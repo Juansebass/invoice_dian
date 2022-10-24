@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="print_survey_form" model="ir.ui.view">
+        <field name="name">wizard.print.survey.form</field>
+        <field name="model">survey.print.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Entrevistas">
+                <sheet>
+                    <group>
+                        <field name="applicant_id" readonly="True"/>
+                        <field name="response_id" required="True" domain="[('id', 'in', (response_ids)), ('state', '=', 'done')]"/>
+                    </group>
+                    <group>
+                        <field name="response_ids" readonly="True">
+                            <tree>
+                                <field name="survey_id"/>
+                                <field name="create_date"/>
+                                <field name="attempts_number"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>    
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_print_survey" type="object" string="Imprimir" class="oe_highlight"/>
+                    <button string="Cancelar" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="launch_the_wizard_print" model="ir.actions.act_window">
+        <field name="name">Imprimir Entrevista</field>
+        <field name="res_model">survey.print.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="hr.model_hr_job"/>
+    </record>
+
+    
+    <record id="hr_applicant_print_form_inherit" model="ir.ui.view">
+        <field name="name">hr.applicant.form.inherit</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment_survey.hr_applicant_view_form_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_print_survey']" position="replace">
+                <button name="%(launch_the_wizard_print)d" icon="fa-print" class="oe_stat_button" type="action" string="Imprimir Entrevistas "/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

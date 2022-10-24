@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+      <record id="view_hr_employee_education_form" model="ir.ui.view">
+      <field name="name">view.hr.employee.education.form</field>
+      <field name="model">hr.employee.education</field>
+      <field name="arch" type="xml">
+        <form string="Formación">
+           <group>
+              <group> 
+                <field name="applicant_id" string="Aplicante"/>              
+                <field name="employee_id" string="Empleado"/>                   
+                <field name="education" string="Formación" required="True"/>
+                <field name="in_progress" string="En progreso" required="True"/>
+                <field name="institute" string="Nombre Institución" required="True"/>
+                <field name="title" string="Título Obtenido" required="True"/>
+                <field name="study_type" string="Clase formación" required="True"/>
+                <field name="state" string="Estado Formación" required="True"/>
+                <field name="country_id" string="País Formación" required="True"/>
+                <field name="duration" string="Tiempo Estudio" required="True"/>
+                <field name="duration_unit" string="Periocidad Estudio" required="True"/>
+                <field name="grad_date" string="Fecha de Graduación" required="True"/>
+              </group>
+           </group>   
+        </form>
+      </field>
+    </record>
+
+    <record id="view_hr_employee_education_tree" model="ir.ui.view">
+      <field name="name">view_hr.employee.education.tree</field>
+      <field name="model">hr.employee.education</field>
+        <field name="arch" type="xml">
+            <tree string="sector Formación">
+                <field name="applicant_id" string="Aplicante"/>
+                <field name="employee_id" string="Empleado"/>        
+                <field name="title" string="Título Obtenido" required="True"/>
+                <field name="education" string="Formación" required="True"/>
+                <field name="in_progress" string="Estudia Actualmente" required="True"/>
+                <field name="institute" string="Nombre Institución" required="True"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_employee_education_title_form" model="ir.ui.view">
+      <field name="name">view.hr.employee.education.title.form</field>
+      <field name="model">hr.employee.education.title</field>
+      <field name="arch" type="xml">
+        <form string="título">
+           <group>
+             <group>
+               <field name="name" string="Título Obtenido"/>
+             </group>
+           </group>
+        </form>
+      </field>
+    </record> 
+
+    <record id="view_hr_employee_education_title_tree" model="ir.ui.view">
+      <field name="name">view.hr.employee.education.title.tree</field>
+      <field name="model">hr.employee.education.title</field>
+        <field name="arch" type="xml">
+            <tree string="sector Título">
+                <field name="name" string="Título Obtenido"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hr_employee_education" model="ir.actions.act_window">
+        <field name="name">Formación</field>
+        <field name="res_model">hr.employee.education</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Formación
+          </p>
+        </field>
+    </record>
+
+    <record id="action_hr_employee_education_title" model="ir.actions.act_window">
+        <field name="name">Título Obtenido</field>
+        <field name="res_model">hr.employee.education.title</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Título
+          </p>
+        </field>
+    </record>
+    
+    <menuitem name='Formación'
+            action='action_hr_employee_education'
+            id='menu_hr_employee_education'
+            parent='hr_recruitment.menu_hr_recruitment_configuration'
+            sequence='12'/>
+
+    <menuitem name='Título Formación'
+            action='action_hr_employee_education_title'
+            id='hr_employee_education_title_menu'
+            parent='hr_recruitment.menu_hr_recruitment_configuration'
+            sequence='20' /> 
+    </data>
+</odoo>
+

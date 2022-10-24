@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_event_range,access_hr_event_range,model_hr_event_range,base.group_user,1,1,1,1
+access_hr_event_range_lines,access_hr_event_range_lines,model_hr_event_range_lines,base.group_user,1,1,1,1
+access_hr_pv_conciliation,access_hr_pv_conciliation,model_hr_pv_conciliation,base.group_user,1,1,1,1
+access_hr_pv_conciliation_lines,access_hr_pv_conciliation_lines,model_hr_pv_conciliation_lines,base.group_user,1,1,1,1
+access_wizard_hr_pv,access_wizard_hr_pv,model_wizard_hr_pv,base.group_user,1,1,1,1
+access_wizard_hr_pv_line,access_wizard_hr_pv_line,model_wizard_hr_pv_line,base.group_user,1,1,1,1
+access_wizard_pv_conciliation_payslip,access_wizard_pv_conciliation_payslip,model_wizard_pv_conciliation_payslip,base.group_user,1,1,1,1

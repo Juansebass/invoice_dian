@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+        <record id="hr_extra_hours_conf_data_1" model="hr.extra.hours.conf">
+            <field name="name">Hora extra diurna ordinaria</field>
+            <field name="factor">1.25</field>
+            <field name="extra_factor">0.0</field>
+        </record>
+
+        <record id="hr_extra_hours_conf_data_2" model="hr.extra.hours.conf">
+            <field name="name">Hora extra nocturna ordinaria</field>
+            <field name="factor">1.75</field>
+            <field name="extra_factor">0.0</field>
+        </record>
+
+        <record id="hr_extra_hours_conf_data_3" model="hr.extra.hours.conf">
+            <field name="name">Recargo por hora nocturna ordinaria</field>
+            <field name="factor">0.35</field>
+            <field name="extra_factor">0.0</field>
+        </record>
+
+        <record id="hr_extra_hours_conf_data_4" model="hr.extra.hours.conf">
+            <field name="name">Hora extra diurna dominical</field>
+            <field name="factor">2.0</field>
+            <field name="extra_factor">0.0</field>
+        </record>
+
+
+        <record id="hr_extra_hours_conf_data_5" model="hr.extra.hours.conf">
+            <field name="name">Hora extra nocturna dominical</field>
+            <field name="factor">2.5</field>
+            <field name="extra_factor">0.0</field>
+        </record>
+
+        <record id="hr_extra_hours_conf_data_6" model="hr.extra.hours.conf">
+            <field name="name">Hora recargo nocturna, dominical o festivo</field>
+            <field name="factor">2.10</field>
+            <field name="extra_factor">0.0</field>
+        </record>
+    </data>
+
+</odoo>

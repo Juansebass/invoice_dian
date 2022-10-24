@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+      <record id="view_hr_employee_phobia_form" model="ir.ui.view">
+      <field name="name">view.hr.employee.phobia.form</field>
+      <field name="model">hr.employee.phobia</field>
+      <field name="arch" type="xml">
+        <form string="fobias">
+           <group>
+             <group>
+               <field name="name" string="Miedos/Fobias"/>
+             </group>
+           </group>
+        </form>
+      </field>
+    </record>
+    
+    <record id="view_hr_employee_phobia_tree" model="ir.ui.view">
+      <field name="name">view.hr.employee.phobia.tree</field>
+      <field name="model">hr.employee.phobia</field>
+        <field name="arch" type="xml">
+            <tree string="sector fobias">
+               <field name="name" string="Miedos/Fobias"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hr_employee_phobia" model="ir.actions.act_window">
+        <field name="name">Miedos/Fobias</field>
+        <field name="res_model">hr.employee.phobia</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Fobias
+          </p>
+        </field>
+    </record>
+
+    <menuitem name='Miedos/Fobias'
+            action='action_hr_employee_phobia'
+            id='hr_employee_phobia_menu'
+            parent='hr_recruitment.menu_hr_recruitment_configuration'
+            sequence='11' /> 
+
+    </data>   
+
+
+
+    
+
+    
+
+
+
+</odoo>
+

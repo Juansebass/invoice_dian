@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="hr_employee_substitution_categ"
+                  name="Employer Substitution"
+                  parent="hr_management_human_talent.request_for_news_menu_item"/>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="hr_employe_substituion_menu_item" name="Employer Substitution"
+                  parent="hr_employee_substitution_categ" action="hr_employee_substitution_action"/>
+
+
+    </data>
+</odoo>

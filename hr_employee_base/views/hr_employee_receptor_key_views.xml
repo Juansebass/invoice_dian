@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+      <record id="view_hr_employee_receptor_key_form" model="ir.ui.view">
+      <field name="name">view.hr.employee.receptor.key.form</field>
+      <field name="model">hr.employee.receptor.key</field>
+      <field name="arch" type="xml">
+        <form string="clave">
+           <group>
+             <group>
+                <field name="name" string="Clave Receptor"/>
+                <field name="identificador" string="Identificador"/>
+             </group>
+           </group>   
+        </form>
+      </field>
+    </record> 
+
+    <record id="view_hr_employee_receptor_key_tree" model="ir.ui.view">
+      <field name="name">view.hr.employee.receptor.key.tree</field>
+      <field name="model">hr.employee.receptor.key</field>
+        <field name="arch" type="xml">
+            <tree string="sector clave">
+                <field name="identificador" string="Identificador"/>
+                <field name="name" string="Clave Receptor"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hr_employee_receptor_key" model="ir.actions.act_window">
+        <field name="name">Clave Receptor</field>
+        <field name="res_model">hr.employee.receptor.key</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Clave Receptor
+          </p>
+        </field>
+    </record>
+
+    <menuitem name='Clave Receptor'
+            action='action_hr_employee_receptor_key'
+            id='menu_hr_employee_receptor_key'
+            parent='hr_recruitment.menu_hr_recruitment_configuration'
+            sequence='62'/> 
+    </data>   
+</odoo>

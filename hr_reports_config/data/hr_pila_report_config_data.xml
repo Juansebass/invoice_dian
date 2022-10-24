@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="hr_pila_config_01" model="hr.pila.report.config">
+            <field name="code">VST</field>
+            <field name="name">Horas Extras/Comisiones</field>
+        </record>
+
+        <record id="hr_pila_config_02" model="hr.pila.report.config">
+            <field name="code">SLN</field>
+            <field name="name">Licencia no remunerada</field>
+        </record>
+
+        <record id="hr_pila_config_03" model="hr.pila.report.config">
+            <field name="code">IGE</field>
+            <field name="name">Incapacidad General</field>
+        </record>
+
+        <record id="hr_pila_config_04" model="hr.pila.report.config">
+            <field name="code">LMA</field>
+            <field name="name">Licencia de Maternidad</field>
+        </record>
+
+        <record id="hr_pila_config_05" model="hr.pila.report.config">
+            <field name="code">VAC - LR</field>
+            <field name="name">Vaciones / Licencia Remunerada</field>
+        </record>
+
+        <record id="hr_pila_config_06" model="hr.pila.report.config">
+            <field name="code">AFP_AFI</field>
+            <field name="name">Aporte Voluntario Pensión Empleado</field>
+        </record>
+
+        <record id="hr_pila_config_07" model="hr.pila.report.config">
+            <field name="code">AFP_APO</field>
+            <field name="name">Aporte Voluntario Pensión Empresa</field>
+        </record>
+
+    </data>
+</odoo>

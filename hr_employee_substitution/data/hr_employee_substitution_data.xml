@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_employee_substitution_seq_id" model="ir.sequence">
+        <field name="name">hr_employee_substitution_sequence</field>
+        <field name="code">hr.employee.substitution</field>
+        <field name="prefix">​SP/</field>
+        <field name="padding">6</field>
+    </record>
+
+</odoo>

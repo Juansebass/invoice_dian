@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="hr.job.type" id="job_type_operative">
+            <field name="name">Nivel operativo</field>
+        </record>
+        <record model="hr.job.type" id="job_type_administrative">
+            <field name="name">Mandos medios y nivel administrativo</field>
+        </record>
+        <record model="hr.job.type" id="job_type_management">
+            <field name="name">Alta gerencia y mandos especiales</field>
+        </record>
+    </data>   
+</odoo>

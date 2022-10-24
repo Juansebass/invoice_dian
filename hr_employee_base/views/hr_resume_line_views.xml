@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <record id="view_resume_line_form_inherit" model="ir.ui.view">
+      <field name="name">hr.resume.line.inherit</field>
+      <field name="model">hr.resume.line</field>
+      <field name="inherit_id" ref="hr_skills.resume_line_view_form"/>
+      <field name="arch" type="xml">
+         <xpath expr="//field[@name='line_type_id']" position="after">
+            <field name="resume_line_job_sector" string="Rama de la Empresa en la que Laboró" required="True"/>
+            <field name="resume_line_job_id" string="Cargo Desempeñado"  required="True"/>
+            <field name="contract_type_id" string="Tipo de Contrato"  required="True"/>
+            <field name="country_id" string="País"  required="True"/>
+            <field name="currently_working" string="Actualmente Laborando"  required="True"/> 
+         </xpath>
+         <xpath expr="//field[@name='date_end']" position="after">
+            <field name="total_days" string="Tiempo Laborado (Días)" readonly="True"/>
+         </xpath>
+      </field>
+   </record>
+
+   <record id="view_hr_resume_line_job_form" model="ir.ui.view">
+      <field name="name">hr.resume.line.job.form</field>
+      <field name="model">hr.resume.line.job</field>
+      <field name="arch" type="xml">
+         <form>
+               <group>
+                  <group>
+                     <field name="name" string="Cargo Desempeñado"/> 
+                  </group>
+               </group>
+         </form>
+      </field>
+    </record> 
+
+   <record id="view_hr_resume_line_job_tree" model="ir.ui.view">
+      <field name="name">hr.resume.line.job.tree</field>
+      <field name="model">hr.resume.line.job</field>
+      <field name="arch" type="xml">
+            <tree>
+               <field name="name" string="Cargo Desempeñado"/>
+            </tree>
+      </field>
+   </record>
+
+   <record id="action_hr_resume_line_job" model="ir.actions.act_window">
+      <field name="name">Cargo Desempeñado</field>
+      <field name="res_model">hr.resume.line.job</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+         <p class="o_view_nocontent_smiling_face">
+         Cargo
+         </p>
+      </field>
+   </record>
+
+   <menuitem name='Cargo Desempeñado'
+            action='action_hr_resume_line_job'
+            id='menu_hr_resume_line_job'
+            parent='hr_recruitment.menu_hr_recruitment_configuration'
+            sequence='31'/> 
+</odoo>

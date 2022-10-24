@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="hr_payroll_capacity_view_form" model="ir.ui.view">
+            <field name="name">hr_payroll_capacity_view_form</field>
+            <field name="model">hr.payroll.debt.capacity</field>
+            <field name="arch" type="xml">
+                <form string="hr_payroll_capacity_form">
+                    <header>
+
+                        <button name="approve" type="object" string="Approve"
+                                attrs="{'invisible':[('state','!=','draft')]}"/>
+
+                        <button name="%(hr_payroll_dis_aid.debt_capacity_wizard)d" type="action"
+                                string="Create Discount" class="oe_highlight"
+                                attrs="{'invisible':[('state','!=','approved')]}"/>
+
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <field name="currency_id" invisible="1"/>
+                        <div>
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group col="3" name="Personal Information">
+                            <group>
+                                <field name="code" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="date"/>
+                                <field name="identification_id" required="1"
+                                       attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="employee_id" required="1" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            </group>
+                        </group>
+                        <group col="2" name="Personal Information 2">
+                            <group>
+                                <field name="date"/>
+                                <field name="requested_amount" widget="monetary"
+                                       attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="company_id" required="1" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="date_entry" attrs="{'readonly': [('state','!=','draft')]}" readonly="1"
+                                       force_save="1"/>
+                                <field name="job_id" attrs="{'readonly': [('state','!=','draft')]}" readonly="1"
+                                       force_save="1"/>
+                            </group>
+                        </group>
+
+                        <group col="3" name="Type contract / Accruals / Deductions">
+                            <group string="Type Contract">
+                                <field name="contract_type_id" attrs="{'readonly': [('state','!=','draft')]}"
+                                       readonly="1" force_save="1"/>
+                                <field name="fixed" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="expiration" attrs="{'readonly': [('state','!=','draft')]}" readonly="1"
+                                       force_save="1"/>
+                            </group>
+                            <group string="Accruals">
+                                <field name="wage" widget="monetary" readonly="1" force_save="1"/>
+                                <field name="includes_overtime" widget="boolean_toggle"/>
+                                <field name="overtime" attrs="{'invisible':[('includes_overtime','=',False)]}"
+                                       widget="monetary" readonly="1" force_save="1"/>
+                                <field name="include_commission" widget="boolean_toggle"/>
+                                <field name="commissions" attrs="{'invisible':[('include_commission','=',False)]}"
+                                       widget="monetary" readonly="1" force_save="1"/>
+                                <field name="total_accruals" widget="monetary" readonly="1" force_save="1"/>
+                                <field name="net" widget="monetary" readonly="1" force_save="1"/>
+                            </group>
+                            <group string="Deductions">
+                                <field name="health" widget="monetary" readonly="1" class="oe_inline" force_save="1"/>
+                                <field name="pension" widget="monetary" readonly="1" class="oe_inline" force_save="1"/>
+                                <field name="pens_solidarity_fund" widget="monetary" readonly="1" class="oe_inline"
+                                       force_save="1"/>
+                                <field name="retention_at_source" widget="monetary" readonly="1" class="oe_inline"
+                                       force_save="1"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Loans">
+                                <field name="loans_line_ids" readonly="1" force_save="1"
+                                       attrs="{'readonly': [('state','!=','draft')]}">
+                                    <tree>
+                                        <field name="dis_aid_id" width="40%"/>
+                                        <field name="concept_id" width="20%"/>
+                                        <field name="monthly_fee" width="20%"/>
+                                        <field name="quote_to_pay" width="20%"/>
+                                    </tree>
+                                </field>
+                                <group>
+                                    <group>
+                                        <field name="less_deductions" readonly="1" force_save="1" widget="monetary"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+
+                        <group name="Final Content">
+                            <group>
+                                <field name="percentage" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="accrued" widget="monetary" readonly="1" force_save="1"/>
+                                <field name="deductions" widget="monetary" readonly="1" force_save="1"/>
+                                <field name="available_salary" widget="monetary" readonly="1" force_save="1"/>
+                                <field name="approved" widget="radio"/>
+                            </group>
+                        </group>
+
+                        <group name="Documents / Observations">
+                            <field name="documents_requested" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="observations" placeholder="IF YOU HAVE DEBT CAPACITY, THE FEE IS $ "
+                                   attrs="{'readonly': [('state','!=','draft')]}"/>
+                        </group>
+
+                        <group name="Approved / Elaborated">
+                            <group string="Elaborated">
+                                <field name="elaborated_employee_id" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="elaborated_job_id" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            </group>
+                            <group string="Approved">
+                                <field name="approve_employee_id" attrs="{'readonly': [('state','=','finalized')]}"/>
+                                <field name="approve_job_id" attrs="{'readonly': [('state','=','finalized')]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="date_received" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="delivery_date" attrs="{'readonly': [('state','=','finalized')]}"/>
+                            </group>
+                        </group>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_payroll_capacity_view_view_tree" model="ir.ui.view">
+            <field name="name">hr_payroll_capacity_view_view_tree</field>
+            <field name="model">hr.payroll.debt.capacity</field>
+            <field name="arch" type="xml">
+                <tree string="hr_payroll_capacity_view_tree">
+                    <field name="name" width="15%"/>
+                    <field name="employee_id" width="15%"/>
+                    <field name="identification_id" width="15%"/>
+                    <field name="requested_amount" width="15%"/>
+                    <field name="approved" width="15%"/>
+                    <field name="state" width="15%"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="hr_payroll_debt_capacity_action" model="ir.actions.act_window">
+            <field name="name">Debt Capacity</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.payroll.debt.capacity</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <!-- Variation Debt Discounts -->
+        <record id="hr_payroll_dis_discounts_view_form" model="ir.ui.view">
+            <field name="name">hr_payroll_debt_discounts_view_form</field>
+            <field name="model">hr.payroll.discount.variable</field>
+            <field name="arch" type="xml">
+                <form string="hr_payroll_debt_discounts_form">
+                    <sheet>
+                        <group>
+                            <field name="name" reaonly="1" force_save="1"/>
+                        </group>
+                        <separator string="Salary Rule"/>
+                        <field name="salary_rule_id">
+                            <tree>
+                                <field name="name"/>
+                                <field name="struct_id"/>
+                                <field name="code"/>
+                                <field name="category_id"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="hr_payroll_dis_discounts_view_tree" model="ir.ui.view">
+            <field name="name">hr_payroll_dis_discounts_view_tree</field>
+            <field name="model">hr.payroll.discount.variable</field>
+            <field name="arch" type="xml">
+                <tree string="hr_payroll_dis_discounts_tree">
+                    <field name="name"/>
+                    <field name="salary_rule_id" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_payroll_dis_discounts_action" model="ir.actions.act_window">
+            <field name="name">Discount variable</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.payroll.discount.variable</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="hr_payroll_dis_discounts_menu" name="Discounts Variable" parent="hr_payroll_dis_aid.dis_aid_root"
+                  action="hr_payroll_dis_discounts_action"/>
+
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="hr_payroll_debt_capacity_menu_item"
+                  name="Debt Capacity"
+                  parent="hr_payroll_dis_aid.hr_payroll_dis_aid_root"
+                  action="hr_payroll_debt_capacity_action"
+                  sequence="3"/>
+
+    </data>
+</odoo>

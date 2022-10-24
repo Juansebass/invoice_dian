@@ -1,0 +1,2506 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_payroll_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20201024\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-23 02:38+0000\n"
+"PO-Revision-Date: 2021-03-22 21:39-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid ""
+"\n"
+"Review the Following Employee Fields: "
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - ARL Company"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Commercial Register Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Company Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Contributor Class"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - DiviPola Code"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Document Number"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Document Type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - E-Mail"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - ICA Activity"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Legal Nature"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Legal Representative First Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Legal Representative Fourth Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Legal Representative Identification Number"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Legal Representative Identification Type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Legal Representative Second Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Legal Representative Third Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Mobile"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Person Type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Phone Number"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - State"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Street"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " - Verification Digit"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid " and the Contract: "
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2020
+msgid "2020"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2021
+msgid "2021"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2022
+msgid "2022"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2023
+msgid "2023"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2024
+msgid "2024"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2025
+msgid "2025"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2026
+msgid "2026"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2027
+msgid "2027"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2028
+msgid "2028"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2029
+msgid "2029"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2030
+msgid "2030"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2031
+msgid "2031"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2032
+msgid "2032"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2033
+msgid "2033"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2034
+msgid "2034"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2035
+msgid "2035"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2036
+msgid "2036"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2037
+msgid "2037"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2038
+msgid "2038"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2039
+msgid "2039"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2040
+msgid "2040"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2041
+msgid "2041"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2042
+msgid "2042"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2043
+msgid "2043"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2044
+msgid "2044"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2045
+msgid "2045"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2046
+msgid "2046"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2047
+msgid "2047"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2048
+msgid "2048"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2049
+msgid "2049"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2050
+msgid "2050"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2051
+msgid "2051"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2052
+msgid "2052"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2053
+msgid "2053"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2054
+msgid "2054"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2055
+msgid "2055"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2056
+msgid "2056"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2057
+msgid "2057"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2058
+msgid "2058"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2059
+msgid "2059"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2060
+msgid "2060"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2061
+msgid "2061"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2062
+msgid "2062"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2063
+msgid "2063"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2064
+msgid "2064"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2065
+msgid "2065"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2066
+msgid "2066"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2067
+msgid "2067"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2068
+msgid "2068"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2069
+msgid "2069"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2070
+msgid "2070"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2071
+msgid "2071"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2072
+msgid "2072"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2073
+msgid "2073"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2074
+msgid "2074"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2075
+msgid "2075"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2076
+msgid "2076"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2077
+msgid "2077"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2078
+msgid "2078"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2079
+msgid "2079"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2080
+msgid "2080"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2081
+msgid "2081"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2082
+msgid "2082"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2083
+msgid "2083"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2084
+msgid "2084"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2085
+msgid "2085"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2086
+msgid "2086"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2087
+msgid "2087"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2088
+msgid "2088"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2089
+msgid "2089"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2090
+msgid "2090"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2091
+msgid "2091"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2092
+msgid "2092"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2093
+msgid "2093"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2094
+msgid "2094"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2095
+msgid "2095"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2096
+msgid "2096"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2097
+msgid "2097"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2098
+msgid "2098"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2099
+msgid "2099"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__year__2100
+msgid "2100"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+msgid ""
+"<br/>\n"
+"                                            <span>IBC Anterior:</span>"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+msgid ""
+"<br/>\n"
+"                                            <span>Regimen: Ley 50</span>\n"
+"                                            <span>T Ret: Porcen</span>"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+msgid ""
+"<br/>\n"
+"                                            <span>T Cont: </span>"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.internal_layout_payslip
+msgid ""
+"<br/>\n"
+"                        <br/>\n"
+"                        <span>\n"
+"                            P R E N O M I N A\n"
+"                        </span>\n"
+"                        <br/>\n"
+"                        <span>SEPTIEMBRE/2020</span>"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.internal_layout_payslip
+msgid ""
+"<br/>\n"
+"                        <br/>\n"
+"                        <span>Del: </span>"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.internal_layout_payslip
+msgid ""
+"<br/>\n"
+"                        <span>Page No. </span><span class=\"list-inline-item\"><span class=\"page\"/></span>\n"
+"                        <br/>"
+msgstr ""
+"<br/>\n"
+"                        <span>Página No. </span><span class=\"list-inline-item\"><span class=\"page\"/></span>\n"
+"                        <br/>"
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+msgid ""
+"<span style=\"margin-left: 12px;\">F-Ing:</span>\n"
+"                                            <br/>\n"
+"                                            <span>Empresa: 1100 </span>"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+msgid ""
+"<span>\n"
+"                                            Sueldo: </span>"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.internal_layout_payslip
+msgid "<span> Al: </span>"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+msgid "<span>0001 100066 </span>"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+msgid "<span>I. D: </span>"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid "AFP Code"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_company__arl_id
+msgid "ARL"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid "ARL Code"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__abroad_date
+msgid "Abroad Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+#, python-format
+msgid "Accruals"
+msgstr "Devengos"
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__action_type
+msgid "Action Type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zconcept_report_wizard__all_employees
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zprenomina_report_wizard__all_employees
+msgid "All Employees"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "Amount"
+msgstr "Importe"
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__aportant_type
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__aportant_type
+msgid "Aportant Type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__month__4
+msgid "April"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__arl_code
+msgid "Arl Code"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__arl_days
+msgid "Arl Days"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__arl_ibc
+msgid "Arl Ibc"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__arl_rate
+msgid "Arl Rate"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__arl_value
+msgid "Arl Value"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "As of %s"
+msgstr "Al %s"
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__month__8
+msgid "August"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.zconcept_report_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.zprenomina_report_wizard_view_form
+msgid "Auxiliary Account Report"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__contributor_class__4
+msgid "Beneficiary contributor of article 5 of Law 1429 of 2010"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__benefit_ccf
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_company__benefit_ccf
+msgid "Benefit Ccf"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "C1"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "C10"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "C2"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "C3"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "C4"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "C5"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "C6"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "C7"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "C8"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "C9"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_employee__ccf_id
+msgid "CCF"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid "CCF Code"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__ciiu
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__ciiu
+msgid "CIIU"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.zconcept_report_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.zprenomina_report_wizard_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__identification_document__cd
+msgid "Carne Diplomático"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__document_type_id__cd
+msgid "Carné diplomático"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__ccf_days
+msgid "Ccf Days"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__ccf_ibc
+msgid "Ccf Ibc"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__ccf_rate
+msgid "Ccf Rate"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__ccf_value
+msgid "Ccf Value"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__check_digit
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__check_digit
+msgid "Check Digit"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__check_log
+msgid "Check Log"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model,name:hr_payroll_report.model_res_city
+msgid "City"
+msgstr "Ciudad"
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_contributor_type__code
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_risk_type__code
+msgid "Code"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__code_afc
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__code_afc
+msgid "Code Afc"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__code_afp
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__code_afp
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__code_afp
+msgid "Code Afp"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__code_arl
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__code_arl
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__code_arl
+msgid "Code Arl"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__code_ccf
+msgid "Code Ccf"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__code_compensation_box
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__code_compensation_box
+msgid "Code Compensation Box"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__code_eps
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__code_eps
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__code_eps
+msgid "Code Eps"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__code_found_layoffs
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__code_found_layoffs
+msgid "Code Found Layoffs"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__code_new_afp
+msgid "Code New Afp"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__code_new_eps
+msgid "Code New Eps"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__code_prepaid_medicine
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__code_prepaid_medicine
+msgid "Code Prepaid Medicine"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__code_required_physical_evidence
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__code_required_physical_evidence
+msgid "Code Required Physical Evidence"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__code_unemployee_fund
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__code_unemployee_fund
+msgid "Code Unemployee Fund"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__code_voluntary_contribution
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__code_voluntary_contribution
+msgid "Code Voluntary Contribution"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__colombian_abroad
+msgid "Colombian Abroad"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__commercial_register
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__commercial_register
+msgid "Commercial Register"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__commercial_register_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__commercial_register_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__commercial_register_date
+msgid "Commercial Register Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model,name:hr_payroll_report.model_res_company
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zconcept_report_wizard__company_ids
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zprenomina_report_wizard__company_ids
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#: model:ir.model.fields,field_description:hr_payroll_report.field_ciiu_value__company_id
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__company_id
+#, python-format
+msgid "Company"
+msgstr "Compañía"
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__company_name
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__company_name
+#, python-format
+msgid "Company Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#, python-format
+msgid "Concept Code"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "Concept Payroll"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "Concept Text Payroll"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__concordate_date
+msgid "Concordate Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__concordate_end_date
+msgid "Concordate End Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__consecutive
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__consecutive
+msgid "Consecutive"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model,name:hr_payroll_report.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.hr_payroll_pila_view_form
+msgid "Content"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#, python-format
+msgid "Contract Date Start"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#, python-format
+msgid "Contract Type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__contributor_class
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__contributor_class
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__contributor_class
+msgid "Contributor Class"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid "Contributor SubType"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__contributor_subtype
+msgid "Contributor Subtype"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#: model:ir.actions.act_window,name:hr_payroll_report.hr_contributor_type_action
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__contributor_type
+#: model:ir.ui.menu,name:hr_payroll_report.hr_contributor_type_menu_action
+#, python-format
+msgid "Contributor Type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__contributor_class__1
+msgid "Contributor with 200 or more contributors"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__contributor_class__2
+msgid "Contributor with less than 200 contributors"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "Cost Center"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_ciiu_value__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_contributor_type__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_risk_type__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zconcept_report_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zprenomina_report_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_ciiu_value__create_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_contributor_type__create_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__create_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_risk_type__create_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__create_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__create_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__create_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zconcept_report_wizard__create_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zprenomina_report_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+msgid "Credit Balance"
+msgstr "Saldo Creditos"
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "Ctd."
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__identification_document__ce
+msgid "Cédula de Extranjería"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__document_type_id__cc
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__identification_document__cc
+msgid "Cédula de ciudadanía"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__document_type_id__ce
+msgid "Cédula de extranjería"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_ciiu_value__code
+msgid "Código"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zconcept_report_wizard__date_from
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zprenomina_report_wizard__date_from
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.zconcept_report_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.zprenomina_report_wizard_view_form
+msgid "Date From"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zconcept_report_wizard__date_to
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zprenomina_report_wizard__date_to
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.zconcept_report_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.zprenomina_report_wizard_view_form
+msgid "Date To"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__month__12
+msgid "December"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+#, python-format
+msgid "Deductions"
+msgstr "Deducciones"
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_ciiu_value__name
+msgid "Descripción"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+#, python-format
+msgid "Description"
+msgstr "Descripción"
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__disability_number
+msgid "Disability Number"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__disability_value
+msgid "Disability Value"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_ciiu_value__display_name
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_contributor_type__display_name
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__display_name
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_risk_type__display_name
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__display_name
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__display_name
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__display_name
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zconcept_report__display_name
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zconcept_report_wizard__display_name
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zprenomina_report__display_name
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zprenomina_report_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_city__div_code
+msgid "Div Code"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid "DiviPola Code"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__divpola_code
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__divpola_code
+msgid "Divpola Code"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__identification_document
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__identification_document
+msgid "Document Identification"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__document_type
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__document_type
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__document_type
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__document_type_id
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__document_type_id
+#, python-format
+msgid "Document Type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__state__done
+msgid "Done"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__dummy_field
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__dummy_field
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__dummy_field
+msgid "Dummy Field"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "E1"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "E10"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "E2"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "E3"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "E4"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "E5"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "E6"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "E7"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "E8"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "E9"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid "EPS Code"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__email
+msgid "Email"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#: model:ir.model,name:hr_payroll_report.model_hr_employee
+#, python-format
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: hr_payroll_report
+#: model:ir.model,name:hr_payroll_report.model_hr_contract
+msgid "Employee Contract"
+msgstr "Contrato del empleado"
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zconcept_report_wizard__employee_ids
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zprenomina_report_wizard__employee_ids
+msgid "Employees"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__legal_nature__5
+msgid "Entidades de derecho público no sometidas a la legislación colombiana"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__esap_rate
+msgid "Esap Rate"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__esap_value
+msgid "Esap Value"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__exempt_from_payment
+msgid "Exempt From Payment"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "Export"
+msgstr "Exportar"
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "Export (XLSX)"
+msgstr "Exportar (XLSX)"
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__month__2
+msgid "February"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.hr_payroll_pila_view_form
+msgid "File 1"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.hr_payroll_pila_view_form
+msgid "File 2"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__file1
+msgid "File1"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__file2
+msgid "File2"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__first_name
+#, python-format
+msgid "First Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#, python-format
+msgid "Fix Wage Amount"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__fourth_name
+msgid "Fourth Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid ""
+"From %s\n"
+"to  %s"
+msgstr ""
+"De%s\n"
+"a %s"
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.zconcept_report_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.zprenomina_report_wizard_view_form
+msgid "General Filters"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.hr_payroll_pila_view_form
+msgid "Generate Report"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.hr_payroll_pila_view_form
+msgid "Header"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__health_days
+msgid "Health Days"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__health_ibc
+msgid "Health Ibc"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__health_payment_period
+msgid "Health Payment Period"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__health_rate
+msgid "Health Rate"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__health_value
+msgid "Health Value"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__hr_payroll_pila_id
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__hr_payroll_pila_id
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__hr_payroll_pila_id
+msgid "Hr Payroll Pila"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_ciiu_value__id
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_contributor_type__id
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__id
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_risk_type__id
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__id
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__id
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__id
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zconcept_report__id
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zconcept_report_wizard__id
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zprenomina_report__id
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zprenomina_report_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__ibc_amount
+msgid "Ibc Amount"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__ica_activity
+msgid "Ica Activity"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__icbf
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_company__icbf
+msgid "Icbf"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__icbf_rate
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_company__icbf_rate
+msgid "Icbf Rate"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__icbf_value
+msgid "Icbf Value"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__identification_number
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__identification_number
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__identification_number
+#, python-format
+msgid "Identification Number"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__ige_end_date
+msgid "Ige End Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__ige_initial_date
+msgid "Ige Initial Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__contributor_class__5
+msgid "Independent"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__ing_date
+msgid "Ing Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__state__initial
+msgid "Initial"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__irl_days
+msgid "Irl Days"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__irl_end_date
+msgid "Irl End Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__irl_initial_date
+msgid "Irl Initial Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_avp
+msgid "Is Avp"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_correction
+msgid "Is Correction"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_employee__is_foreign
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_foreign
+msgid "Is Foreign"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_ige
+msgid "Is Ige"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_ing
+msgid "Is Ing"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_integral_salary
+msgid "Is Integral Salary"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_lma
+msgid "Is Lma"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_ret
+msgid "Is Ret"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_sln
+msgid "Is Sln"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_tae
+msgid "Is Tae"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_tap
+msgid "Is Tap"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_tde
+msgid "Is Tde"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_tdp
+msgid "Is Tdp"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_vac_lr
+msgid "Is Vac Lr"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_vct
+msgid "Is Vct"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_vsp
+msgid "Is Vsp"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__is_vst
+msgid "Is Vst"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__month__1
+msgid "January"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#, python-format
+msgid "Job"
+msgstr "Puesto"
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__month__7
+msgid "July"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__month__6
+msgid "June"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__person_pila_type__j
+msgid "Jurídica"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_ciiu_value____last_update
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_contributor_type____last_update
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila____last_update
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_risk_type____last_update
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line____last_update
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line____last_update
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line____last_update
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zconcept_report____last_update
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zconcept_report_wizard____last_update
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zprenomina_report____last_update
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zprenomina_report_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_ciiu_value__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_contributor_type__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_risk_type__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zconcept_report_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zprenomina_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_ciiu_value__write_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_contributor_type__write_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__write_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_risk_type__write_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__write_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__write_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__write_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zconcept_report_wizard__write_date
+#: model:ir.model.fields,field_description:hr_payroll_report.field_zprenomina_report_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "Last name First name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__legal_nature
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__legal_nature
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__legal_nature
+msgid "Legal Nature"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__line1_ids
+msgid "Line1"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__line2_1_ids
+msgid "Line2 1"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__line2_2_ids
+msgid "Line2 2"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__lma_end_date
+msgid "Lma End Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__lma_initial_date
+msgid "Lma Initial Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__log
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.hr_payroll_pila_view_form
+msgid "Log"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__month__3
+msgid "March"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__maternity_disability_number
+msgid "Maternity Disability Number"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__maternity_disability_value
+msgid "Maternity Disability Value"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__month__5
+msgid "May"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__men_rate
+msgid "Men Rate"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__men_value
+msgid "Men Value"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__contributor_class__3
+msgid "Mipyme contributor that takes advantage of Law 590 of 2000"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__legal_nature__3
+msgid "Mixta"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__mobile
+msgid "Mobile"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__month
+msgid "Month"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "NIF"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#, python-format
+msgid "NIT"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_contributor_type__name
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__file1_name
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__file2_name
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_risk_type__name
+msgid "Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__person_pila_type__n
+msgid "Natural"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+msgid "Net"
+msgstr "Neto"
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+msgid "No."
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__month__11
+msgid "November"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__document_type_id__ni
+msgid "Número de identificación tributaria"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__identification_document__ni
+msgid "Número de identificacióntributaria"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__month__10
+msgid "October"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__operator
+msgid "Operator"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__operator_code
+msgid "Operator Code"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__legal_nature__4
+msgid "Organismos multilaterales"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.view_partner_form_inherit
+msgid "Other Pila Fields"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "PDF"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__document_type_id__pa
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__identification_document__pa
+msgid "Pasaporte"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model,name:hr_payroll_report.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Nómina"
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__payment_date
+msgid "Payment Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__payment_period
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__payment_period
+msgid "Payment Period"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "Payroll Area"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "Payroll Area Text"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#, python-format
+msgid "Payroll Date From"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#, python-format
+msgid "Payroll Date To"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#, python-format
+msgid "Payroll Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.actions.act_window,name:hr_payroll_report.hr_payroll_pila_action
+#: model:ir.ui.menu,name:hr_payroll_report.hr_payroll_pila_menu
+msgid "Payroll Pila"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__pension_days
+msgid "Pension Days"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__pension_ibc
+msgid "Pension Ibc"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__pension_rate
+msgid "Pension Rate"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__pension_total
+msgid "Pension Total"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__pension_value
+msgid "Pension Value"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__pension_vol_com
+msgid "Pension Vol Com"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__pension_vol_emp
+msgid "Pension Vol Emp"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_risk_type__percentage
+msgid "Percentage"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.zconcept_report_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.zprenomina_report_wizard_view_form
+#, python-format
+msgid "Period"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__document_type_id__pe
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__identification_document__pe
+msgid "Permiso Especial de Permanencia"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_partner__person_pila_type
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_users__person_pila_type
+msgid "Person Pila Type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__person_type
+msgid "Person Type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "Personnel Division"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__phone
+msgid "Phone"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "Position"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__presentation_form
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__presentation_form
+msgid "Presentation Form"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__principal_document_type
+msgid "Principal Document Type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__principal_identification_number
+msgid "Principal Identification Number"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "Print Preview"
+msgstr "Vista previa de impresión"
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.hr_payroll_pila_view_form
+msgid "Print XLSX"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__legal_nature__2
+msgid "Privada"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__state__process
+msgid "Process"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__legal_nature__1
+msgid "Pública"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+#, python-format
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__register_type
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__register_type
+msgid "Register Type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.zconcept_report_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.zprenomina_report_wizard_view_form
+msgid "Render Report"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__ret_date
+msgid "Ret Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#, python-format
+msgid "Review the Following Company Fields: "
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__risk_level
+#, python-format
+msgid "Risk Level"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.actions.act_window,name:hr_payroll_report.hr_risk_type_action
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_contract__risk_type_id
+#: model:ir.ui.menu,name:hr_payroll_report.hr_risk_type_menu_action
+msgid "Risk Type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__rl_document_type
+msgid "Rl Document Type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__rl_first_name
+msgid "Rl First Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__rl_fourth_name
+msgid "Rl Fourth Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__rl_identification_id
+msgid "Rl Identification"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__rl_second_name
+msgid "Rl Second Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__rl_third_name
+msgid "Rl Third Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__rl_verification_code
+msgid "Rl Verification Code"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__salary
+msgid "Salary"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__document_type_id__sc
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__identification_document__sc
+msgid "Salvoconducto de permanencia"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "Save"
+msgstr "Guardar"
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__second_name
+msgid "Second Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_company__sena
+msgid "Sena"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__sena_rate
+#: model:ir.model.fields,field_description:hr_payroll_report.field_res_company__sena_rate
+msgid "Sena Rate"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__sena_value
+msgid "Sena Value"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__hr_payroll_pila__month__9
+msgid "September"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__sln_end_date
+msgid "Sln End Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__sln_initial_date
+msgid "Sln Initial Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__solidarity_fund_sol
+msgid "Solidarity Fund Sol"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__solidarity_fund_sub
+msgid "Solidarity Fund Sub"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__special_pension
+msgid "Special Pension"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__state
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__state
+#, python-format
+msgid "State"
+msgstr "Estado"
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__state_partner
+msgid "State Partner"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__state
+msgid "Status"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__street
+msgid "Street"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__sucursal_code
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__sucursal_code
+msgid "Sucursal Code"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__sucursal_name
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__sucursal_name
+msgid "Sucursal Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__identification_document__ti
+msgid "Tarjeta de Identidad"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields.selection,name:hr_payroll_report.selection__res_partner__document_type_id__ti
+msgid "Tarjeta de identidad"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__template_mode
+msgid "Template Mode"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__template_number
+msgid "Template Number"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__template_ref_number
+msgid "Template Ref Number"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__template_ref_payment_date
+msgid "Template Ref Payment Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__template_type
+msgid "Template Type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "Text Personnel Division"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__third_name
+#, python-format
+msgid "Third Name"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+msgid "Total Center Cost"
+msgstr "Total Centro de Costos"
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+msgid "Total Company"
+msgstr "Total Compañia"
+
+#. module: hr_payroll_report
+#: model_terms:ir.ui.view,arch_db:hr_payroll_report.report_payslip
+msgid "Total Employee"
+msgstr "Total Empleado"
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__total_employees
+msgid "Total Employees"
+msgstr "Total Empleados"
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__total_not_retained
+msgid "Total Not Retained"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__total_payroll
+msgid "Total Payroll"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__upc_value
+msgid "Upc Value"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__vac_lr_end_date
+msgid "Vac Lr End Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__vac_lr_initial_date
+msgid "Vac Lr Initial Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__vct_end_date
+msgid "Vct End Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__vct_initial_date
+msgid "Vct Initial Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f1_line__verification_code
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_1_line__verification_code
+msgid "Verification Code"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__vsp_date
+msgid "Vsp Date"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#, python-format
+msgid "Wage"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/models/hr_payroll_pila.py:0
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__work_center
+#, python-format
+msgid "Work Center"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_type2f2_2_line__workly_hours
+msgid "Workly Hours"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "XLSX"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model.fields,field_description:hr_payroll_report.field_hr_payroll_pila__year
+msgid "Year"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.actions.act_window,name:hr_payroll_report.zconcept_report_wizard
+msgid "ZConcept Report"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.actions.client,name:hr_payroll_report.action_zprenomina_payroll
+#: model:ir.ui.menu,name:hr_payroll_report.menu_action_zprenomina_payroll
+msgid "ZPrenomina Payroll"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.actions.act_window,name:hr_payroll_report.zprenomina_report_wizard
+msgid "ZPrenomina Report"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.actions.client,name:hr_payroll_report.action_zconcept_payroll
+#: model:ir.ui.menu,name:hr_payroll_report.menu_action_zconcept_payroll
+msgid "Zconcept Payroll"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model,name:hr_payroll_report.model_zconcept_report
+msgid "Zconcept Report"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model,name:hr_payroll_report.model_ciiu_value
+msgid "ciiu.value"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model,name:hr_payroll_report.model_hr_contributor_type
+msgid "hr.contributor.type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model,name:hr_payroll_report.model_hr_payroll_pila
+msgid "hr.payroll.pila"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model,name:hr_payroll_report.model_hr_risk_type
+msgid "hr.risk.type"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model,name:hr_payroll_report.model_hr_type2f1_line
+msgid "hr.type2f1.line"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model,name:hr_payroll_report.model_hr_type2f2_1_line
+msgid "hr.type2f2_1.line"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model,name:hr_payroll_report.model_hr_type2f2_2_line
+msgid "hr.type2f2_2.line"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model,name:hr_payroll_report.model_zconcept_report_wizard
+msgid "zconcept.report.wizard"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zcocept_report.py:0
+#, python-format
+msgid "zconcepto-nomina"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model,name:hr_payroll_report.model_zprenomina_report
+msgid "zprenomina Report"
+msgstr ""
+
+#. module: hr_payroll_report
+#: code:addons/hr_payroll_report/reports/zprenomina_report.py:0
+#, python-format
+msgid "zprenomina-"
+msgstr ""
+
+#. module: hr_payroll_report
+#: model:ir.model,name:hr_payroll_report.model_zprenomina_report_wizard
+msgid "zprenomina.report.wizard"
+msgstr ""

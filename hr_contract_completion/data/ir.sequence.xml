@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="cc_seq_id" model="ir.sequence">
+        <field name="name">cc_sequence</field>
+        <field name="code">hr.contract.completion</field>
+        <field name="prefix">CC-</field>
+        <field name="padding">6</field>
+    </record>
+
+</odoo>

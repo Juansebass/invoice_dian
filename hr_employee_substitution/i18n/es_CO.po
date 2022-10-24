@@ -1,0 +1,308 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_employee_substitution
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20201024\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-05 03:18+0000\n"
+"PO-Revision-Date: 2021-03-04 22:30-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_CO\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields.selection,name:hr_employee_substitution.selection__hr_employee_substitution__state__cancel
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "Cancel"
+msgstr "Cancelado"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__check_cost_center
+msgid "Change of Cost Center?"
+msgstr "¿Requiere cambio de centro de costos?"
+
+#. module: hr_employee_substitution
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "Company's"
+msgstr "Compañias"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields.selection,name:hr_employee_substitution.selection__hr_employee_substitution__state__completed
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "Completed"
+msgstr "Completado"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__contract_id
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: hr_employee_substitution
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "Cost Center"
+msgstr "Centro de Costos"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__creation_date
+msgid "Creation Date"
+msgstr "Fecha de creación"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: hr_employee_substitution
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "Current Center Cost"
+msgstr "Centro de Costos Actual"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__current_company_id
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_search_view
+msgid "Current Company"
+msgstr "Compañía Actual"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__current_flex_wage_ids
+msgid "Current Flex Wage"
+msgstr "Salario Flexible Actual"
+
+#. module: hr_employee_substitution
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "Current Job"
+msgstr "Puesto de Trabajo Actual"
+
+#. module: hr_employee_substitution
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "Current Work Location"
+msgstr "Dirección de Trabajo Actual"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__current_center_cost_id
+msgid "Current cost center"
+msgstr "Centro de Costos Actual"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields.selection,name:hr_employee_substitution.selection__hr_employee_substitution__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_search_view
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,help:hr_employee_substitution.field_hr_employee_substitution__wage
+msgid "Employee's monthly gross wage."
+msgstr ""
+
+#. module: hr_employee_substitution
+#: model:ir.actions.act_window,name:hr_employee_substitution.hr_employee_substitution_action
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_center_cost__employee_substitution_id
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_new_center_cost__employee_substitution_id
+#: model:ir.ui.menu,name:hr_employee_substitution.hr_employe_substituion_menu_item
+#: model:ir.ui.menu,name:hr_employee_substitution.hr_employee_substitution_categ
+msgid "Employer Substitution"
+msgstr "Sustitución Patronal"
+
+#. module: hr_employee_substitution
+#: model:ir.model,name:hr_employee_substitution.model_hr_contract_flex_wage
+msgid "Flex Wage Detailed List"
+msgstr "Lista  sueldo flexible"
+
+#. module: hr_employee_substitution
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "General Information"
+msgstr "Información General"
+
+#. module: hr_employee_substitution
+#: model:ir.model,name:hr_employee_substitution.model_hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_contract_flex_wage__hr_employee_substitution_id
+msgid "Hr Employee Substitution"
+msgstr "Hr Sustitución Patronal"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_employee_substitution
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "Job"
+msgstr "Cargo"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__check_job
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__current_job_id
+msgid "Job Position"
+msgstr "Puesto de trabajo"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización en"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__name
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_search_view
+msgid "Name"
+msgstr "Nombre"
+
+#. module: hr_employee_substitution
+#: code:addons/hr_employee_substitution/models/hr_employee_substitution.py:0
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: hr_employee_substitution
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "New Center Cost"
+msgstr "Nuevo Centro de Costos"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__new_company_id
+msgid "New Company"
+msgstr "Nueva Compañia"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__new_flex_wage_ids
+msgid "New Flex Wage"
+msgstr "Nuevo Salario Flexible"
+
+#. module: hr_employee_substitution
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "New Job"
+msgstr "Nuevo Puesto de Trabajo"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__new_job_id
+msgid "New Job Position"
+msgstr "Nuevo Puesto de Trabajo"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__new_salary
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "New Salary"
+msgstr "Nuevo Salario"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__new_salary_fixed
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "New Salary Fixed"
+msgstr "Nuevo Salario Fijo"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__new_work_location_id
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "New Work Location"
+msgstr "Nueva Dirección de Trabajo"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__new_center_cost_id
+msgid "New cost center"
+msgstr "Nuevo Centro de Costos"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__identification_id
+msgid "No. Identification"
+msgstr "No. identificación"
+
+#. module: hr_employee_substitution
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "Process"
+msgstr "Procesar"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields.selection,name:hr_employee_substitution.selection__hr_employee_substitution__state__processed
+msgid "Processed"
+msgstr "Procesado"
+
+#. module: hr_employee_substitution
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "Salary"
+msgstr "Salario"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__check_salary
+msgid "Salary Change?"
+msgstr "¿Cambio de Salario?"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__state
+msgid "State"
+msgstr "Estado"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__validation_date
+msgid "Validation Date"
+msgstr "Fecha de Validación"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__wage
+msgid "Wage"
+msgstr "Salario"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__current_work_location_id
+msgid "Work Address"
+msgstr "Dirección de Trabajo"
+
+#. module: hr_employee_substitution
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_form
+msgid "Work Location"
+msgstr "Lugar de Trabajo"
+
+#. module: hr_employee_substitution
+#: model:ir.model.fields,field_description:hr_employee_substitution.field_hr_employee_substitution__check_work_location
+msgid "change work location?"
+msgstr "¿Cambio de Lugar de Trabajo?"
+
+#. module: hr_employee_substitution
+#: model:ir.model,name:hr_employee_substitution.model_hr_center_cost
+msgid "hr.center.cost"
+msgstr ""
+
+#. module: hr_employee_substitution
+#: model:ir.model,name:hr_employee_substitution.model_hr_new_center_cost
+msgid "hr.new.center.cost"
+msgstr ""
+
+#. module: hr_employee_substitution
+#: model_terms:ir.ui.view,arch_db:hr_employee_substitution.hr_employee_substitution_view_tree
+msgid "hr_employee_substitution_tree"
+msgstr ""

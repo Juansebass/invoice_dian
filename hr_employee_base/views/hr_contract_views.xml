@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <record id="view_hr_contrato_inherit" model="ir.ui.view">
+      <field name="name">hr.contrac</field>
+      <field name="model">hr.contract</field>
+      <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+      <field name="priority">5</field>
+      <field name="arch" type="xml">
+         
+         <field name="resource_calendar_id" position="attributes" >
+            <attribute name="readonly">False</attribute>
+         </field>
+
+         <!-- <field name="hr_responsible_id" position="attributes" >
+            <attribute name="invisible">True</attribute>
+         </field> -->    
+         <xpath expr="//field[(@name='employee_id')]" position="after">
+           <field name="employe_identification" string="No. Identificación" required="True"/>
+           <field name="employee_expedition_city" string="Lugar de Expedición de documento"/>
+           <field name="employee_bank_account" string="No de Cuenta Bancaría" invisible="True"/> 
+           <field name="employee_phone"  string="Télefono"/>
+           <field name="employee_email" string="Correo"/>                
+         </xpath>
+            
+         <xpath expr="//group[(@name='contract_details')]" position="inside">
+             <field name="immediate_boss" string="Jefe Inmediato" required="True"/>
+             <field name="immediate_boss_job" string="Cargo Jefe Inmediato"/>
+             <field name="city_id" string="Ciudad" required="True"/>                           
+             <!-- <field name="trial_days" string="No. de Días de Prueba" required="True"/>           -->
+          </xpath>
+
+          <xpath expr="//field[(@name='job_id')]" position="after">
+            <field name="document_version" string="Versión del Documento" required="True"/>
+            <field name="firma" widget="signature"/> 
+             <field name="firma_date" string="Fecha de Firma del Contrato" required="True"/>              
+            <field name="benefit_type_value" invisible="True"/>
+         </xpath>
+
+         <xpath expr="//notebook/page[@name='other']"  position="after">
+            <page string="Información de la Requisición">
+            <group>
+               <group string="General">
+                  <field name="requisition_id" string="Requisición"/>
+                  <field name="contract_number" string="No de Contrato Comercial" groups="hr.group_hr_user"/>
+                  <field name="client" string="Cliente" groups="hr.group_hr_user"/>
+                  <field name="initial_contract_time" string="Tiempo de Contrato Inicial"/>
+                  <field name="contract_time_range" string="Rango"/>              
+                  <field name="work_shift_id" string="Turno"/>  
+                  <field name="req_area"  string="Área" invisible="True"/>      
+                  <field name="disability_handling_id" string="Manejo de Incapacidades Generales"/>
+                  <field name="arl_risk_level" string="Nivel de Riesgo"/>               
+                  <field name="salary_type" string="Tipo de Salario"/>
+                  <field name="agreement" string="Pacto/Convensión"/>
+               </group>
+               <group string="Beneficios/Auxilio">
+                  <field name="food_allowance" string="Auxilio de Alimentación Fijo"/>
+                  <field name="food_allowance_value"
+                  attrs="{'invisible': [('food_allowance', '!=', True)], 'required': [('food_allowance', '=', True)]}"
+                  groups="hr.group_hr_user"/>
+                  <field name="food_allowance_start"
+                  attrs="{'invisible': [('food_allowance', '!=', True)], 'required': [('food_allowance', '=', True)]}"
+                  groups="hr.group_hr_user"/>
+
+                  <field name="food_allowance_proportional" string="Auxilio de Alimentación Proporcional"/>
+                  <field name="food_allowance_proportional_value"
+                  string="Valor Auxilio de Alimentación Proporcional"
+                  attrs="{'invisible': [('food_allowance_proportional', '!=', True)], 'required': [('food_allowance_proportional', '=', True)]}"
+                  groups="hr.group_hr_user"/>
+                  <field name="food_allowance_proportional_start"
+                  attrs="{'invisible': [('food_allowance_proportional', '!=', True)], 'required': [('food_allowance_proportional', '=', True)]}"
+                  groups="hr.group_hr_user"
+                  string="Auxilio de Alimentación proporcional a partir de"/>
+
+                  <field name="transport_allowance" string="Auxilio de Rodamiento Fijo"/>
+                  <field name="transport_allowance_value" string="Valor Auxilio de Rodamiento"
+                  attrs="{'invisible': [('transport_allowance', '!=', True)], 'required': [('transport_allowance', '=', True)]}"
+                  groups="hr.group_hr_user" required="True"/>
+                  <field name="transport_allowance_start"
+                  attrs="{'invisible': [('transport_allowance', '!=', True)], 'required': [('transport_allowance', '=', True)]}"
+                  groups="hr.group_hr_user"/>
+
+                  <field name="transport_allowance_proportional" string="Auxilio de Rodamiento Proporcional"
+                           readonly="False"/>
+                  <field name="transport_allowance_proportional_value"
+                           attrs="{'invisible': [('transport_allowance_proportional', '!=', True)], 'required': [('transport_allowance_proportional', '=', True)]}"
+                           groups="hr.group_hr_user"
+                           string="Valor Auxilio de Rodamiento Proporcional"/>
+                  <field name="transport_allowance_proportional_start"
+                           attrs="{'invisible': [('transport_allowance_proportional', '!=', True)], 'required': [('transport_allowance_proportional', '=', True)]}"
+                           groups="hr.group_hr_user"
+                           string="Auxilio de Rodamiento Proporcional a Partir de"/>
+
+                  <field name="cellphone_allowance"/>
+                  <field name="cellphone_allowance_value"
+                           attrs="{'invisible': [('cellphone_allowance', '!=', True)], 'required': [('cellphone_allowance', '=', True)]}"
+                           groups="hr.group_hr_user" required="True"/>
+                  <field name="cellphone_allowance_start"
+                           attrs="{'invisible': [('cellphone_allowance', '!=', True)], 'required': [('cellphone_allowance', '=', True)]}"
+                           groups="hr.group_hr_user"/>
+
+                  <field name="mobilization_allowance" string="Auxilio de Movilización"/>
+                  <field name="mobilization_allowance_value"
+                           attrs="{'invisible': [('mobilization_allowance', '!=', True)], 'required': [('mobilization_allowance', '=', True)]}"
+                           groups="hr.group_hr_user" string="Valor Auxilio de Movilización"/>
+                  <field name="mobilization_allowance_start"
+                           attrs="{'invisible': [('mobilization_allowance', '!=', True)], 'required': [('mobilization_allowance', '=', True)]}"
+                           groups="hr.group_hr_user" string="Auxilio de Movilización a Partir de"/>
+
+                  <field name="prepaid_medicine" string="Medicina Prepagada"/>
+                  <field name="prepaid_medicine_value"
+                           attrs="{'invisible': [('prepaid_medicine', '!=', True)], 'required': [('prepaid_medicine', '=', True)]}"
+                           groups="hr.group_hr_user" string="Valor Medicina Prepagada"/>
+                  <field name="prepaid_medicine_start"
+                           attrs="{'invisible': [('prepaid_medicine', '!=', True)], 'required': [('prepaid_medicine', '=', True)]}"
+                           groups="hr.group_hr_user" string="Medicina Prepagada a Partir de"/>
+
+                  <field name="bonos" string="Bonos"/>
+                  <field name="bono_value"
+                           attrs="{'invisible': [('bonos', '!=', True)], 'required': [('bonos', '=', True)]}"
+                           groups="hr.group_hr_user" string="Valor del Bono"/>
+                  <field name="bonos_start"
+                           attrs="{'invisible': [('bonos', '!=', True)], 'required': [('bonos', '=', True)]}"
+                           groups="hr.group_hr_user" string="Bonos a Partir de"/>
+  
+                  <field name="commission" string="Comisiones"/>
+                  <field name="commission_value"
+                           attrs="{'invisible': [('commission', '!=', True)], 'required': [('commission', '=', True)]}"
+                           groups="hr.group_hr_user" string="Valor de la Comisión"/>
+                  <field name="commission_start"
+                           attrs="{'invisible': [('commission', '!=', True)], 'required': [('commission', '=', True)]}"
+                           groups="hr.group_hr_user" string="Comisiones a Partir de"/>
+
+                  <field name="other_benefit" groups="hr.group_hr_user"/>
+                  <field name="other_benefit_value" attrs="{'invisible': [('other_benefit', '=', False)], 'required': [('other_benefit', '!=', False)]}" groups="hr.group_hr_user" string="Valor Otro Beneficio"/>
+                  <field name="other_benefit_start"
+                           attrs="{'invisible': [('other_benefit', '=', False)], 'required': [('other_benefit', '!=', False)]}"
+                           groups="hr.group_hr_user" string="Otro Beneficio a partir de"/>
+               </group> 
+            </group>  
+            </page>
+         </xpath>
+
+         <xpath expr="//notebook/page[@name='other']/group[1]"  position="after">
+            <group>
+               <group string="Empleado responsable">
+                   <field name="responsible_employee" string="Empleado Responsable" required="True"/>
+                   <field name="responsible_expedition_city" string="Lugar de Expedición documento"/>
+                   <field name="responsible_job_id" string="Cargo del Representante" required="True"/>       
+               </group>             
+               <group>                             
+                  <field name="pay_mode" string="Vía de pago"/>
+               </group>
+
+               <group string="Aprendiz Sena / Practicante">                
+                   <field name="trainee_type" string="Tipo de Aprendiz"/>
+                   <field name="teaching_stage_end_date" string="Fecha de Terminación Etapa Lectiva"/>
+                   <field name="productive_stage_start_date" string="Fecha de Inicio Etapa Productiva"/>
+                   <field name="productive_stage_end_date" string="Fecha de Terminación Etapa Productiva"/>                  
+               </group>       
+            </group>
+          </xpath>
+      </field>
+   </record> 
+</odoo>
+
+
+

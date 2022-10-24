@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <record id="email_template_edi_sale" model="mail.template">
+        <field name="name">Cambio a etapa Productiva Afiliación a ARL</field>
+        <field name="model_id" ref="hr_contract_extended.model_hr_contract_alert"/>
+        <field name="subject">Cambio a etapa Productiva Afiliación a ARL</field>
+        <field name="email_from">{{ object.email_formatted }}</field>
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px;">
+                <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                    Los siguientes empleados tienen contrato de aprendiz y están a menos de un mes de terminar la etapa
+                    lectiva” -
+                    <br/>
+                    Assigned data employee the next
+                    <ul>
+                        <t t-foreach="object.alert_ids" t-as="row">
+                            <li><t t-out="row.employee_id.name or ''"/>, <t t-out="row.identification_id or ''"/></li>
+                        </t>
+                    </ul>
+                </p>
+            </div>
+        </field>
+        <field name="auto_delete" eval="True"/>
+    </record>
+</odoo>

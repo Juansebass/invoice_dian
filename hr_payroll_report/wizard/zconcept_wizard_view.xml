@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Zconcept -->
+        <record id="action_zconcept_payroll" model="ir.actions.client">
+            <field name="name">Zconcept Payroll</field>
+            <field name="tag">account_report</field>
+            <field name="context" eval="{'model': 'zconcept.report'}"/>
+        </record>
+
+        <!-- form View -->
+        <record id="zconcept_report_wizard_view_form" model="ir.ui.view">
+            <field name="name">zconcept_report_wizard</field>
+            <field name="model">zconcept.report.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Auxiliary Account Report">
+
+                    <group string="General Filters">
+                        <label for="date_from" string="Period"/>
+                        <div>
+                            <field name="date_from" class="oe_inline" placeholder="Date From" required="1"/> - <field
+                                name="date_to" class="oe_inline" placeholder="Date To" required="1"/>
+                        </div>
+                    </group>
+
+                    <group>
+                        <group>
+                            <field name="company_ids" widget="many2many_tags" required="1"/>
+                            <field name="all_employees" widget="boolean_toggle"/>
+                            <field name="employee_ids" widget="many2many_tags" required="1" domain="[('company_id','in',company_ids)]"/>
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                        <button string="Render Report"
+                                name="%(action_zconcept_payroll)d"
+                                type="action" class="btn-primary"/>
+
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="zconcept_report_wizard" model="ir.actions.act_window">
+            <field name="name">ZConcept Report</field>
+            <field name="res_model">zconcept.report.wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

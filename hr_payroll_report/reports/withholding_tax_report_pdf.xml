@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="withholding_report_pdf">
+            <t t-call="web.html_container">
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <h2>Withholding Report</h2>
+
+                    </div>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

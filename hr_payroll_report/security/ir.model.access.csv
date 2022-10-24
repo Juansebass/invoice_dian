@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_payroll_pila,access_hr_payroll_pila,model_hr_payroll_pila,base.group_user,1,1,1,1
+access_hr_type2f1_line,access_hr_type2f1_line,model_hr_type2f1_line,base.group_user,1,1,1,1
+access_hr_type2f2_1_line,access_hr_type2f2_1_line,model_hr_type2f2_1_line,base.group_user,1,1,1,1
+access_hr_type2f2_2_line,access_hr_type2f2_2_line,model_hr_type2f2_2_line,base.group_user,1,1,1,1
+access_withholding_tax_wizard,access_withholding_tax_wizard,model_withholding_tax_wizard,base.group_user,1,1,1,1
+access_zconcept_report_wizard,access_zconcept_report_wizard,model_zconcept_report_wizard,base.group_user,1,1,1,1
+access_zprenomina_report_wizard,access_zprenomina_report_wizard,model_zprenomina_report_wizard,base.group_user,1,1,1,1

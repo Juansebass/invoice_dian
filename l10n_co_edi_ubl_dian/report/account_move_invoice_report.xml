@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="paperformat_account_move_invoice_report"
+        model="report.paperformat">
+        <field name="name">European A4 Landscape</field>
+        <field name="default" eval="False"/>
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">7</field>
+        <field name="margin_bottom">13</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">30</field>
+        <field name="dpi">90</field>
+    </record>
+    
+    <record id="action_account_move_invoice_report" model="ir.actions.report">
+        <field name="name">SYSMAN INVOICE</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">l10n_co_edi_ubl_dian.account_move_invoice_report</field>
+        <field name="paperformat_id" ref="paperformat_account_move_invoice_report" />
+        <field name="binding_model_id" ref="account.model_account_move" />
+        <field name="binding_type">report</field>
+    </record>
+    
+    <template id="assets_common" name="account_move_invoice_report_assets" inherit_id="web.minimal_layout">
+        <xpath expr="." position="inside">
+             <link rel='stylesheet' href="/l10n_co_edi_ubl_dian/static/src/css/account_move_invoice_report.css"/>
+        </xpath>
+    </template>
+
+    <template id="account_move_invoice_report">
+        <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+                <div class="page">
+                    <div style="company-logo">
+                        <img src='l10n_co_edi_ubl_dian/static/images/logo-header.png' style="width:15%"/>
+                    </div>
+                    <div class="company-info">
+                        <p>
+                            Responsable de IVA<br/>
+                            <span t-field="docs.company_id.street"/>, <span t-field="docs.company_id.city"/>-<span t-field="docs.company_id.state_id"/><br/>
+                            Tel: <span t-field="docs.company_id.phone"/><br/>
+                            Cel: <span t-field="docs.company_id.mobile"/><br/>
+                            E-mail: <span t-field="docs.company_id.email"/><br/>
+                            CIIU: <span t-field="docs.company_id.ciiu"/>
+                        </p>
+                    </div>
+                    <div class="resolution-info">
+                        <p>
+                            RESOLUCIÓN DIAN Facturación
+                            electrónica No <span t-field="docs.journal_id.l10n_co_edi_dian_authorization_number"/>
+                            Fechas <span t-field="docs.journal_id.l10n_co_edi_dian_authorization_date"/>
+                            a <span t-field="docs.journal_id.l10n_co_edi_dian_authorization_end_date"/>
+                            Habilita No <span t-field="docs.journal_id.l10n_co_edi_min_range_number"/> 
+                            al No <span t-field="docs.journal_id.l10n_co_edi_max_range_number"/>
+                        </p>
+                    </div>
+                    <div class="invoice-number">
+                        <h6>FACTURA ELECTRÓNICA DE VENTA</h6>
+                        <h6>N° <span t-field="docs.name"/></h6>
+                    </div>
+                    <div class="nit-info">
+                        <p>
+                            <span t-field="docs.company_id.partner_id.name"/><br/>
+                            <span t-field="docs.company_id.partner_id.vat"/>
+                        </p>
+                    </div>
+                    <div class="cufe">
+                        <p>
+                            <b>CUFE:</b><br/>
+                            <span class="cufe_cude" t-field="docs.dian_document_lines[-1].cufe_cude"/>
+                        </p> 
+                    </div>
+                    <table class="partner-info">
+                        <tr>
+                            <th>Cliente:</th>
+                            <td colspan="3"><span t-field="docs.partner_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <th>NIT o CC:</th>
+                            <td><span t-field="docs.partner_id.vat"/></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Ciudad:</th>
+                            <td><span t-field="docs.partner_id.city_id"/></td>
+                            <th>Departamento:</th>
+                            <td><span t-field="docs.partner_id.state_id"/></td>
+                        </tr>
+                        <tr>
+                            <th>Dirección:</th>
+                            <td><span t-field="docs.partner_id.street"/></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Telefono:</th>
+                            <td><span t-field="docs.partner_id.phone"/></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Medio de Pago:</th>
+                            <td><span t-field="docs.l10n_co_edi_payment_option_id"/></td>
+                            <th>Tipo Negociación:</th>
+                            <td><span t-field="docs.l10n_co_edi_operation_type"/></td>
+                        </tr>
+                    </table>
+                    <table class="dates">
+                        <tr>
+                            <th colspan="3">FECHA FACTURA</th>
+                            <th colspan="3">FECHA VENCIMIENTO</th>
+                        </tr>
+                        <tr>
+                            <td><b>DIA</b></td>
+                            <td><b>MES</b></td>
+                            <td class="border-color-black-right"><b>AÑO</b></td>
+                            <td><b>DIA</b></td>
+                            <td><b>MES</b></td>
+                            <td><b>AÑO</b></td>
+                        </tr>
+                        <tr>
+                            <td><span t-esc="docs.invoice_date.day"/></td>
+                            <td><span t-esc="docs.invoice_date.month"/></td>
+                            <td class="border-color-black-right"><span t-esc="docs.invoice_date.year"/></td>
+                            <td><span t-esc="docs.invoice_date_due.day"/></td>
+                            <td><span t-esc="docs.invoice_date_due.month"/></td>
+                            <td><span t-esc="docs.invoice_date.year"/></td>
+                        </tr>  
+                    </table>
+                    <br/>
+                    <br/>
+                    <div class="products">
+                        
+                        <table class="product-line-table">
+                            <thead>
+                                <tr>
+                                    <th class="border-color-right">#</th>
+                                    <th class="border-color-right">Código</th>
+                                    <th class="border-color-right">Descripción del Elemento</th>
+                                    <th class="border-color-right">Und medida</th>
+                                    <th class="border-color-right">Cant.</th>
+                                    <th class="border-color-right">% IVA</th>
+                                    <th class="border-color-right">Descuento</th>
+                                    <th class="border-color-right">Valor unitario</th>
+                                    <th>Valor Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-if="not docs.report_products_inline_enabled">
+                                    <t t-set="count" t-value="1" > </t>
+                                    <t t-foreach="docs.invoice_line_ids" t-as="o">
+                                        <tr>
+                                            <td class="center"><span t-esc="count"/></td>
+                                            <td class="center"><span t-field="o.product_id.default_code"/></td>
+                                            <td><span t-esc="o.name"/></td>
+                                            <td class="center"><span t-field="o.product_uom_id"/></td>
+                                            <td class="center"><span t-field="o.quantity"/></td>
+                                            <td class="center"><span t-field="o.tax_ids"/></td>
+                                            <td class="right"><span t-field="o.discount"/></td>
+                                            <td class="right"><span t-field="o.price_unit"/></td>
+                                            <td class="right"><span t-field="o.price_subtotal"/></td>
+                                        </tr>
+                                        <t t-set="count" t-value="count+1"/>
+                                    </t>
+                                </t>
+                                <t t-if="docs.report_products_inline_enabled">
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td class="center"><span t-field="docs.invoice_line_ids[0].product_id.default_code"/></td>
+                                        <td>
+                                            <span t-esc="docs.invoice_line_ids[0].name"/>
+                                        </td>
+                                        <td class="center"><span t-field="docs.invoice_line_ids[0].product_uom_id"/></td>
+                                        <td class="center">1.00</td>
+                                        <td class="center"><span t-field="docs.invoice_line_ids[0].tax_ids"/></td>
+                                        <td class="right"><span t-esc="sum([o.discount for o in docs.invoice_line_ids])"/></td>
+                                        <td class="right"><span t-esc="sum([o.price_unit for o in docs.invoice_line_ids])"/></td>
+                                        <td class="right"><span t-esc="sum([o.price_subtotal for o in docs.invoice_line_ids])"/></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <table class="totals">
+                            <t t-set="tax_totals" t-value="json.loads(docs.tax_totals_json)"/>
+                            <t t-set="groups_by_subtotal" t-value="tax_totals['groups_by_subtotal']['Importe libre de impuestos']"/>
+                            <tr>
+                                <td colspan="2" class="white-space border-color-black-right"></td>
+                                <th class="border-color-right">Base Gravable</th>
+                                <th class="border-color-right">I.V.A</th>
+                                <th class="border-color-black-right">Rete. Fuente</th>
+                                <td>DESCUENTO</td>
+                                <td><span t-esc="sum([o.discount for o in docs.invoice_line_ids])"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="border-color-black-right"></td>
+                                <td><span t-field="docs.amount_untaxed"/></td>
+                                <td class="border-color-black-right">
+                                    <span t-esc="sum([line['tax_group_amount'] if line['tax_group_name'] == 'IVA 19%' else 0 for line in groups_by_subtotal])"/>
+                                </td>
+                                <td class="border-color-black-right">
+                                    <span t-esc="sum([line['tax_group_amount'] if 'R REN' in line['tax_group_name']  else 0 for line in groups_by_subtotal])"/>
+                                </td>
+                                <td>SUBTOTAL</td>
+                                <td><span t-field="docs.amount_untaxed"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="border-color-black-right"></td>
+                                <td></td>
+                                <td class="border-color-black-right"></td>
+                                <th class="border-color-black-right">Rete. I.V.A</th>
+                                <td>I.V.A</td>
+                                <td><span t-esc="sum([line['tax_group_amount'] if line['tax_group_name'] == 'IVA 19%' else 0 for line in groups_by_subtotal])"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="border-color-black-right"></td>
+                                <td></td>
+                                <td class="border-color-black-right"></td>
+                                <td class="border-color-black-right">
+                                    <span t-esc="sum([line['tax_group_amount'] if 'R IVA' in line['tax_group_name']  else 0 for line in groups_by_subtotal])"/>
+                                </td>
+                                <th>TOTAL</th>
+                                <td class="border-color-black-top"><span t-field="docs.amount_total"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="7" class="border-color-black-top">
+                                    <b>Son: <span t-esc="docs.currency_id.amount_to_text(docs.amount_total).upper()"/></b>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="payment-info">
+                            <tr>
+                                <td class="payment-text">
+                                    <span t-field="docs.journal_id.terms"/>
+                                </td>
+                                <td class="payment-text">
+                                    <span t-field="docs.journal_id.payment_info"/>
+                                </td>
+                                <td class="payment-qr">
+                                    <p align="left"><b>Elaboró:</b></p>
+                                    <p>
+                                        <span t-field="docs.invoice_user_id"/><br/>
+                                        <span t-esc="datetime.datetime.now()"/><br/>
+                                    </p>
+                                    <div>
+                                        <img class="qr-code" t-attf-src="data:image/png;base64,{{docs.dian_document_lines[-1].qr_image}}"/>
+                                    </div>
+                                    
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="footer">
+                    <p>
+                        Impreso por: <span t-field="docs.company_id.partner_id.name"/> 
+                        NIT:  <span t-field="docs.company_id.partner_id.vat"/>. 
+                        Cel. <span t-field="docs.company_id.partner_id.phone"/>. 
+                        <span t-field="docs.company_id.partner_id.street"/> 
+                        <span t-field="docs.company_id.partner_id.city"/> - <span t-field="docs.company_id.partner_id.state_id"/>.
+                         <span t-field="docs.company_id.partner_id.city"/> - <span t-field="docs.company_id.partner_id.website"/>
+                    </p>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

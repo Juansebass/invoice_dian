@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_contract_sena_tree_view" model="ir.ui.view">
+            <field name="name">hr_contract_sena.hr_contract_sena.tree</field>
+            <field name="model">hr.contract.sena</field>
+            <field name="arch" type="xml">
+                <tree string="Hr Contract Sena" editable="top">
+                    <field name="company_id"/>
+                    <field name="employee_number"/>
+                    <field name="number_apprentices"/>
+                    <field name="days_monetize"/>
+                    <field name="number_apprentices_plant"/>
+                    <field name="number_apprentices_to_monetized"/>
+                    <field name="support_days"/>
+                    <field name="days_to_monetize"/>
+                    <field name="monetize_value" widget="monetary"/>
+                    <field name="monetize_invoice_value" widget="monetary"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Graph to DashBoard -->
+        <record model="ir.ui.view" id="hr_contract_sena_graph">
+            <field name="name">hr.contract.sena.graph</field>
+            <field name="model">hr.contract.sena</field>
+            <field name="arch" type="xml">
+                <graph string="Contract Sena">
+                    <field name="employee_number"/>
+                    <field name="days_monetize"/>
+                    <field name="number_apprentices"/>
+                    <field name="number_apprentices_plant"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="hr_contract_sena_act_window" model="ir.actions.act_window">
+            <field name="name">Sena Monetization</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.contract.sena</field>
+            <field name="view_mode">tree</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    There is no examples click here to add new Monetization Sena.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Sena Monetization" id="hr_contract_sena_menu" parent="hr.menu_hr_employee_payroll"
+                  action="hr_contract_sena_act_window" sequence="6"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- <record id="paperformat_low_monthly_report" model="report.paperformat">
+            <field name="name">PF Thomas Report Talento</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">15</field>
+            <field name="margin_left">30</field>
+            <field name="margin_right">30</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">3</field>
+            <field name="dpi">90</field>
+        </record>   
+        <record id="paperformat_frenchcheck" model="report.paperformat">
+            <field name="name">French Bank Check</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">80</field>
+            <field name="page_width">175</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">3</field>
+            <field name="margin_bottom">3</field>
+            <field name="margin_left">3</field>
+            <field name="margin_right">3</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">80</field>
+        </record> -->
+
+        <record id="action_report_integral_salary_contract" model="ir.actions.report">
+            <field name="name">SYC-FOR-035 MINUTA CONTRATO SALARIO INTEGRAL</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_thomas.report_integral_salary_contract_template</field>
+            <field name="report_file">hr_thomas.report.report_integral_salary_contract</field>
+            <!-- <field name="print_report_name"></field> -->
+            <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="binding_type">report</field>
+        </record>
+        <record id="action_report_permanent_contract" model="ir.actions.report">
+            <field name="name">SYC-FOR-033 MINUTA CONTRATO INDEFINIDO</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_thomas.report_report_permanent_contract_template</field>
+            <field name="report_file">hr_thomas.report.report_permanent_contract</field>
+            <!-- <field name="print_report_name"></field> -->
+            <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="binding_type">report</field>
+        </record>
+        <record id="action_report_fixed_term_contract" model="ir.actions.report">
+            <field name="name">SYC-FOR-034-MINUTA DE CONTRATO FIJO</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_thomas.report_fixed_term_contract_template</field>
+            <field name="report_file">hr_thomas.report.report_fixed_term_contract</field>
+            <!-- <field name="print_report_name"></field> -->
+            <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="binding_type">report</field>
+        </record>
+        <record id="action_report_half_time_contract" model="ir.actions.report">
+            <field name="name">SYC-FOR-032 MINUTA CONTRATO MEDIO TIEMPO</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_thomas.report_half_time_contract_template</field>
+            <field name="report_file">hr_thomas.report.report_half_time_contract</field>
+            <!-- <field name="print_report_name"></field> -->
+            <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="binding_type">report</field>
+        </record>
+        <record id="action_report_work_labor_contract" model="ir.actions.report">
+            <field name="name">SYC-FOR-037 MINUTA CONTRATO OBRA O LABOR</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_thomas.report_work_labor_contract_template</field>
+            <field name="report_file">hr_thomas.report.report_work_labor_contract</field>
+            <!-- <field name="print_report_name"></field> -->
+            <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="binding_type">report</field>
+        </record>
+        <record id="action_report_trainee_contract" model="ir.actions.report">
+            <field name="name">SYC-FOR-036 MINUTA CONTRATO PRACTICANTE</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_thomas.report_trainee_contract_template</field>
+            <field name="report_file">hr_thomas.report.report_trainee_contract</field>
+            <!-- <field name="print_report_name"></field> -->
+            <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="binding_type">report</field>
+        </record>
+        <record id="action_report_fixed_term_contract" model="ir.actions.report">
+            <field name="name">SYC-FOR-031 MINUTA CONTRATO DE APRENDIZAJE 2020</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_thomas.report_apprenticeship_contract_template</field>
+            <field name="report_file">hr_thomas.report.report_apprenticeship_contract</field>
+            <!-- <field name="print_report_name"></field> -->
+            <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <record id="action_report_presentation_memo" model="ir.actions.report">
+            <field name="name">SYC-FOR-018 MEMORANDO DE PRESENTACION V2</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_thomas.report_presentation_memo_template</field>
+            <field name="report_file">hr_thomas.report.report_presentation_memo</field>
+            <!-- <field name="print_report_name"></field> -->
+            <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <record id="action_report_personal_data_auth" model="ir.actions.report">
+            <field name="name">SYC-FOR-051-SOLICITUD DE AUTORIZACIÓN PARA LA UTILIZACIÓN DE DATOS PERSONALES</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_thomas.report_personal_data_auth_template</field>
+            <field name="report_file">hr_thomas.report.report_personal_data_auth</field>
+            <!-- <field name="print_report_name"></field> -->
+            <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="binding_type">report</field>
+        </record>
+        <record id="action_report_bank_account_info" model="ir.actions.report">
+            <field name="name">SYC-FOR-046 INFORMACIÓN CUENTA BANCARIA</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_thomas.report_bank_account_info_template</field>
+            <field name="report_file">hr_thomas.report.report_bank_account_info</field>
+            <!-- <field name="print_report_name"></field> -->
+            <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="binding_type">report</field>
+        </record>
+        <record id="action_report_image_rights_auth" model="ir.actions.report">
+            <field name="name">SYC-FOR-077 AUTORIZACIÓN DERECHOS DE IMAGEN</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_thomas.report_image_rights_auth_template</field>
+            <field name="report_file">hr_thomas.report.report_image_rights_auth</field>
+            <!-- <field name="print_report_name"></field> -->
+            <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="binding_type">report</field>
+        </record>
+        <record id="action_report_mail_usage" model="ir.actions.report">
+            <field name="name">SYC-FOR-050 USO CORREO ELECTRONICO</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_thomas.report_mail_usage_template</field>
+            <field name="report_file">hr_thomas.report.report_mail_usage</field>
+            <!-- <field name="print_report_name"></field> -->
+            <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="binding_type">report</field>
+        </record>
+        <record id="action_report_solidarity_fund" model="ir.actions.report">
+            <field name="name">SYC-FOR-043 AUTORIZACION FONDO SOLIDARIO V1</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_thomas.report_solidarity_fund_template</field>
+            <field name="report_file">hr_thomas.report.report_solidarity_fund</field>
+            <!-- <field name="print_report_name"></field> -->
+            <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="binding_type">report</field>
+        </record>
+        <record id="action_report_dependent_cert" model="ir.actions.report">
+            <field name="name">SYC-FOR-047 CERTIFICACION DEPENDIENTES</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_thomas.report_dependent_cert_template</field>
+            <field name="report_file">hr_thomas.report.report_dependent_cert</field>
+            <!-- <field name="print_report_name"></field> -->
+            <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="binding_type">report</field>
+        </record>
+        <record id="action_report_military_situation" model="ir.actions.report">
+            <field name="name">SYC-FOR-055 OTROSÍ SITUACION MILITAR</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_thomas.report_military_situation_template</field>
+            <field name="report_file">hr_thomas.report.report_military_situation</field>
+            <!-- <field name="print_report_name"></field> -->
+            <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>
+    

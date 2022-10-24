@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="inherit_hr_employee_view_form" model="ir.ui.view">
+            <field name="name">inherit.hr.employee.view.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+
+                <field name="name" position="replace">
+                    <label for="name"/>
+                    <h1>
+                        <field name="label_name" class="oe_read_only"/>
+                    </h1>
+                    <h1>
+                        <field name="name" class="oe_edit_only" placeholder="Name" readonly="1" force_save="1"/>
+                    </h1>
+                </field>
+
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="is_employer_substitution"/>
+                    <field name="contributor_type_id"/>
+                    <field name="contributor_subtype_id"/>
+                </xpath>
+
+                <xpath expr="//field[@name='identification_id']" position="after">
+                    <field name="firm"/>
+                </xpath>
+                <xpath expr="//group[@name='active_group']" position="after">
+                    <group string="Multicompany" name="multicompany">
+                        <field name="is_multi_company"/>
+                        <field name="multi_company_ids" widget="many2many_tags"
+                               attrs="{'invisible': [('is_multi_company', '=', False)]}"/>
+                    </group>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

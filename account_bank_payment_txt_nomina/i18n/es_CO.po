@@ -1,0 +1,230 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_bank_payment_txt_nomina
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-17 22:32+0000\n"
+"PO-Revision-Date: 2021-02-17 22:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_bank_payment_txt_nomina
+#: model_terms:ir.ui.view,arch_db:account_bank_payment_txt_nomina.payment_txt_generator_hr_wizard_view_form
+msgid ""
+"<span>Si no selecciona un archivo de configuración, el sistema buscará automáticamente una configuración para el banco seleccionado.</span>"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model_terms:ir.actions.act_window,help:account_bank_payment_txt_nomina.res_bank_txt_config_hr_action
+msgid "Agregar configuración de txt de banco para nómina"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_payment_txt_generator_hr_wizard__txt_file
+msgid "Archivo Txt"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_payment_txt_generator_hr_wizard__journal_id
+msgid "Banco"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model_terms:ir.ui.view,arch_db:account_bank_payment_txt_nomina.res_bank_txt_config_view_form
+msgid "Body"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model_terms:ir.ui.view,arch_db:account_bank_payment_txt_nomina.payment_txt_generator_hr_wizard_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_payment_txt_generator_hr_wizard__company_id
+msgid "Compañia"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.ui.menu,name:account_bank_payment_txt_nomina.res_bank_txt_config_hr_menu_act
+msgid "Configuración de txt de banco"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.actions.act_window,name:account_bank_payment_txt_nomina.res_bank_txt_config_hr_action
+msgid "Configuración txt nómina"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model,name:account_bank_payment_txt_nomina.model_res_bank_txt_config
+msgid ""
+"Configuration of txt generator of each banks for payments in the banking "
+"portal"
+msgstr ""
+"Configuración del generador de txt de cada banco para pagos en el portal "
+"bancario"
+
+#. module: account_bank_payment_txt_nomina
+#: model_terms:ir.ui.view,arch_db:account_bank_payment_txt_nomina.res_bank_txt_config_view_form
+msgid "Conjunto de pagos (nóminas) (hr.payslip)"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_payment_txt_generator_hr_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_payment_txt_generator_hr_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_payment_txt_generator_hr_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_payment_txt_generator_hr_wizard__date
+msgid "Fecha Pago"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_payment_txt_generator_hr_wizard__transmission_date
+msgid "Fecha de transmisión"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model_terms:ir.ui.view,arch_db:account_bank_payment_txt_nomina.hr_payslip_run_txt
+#: model_terms:ir.ui.view,arch_db:account_bank_payment_txt_nomina.payment_txt_generator_hr_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:account_bank_payment_txt_nomina.view_hr_payslip_form
+msgid "Generate Txt"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.actions.server,name:account_bank_payment_txt_nomina.action_generate_txt_hr_payslip
+msgid "Generate txt bank"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model_terms:ir.ui.view,arch_db:account_bank_payment_txt_nomina.res_bank_txt_config_view_form
+msgid "Header, Body, Footer"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_payment_txt_generator_hr_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_payment_txt_generator_hr_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_payment_txt_generator_hr_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_payment_txt_generator_hr_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_hr_payslip_run__txt_filename
+msgid "Name txt file"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_payment_txt_generator_hr_wizard__name
+msgid "Nombre"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_payment_txt_generator_hr_wizard__txt_filename
+msgid "Nombre de archivo txt"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_res_bank_txt_config__is_nomina
+msgid "Nómina?"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model_terms:ir.ui.view,arch_db:account_bank_payment_txt_nomina.res_bank_txt_config_view_form
+msgid "Objeto de la ventana de dialogo (Wizard)"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model_terms:ir.ui.view,arch_db:account_bank_payment_txt_nomina.res_bank_txt_config_view_form
+msgid "Objeto linea de pago (nómina) (hr.payslip)"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model,name:account_bank_payment_txt_nomina.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Nómina"
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model,name:account_bank_payment_txt_nomina.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "Procesamientos de nóminas"
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_payment_txt_generator_hr_wizard__txt_setting_id
+msgid "Plantilla Banco"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model_terms:ir.actions.act_window,help:account_bank_payment_txt_nomina.res_bank_txt_config_hr_action
+msgid ""
+"Registro de configuración para generar archivo TXT para subir el pago al "
+"portal bancario."
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_payment_txt_generator_hr_wizard__payment_type_id
+msgid "Tipo de pago"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.actions.act_window,name:account_bank_payment_txt_nomina.payment_txt_payslip_run_wizard_action
+msgid "Txt Generator"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model.fields,field_description:account_bank_payment_txt_nomina.field_hr_payslip_run__txt_file
+msgid "Txt file"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model:ir.model,name:account_bank_payment_txt_nomina.model_payment_txt_generator_hr_wizard
+msgid "Txt generator hr"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model_terms:ir.ui.view,arch_db:account_bank_payment_txt_nomina.res_bank_txt_config_view_form
+msgid "batch_payment"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model_terms:ir.ui.view,arch_db:account_bank_payment_txt_nomina.res_bank_txt_config_view_form
+msgid "payment"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model_terms:ir.ui.view,arch_db:account_bank_payment_txt_nomina.res_bank_txt_config_view_form
+msgid "set_payments"
+msgstr ""
+
+#. module: account_bank_payment_txt_nomina
+#: model_terms:ir.ui.view,arch_db:account_bank_payment_txt_nomina.payment_txt_generator_hr_wizard_view_form
+msgid "txt generator"
+msgstr ""

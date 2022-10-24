@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="hr.employee.shift.type" id="fixed_shift">
+            <field name="name">FIJO</field>
+        </record>
+        <record model="hr.employee.shift.type" id="unfixed_shift">
+            <field name="name">ROTATIVO</field>
+        </record>
+    </data>   
+</odoo>

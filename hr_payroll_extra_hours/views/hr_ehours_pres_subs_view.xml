@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_ehours_pres_subs_view_tree" model="ir.ui.view">
+        <field name="name">hr.ehours.pres.subs.view.tree</field>
+        <field name="model">hr.ehours.pres.subs</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="create_uid"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_ehours_pres_subs_view_form" model="ir.ui.view">
+        <field name="name">hr.ehours.pres.subs.view.form</field>
+        <field name="model">hr.ehours.pres.subs</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar"/>
+                    <button name="upload_data" class="oe_highlight"
+                            string="Upload Data" type="object"
+                            attrs="{'invisible': ['|',('file', '=', False),('state', '!=', 'draft')]}"/>
+                    <button name="action_approved" class="oe_highlight"
+                            string="Approved" type="object"
+                            attrs="{'invisible': ['|',('hr_ehours_pres_subs_line_ids','=',[]),('state', '!=', 'draft')]}"/>
+                    <button name="action_cancelled" class="oe_highlight"
+                            string="Cancelled" type="object"
+                            states="approved"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group colspan="4" col="4">
+                            <field name="create_uid"/>
+                            <field name="file"
+                                   attrs="{'readonly': [('state', 'in', ('approved', 'cancelled'))]}"/>
+                            <field name="created_on"/>
+                            <field name="message"/>
+                            <field name="company_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="hr_ehours_pres_subs_line_ids" nolabel="1"
+                               attrs="{'readonly': [('state', 'in', ('approved', 'cancelled'))]}">
+                            <tree>
+                                <field name="identification"/>
+                                <field name="personal_number"/>
+                                <field name="cos_center"/>
+                                <field name="sup_start_date"/>
+                                <field name="pre_start_date"/>
+                                <field name="status"/>
+                            </tree>
+                            <form>
+                                <group colspan="4" col="4">
+                                    <field name="identification"/>
+                                    <field name="personal_number"/>
+                                    <field name="name"/>
+                                    <field name="cos_center"/>
+                                    <field name="position"/>
+                                    <field name="sup_start_date"/>
+                                    <field name="sup_end_date"/>
+                                    <field name="sup_start_time"/>
+                                    <field name="sup_end_time"/>
+                                    <field name="pre_start_date"/>
+                                    <field name="pre_end_date"/>
+                                    <field name="pre_start_time"/>
+                                    <field name="pre_end_time"/>
+                                    <field name="status"/>
+                                    <field name="company_id" invisible="1"/>
+                                </group>
+                            </form>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_ehours_pres_subs_action" model="ir.actions.act_window">
+        <field name="name">Presence/Substitution File</field>
+        <field name="res_model">hr.ehours.pres.subs</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="hr_ehours_pres_subs_menu"
+            action="hr_ehours_pres_subs_action"
+            parent="extra_hours_menu"
+            name="Presence/Substitution File"/>
+
+</odoo>

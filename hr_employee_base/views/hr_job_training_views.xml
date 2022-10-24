@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+      <record id="view_hr_job_training_form" model="ir.ui.view">
+      <field name="name">hr.job.training.form</field>
+      <field name="model">hr.job.training</field>
+      <field name="arch" type="xml">
+        <form string="formacion">
+           <group>
+             <group>
+               <field name="name"/> 
+               <field name="academic_cert"/>
+               <field name="technical_test"/> 
+               <field name="job_cert"/>       
+             </group>
+           </group>
+        </form>
+      </field>
+    </record>  
+
+    <record id="view_hr_job_training_tree" model="ir.ui.view">
+      <field name="name">hr.job.training.tree</field>
+      <field name="model">hr.job.training</field>
+        <field name="arch" type="xml">
+            <tree string="sector Formación">
+                <field name="name"/>
+                <field name="academic_cert"/>
+                <field name="technical_test"/> 
+                <field name="job_cert"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hr_job_training" model="ir.actions.act_window">
+        <field name="name">Formación Cargos</field>
+        <field name="res_model">hr.job.training</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Formación Cargos
+          </p>
+        </field>
+    </record>
+
+    <menuitem name='Formación Cargos'
+            action='action_hr_job_training'
+            id='menu_hr_job_training'
+            parent='hr.menu_human_resources_configuration_employee'
+            sequence='98' /> 
+
+    </data>
+</odoo>

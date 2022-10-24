@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_simple_form_names" model="ir.ui.view">
+        <field name="name">Add names and lastname</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_simple_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@id='individual']" position="attributes">
+                    <attribute name="attrs">
+                        {
+                            'required': [('type', '=', 'contact'), ('is_company', '=', False)], 
+                            'invisible': [('is_company','=', True)],
+                            'readonly': [('is_company', '=', False)]
+                        }
+                    </attribute>
+                </xpath>
+                <xpath expr="//h1//field[@name='name']/.." position="before">
+                    <group attrs="{'invisible': [('is_company', '=', True)]}">
+                        <field name="firstname" attrs="{'required': [('is_company', '=', False)]}"/>
+                        <field name="othernames"/>
+                        <field name="lastname" attrs="{'required': [('is_company', '=', False)]}"/>
+                        <field name="lastname2"/>
+                    </group>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="view_partner_form_names" model="ir.ui.view">
+        <field name="name">Add names and surnames</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@id='individual']" position="attributes">
+                    <attribute name="attrs">
+                        {
+                            'required': [('type', '=', 'contact'), ('is_company', '=', False)], 
+                            'invisible': [('is_company','=', True)],
+                            'readonly': [('is_company', '=', False)]
+                        }
+                    </attribute>
+                </xpath>
+
+                <xpath expr="//h1//field[@name='name']/.." position="after">
+                    <div class="oe_edit_only">
+                        <group attrs="{'invisible': [('is_company', '=', True)]}">
+                            <field name="firstname" attrs="{'required': [('is_company', '=', False)]}"/>
+                            <field name="othernames"/>
+                            <field name="lastname" attrs="{'required': [('is_company', '=', False)]}"/>
+                            <field name="lastname2"/>
+                        </group>
+                    </div>
+                </xpath>
+
+                <!-- Modify inner contact form of child_ids -->
+                <xpath expr="//field[@name='child_ids']/form//field[@name='name']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('is_company', '=', False)], 'required': [('is_company', '=', True)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='child_ids']/form//field[@name='name']" position="after">
+                    <div class="oe_edit_only" colspan="2">
+                        <field name="is_company" invisible="True"/>
+                        <group attrs="{'invisible': [('is_company', '=', True)]}">
+                            <field name="firstname" attrs="{'required': [('is_company', '=', False)]}"/>
+                            <field name="othernames"/>
+                            <field name="lastname" attrs="{'required': [('is_company', '=', False)]}"/>
+                            <field name="lastname2"/>
+                        </group>
+                    </div>
+                </xpath>
+
+                <xpath expr="//span[@name='address_name']" position="before">
+                    <field name="detailed_address"/>
+                    <label for="co_street_1" string="Dirección"  attrs="{'invisible': [('detailed_address', '=', False)]}"/>
+                    <div class="o_row oe_edit_only"  attrs="{'invisible': [('detailed_address', '=', False)]}">
+                        <field name="co_street_1" placeholder="CALLE"/>
+                        <field name="co_street_2" placeholder="38A BIS"/>
+                        <field name="co_street_3" placeholder="20B"/>
+                        <field name="co_street_4" placeholder="45"/>
+                        <field name="co_street_5" placeholder="SUR"/>
+                    </div>
+                </xpath>
+
+                <xpath expr="//field[@name='street']" position="attributes">
+                    <attribute name="attrs">
+                        {
+                            'readonly': ['|', ('detailed_address', '=', True),'&amp;', ('type', '=', 'contact'), ('parent_id', '!=', False)]
+                        }
+                    </attribute>
+                </xpath>
+            </data>
+        </field>
+    </record>
+</odoo>

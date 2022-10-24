@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="hr_config_type2f1" model="hr.reports.config">
+            <field name="type">txt</field>
+            <field name="model_id">10</field>
+        </record>
+
+
+        <!-- TYPE2F1_LINE -->
+        <record id="hr_type2f1_line_01" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">1</field>
+            <field name="size">200</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">company_name</field>
+        </record>
+
+        <record id="hr_type2f1_line_02" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">2</field>
+            <field name="size">2</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">document_type</field>
+        </record>
+
+        <record id="hr_type2f1_line_03" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">3</field>
+            <field name="size">16</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">identification_number</field>
+        </record>
+
+        <record id="hr_type2f1_line_04" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">4</field>
+            <field name="size">1</field>
+            <field name="data_type">numeric</field>
+            <field name="name">verification_code</field>
+        </record>
+
+        <record id="hr_type2f1_line_05" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">5</field>
+            <field name="size">10</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">sucursal_code</field>
+        </record>
+
+        <record id="hr_type2f1_line_06" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">6</field>
+            <field name="size">40</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">sucursal_name</field>
+        </record>
+
+        <record id="hr_type2f1_line_07" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">7</field>
+            <field name="size">1</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">contributor_class</field>
+        </record>
+
+        <record id="hr_type2f1_line_08" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">8</field>
+            <field name="size">1</field>
+            <field name="data_type">numeric</field>
+            <field name="name">legal_nature</field>
+        </record>
+
+        <record id="hr_type2f1_line_09" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">9</field>
+            <field name="size">1</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">person_type</field>
+        </record>
+
+        <record id="hr_type2f1_line_10" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">10</field>
+            <field name="size">1</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">presentation_form</field>
+        </record>
+
+        <record id="hr_type2f1_line_11" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">11</field>
+            <field name="size">40</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">street</field>
+        </record>
+
+        <record id="hr_type2f1_line_12" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">12</field>
+            <field name="size">3</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">divpola_code</field>
+        </record>
+
+        <record id="hr_type2f1_line_13" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">13</field>
+            <field name="size">2</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">state</field>
+        </record>
+
+        <record id="hr_type2f1_line_14" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">14</field>
+            <field name="size">4</field>
+            <field name="data_type">numeric</field>
+            <field name="name">ica_activity</field>
+        </record>
+
+        <record id="hr_type2f1_line_15" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">15</field>
+            <field name="size">10</field>
+            <field name="data_type">numeric</field>
+            <field name="name">phone</field>
+        </record>
+
+        <record id="hr_type2f1_line_16" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">16</field>
+            <field name="size">10</field>
+            <field name="data_type">numeric</field>
+            <field name="name">fax</field>
+        </record>
+
+        <record id="hr_type2f1_line_17" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">17</field>
+            <field name="size">60</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">email</field>
+        </record>
+
+        <record id="hr_type2f1_line_18" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">18</field>
+            <field name="size">16</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">rl_identification_id</field>
+        </record>
+
+        <record id="hr_type2f1_line_19" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">19</field>
+            <field name="size">1</field>
+            <field name="data_type">numeric</field>
+            <field name="name">rl_verification_code</field>
+        </record>
+
+        <record id="hr_type2f1_line_20" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">20</field>
+            <field name="size">2</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">rl_document_type</field>
+        </record>
+
+        <record id="hr_type2f1_line_21" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">21</field>
+            <field name="size">20</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">rl_first_surname</field>
+        </record>
+
+        <record id="hr_type2f1_line_22" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">22</field>
+            <field name="size">30</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">rl_second_surname</field>
+        </record>
+
+        <record id="hr_type2f1_line_23" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">23</field>
+            <field name="size">20</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">rl_first_name</field>
+        </record>
+
+        <record id="hr_type2f1_line_24" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">24</field>
+            <field name="size">30</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">rl_second_name</field>
+        </record>
+
+        <record id="hr_type2f1_line_25" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">25</field>
+            <field name="size">10</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">concordate_date</field>
+        </record>
+
+        <record id="hr_type2f1_line_26" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">26</field>
+            <field name="size">1</field>
+            <field name="data_type">numeric</field>
+            <field name="name">action_type</field>
+        </record>
+
+        <record id="hr_type2f1_line_27" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">27</field>
+            <field name="size">10</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">concordate_end_date</field>
+        </record>
+
+        <record id="hr_type2f1_line_28" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">28</field>
+            <field name="size">2</field>
+            <field name="data_type">numeric</field>
+            <field name="name">operator</field>
+        </record>
+
+        <record id="hr_type2f1_line_29" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">29</field>
+            <field name="size">7</field>
+            <field name="data_type">numeric</field>
+            <field name="name">payment_period</field>
+        </record>
+
+        <record id="hr_type2f1_line_30" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">30</field>
+            <field name="size">2</field>
+            <field name="data_type">numeric</field>
+            <field name="name">aportant_type</field>
+        </record>
+
+        <record id="hr_type2f1_line_31" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">31</field>
+            <field name="size">10</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">commercial_register_date</field>
+        </record>
+
+        <record id="hr_type2f1_line_32" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">32</field>
+            <field name="size">2</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">state</field>
+        </record>
+
+        <record id="hr_type2f1_line_33" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">33</field>
+            <field name="size">1</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">icbf</field>
+        </record>
+
+        <record id="hr_type2f1_line_34" model="hr.reports.config.line">
+            <field name="hr_reports_config_id" ref="hr_config_type2f1"/>
+            <field name="code">34</field>
+            <field name="size">1</field>
+            <field name="data_type">alphabetic</field>
+            <field name="name">benefit_ccf</field>
+        </record>
+
+    </data>
+</odoo>

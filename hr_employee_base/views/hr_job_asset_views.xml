@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+      <record id="view_hr_hob_asset_form" model="ir.ui.view">
+      <field name="name">view.hr.job.asset.form</field>
+      <field name="model">hr.job.asset</field>
+      <field name="arch" type="xml">
+        <form string="Activos">
+           <group>
+             <group>
+               <field name="name" string="Activo del Cargo"/>
+               <field name="category" string="Categoría"/>
+               <field name="job_id" string="Cargo Asociado" readonly="False"/>
+             </group>
+           </group>   
+        </form>
+      </field>
+    </record> 
+
+    <record id="view_hr_hob_asset_tree" model="ir.ui.view">
+      <field name="name">view.hr.job.asset.tree</field>
+      <field name="model">hr.job.asset</field>
+        <field name="arch" type="xml">
+            <tree string="sector Activos">
+               <field name="name" string="Activo del Cargo"/>
+               <field name="category" string="Categoría"/>
+               <field name="job_id" string="Cargo Asociado"/>              
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hr_job_asset" model="ir.actions.act_window">
+        <field name="name">Activos</field>
+        <field name="res_model">hr.job.asset</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Activos
+          </p>
+        </field>
+    </record>
+
+    <menuitem name='Activos'
+            action='action_hr_job_asset'
+            id='menu_hr_job_asset'
+            parent='hr_recruitment.menu_hr_recruitment_configuration'
+            sequence='13' /> 
+
+    </data>   
+</odoo>
+

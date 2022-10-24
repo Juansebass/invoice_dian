@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+      <record id="view_hr_employee_pet_form" model="ir.ui.view">
+      <field name="name">view.hr.employee.pet.form</field>
+      <field name="model">hr.employee.pet</field>
+      <field name="arch" type="xml">
+        <form string="mascotas">
+           <group>
+             <group>
+               <field name="pet_type" string="Tipo de Mascota"/>
+               <field name="number_of_pets" string="Numero de Mascota"/>
+               <field name="applicant_id" string="Aplicante"/> 
+             </group>
+           </group>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_hr_employee_pet_tree" model="ir.ui.view">
+      <field name="name">view.hr.employee.pet.tree</field>
+      <field name="model">hr.employee.pet</field>
+        <field name="arch" type="xml">
+            <tree string="sector mascotas">
+              <field name="pet_type" string="Tipo de Mascota"/>
+              <field name="number_of_pets" string="Numero de Mascota"/>             
+              <field name="applicant_id" string="Aplicante"/>
+              <field name="employee_id" string="Empleado"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hr_employee_pet" model="ir.actions.act_window">
+        <field name="name">Mascotas</field>
+        <field name="res_model">hr.employee.pet</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Mascotas
+          </p>
+        </field>
+    </record>
+
+    <menuitem name='Mascotas'
+            action='action_hr_employee_pet'
+            id='menu_hr_employee_pet'
+            parent='hr_recruitment.menu_hr_recruitment_configuration'
+            sequence='13' />
+    </data>
+</odoo>
+

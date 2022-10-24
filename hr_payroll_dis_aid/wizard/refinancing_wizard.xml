@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="refinancing_form" model="ir.ui.view">
+            <field name="name">refinancing_wizard</field>
+            <field name="model">hr.dis.aid.refinancing</field>
+            <field name="arch" type="xml">
+                <form string="Refinance Credit - Insert Payment">
+                    <group>
+                        <field name="type"/>
+                        <field name="extra_quote_value" attrs="{'invisible': [('type','!=','extra_pay')]}"/>
+                        <field name="new_term_in_months" attrs="{'invisible': [('type','!=','refinance')]}"/>
+                    </group>
+                    <footer>
+                        <button name="refinancing" type="object" string="Create" class="btn-primary"/>
+                        <button special="cancel" string="Cancel" class="btn-secondary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="refinancing_wizard" model="ir.actions.act_window">
+            <field name="name">Create Appointment</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.dis.aid.refinancing</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="refinancing_form"/>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+      <record id="view_hr_employee_payrollcc_form" model="ir.ui.view">
+      <field name="name">view.hr.employee.payrollcc.form</field>
+      <field name="model">hr.employee.payrollcc</field>
+      <field name="arch" type="xml">
+        <form string="ccnomina">
+           <group>
+             <group>
+                <field name="name" string="CC-Nomina"/>
+                <field name="identifier" string="Identificador"/>
+             </group>
+           </group>   
+        </form>
+      </field>
+    </record> 
+
+    <record id="view_hr_employee_payrollcc_tree" model="ir.ui.view">
+      <field name="name">view.hr.employee.payrollcc.tree</field>
+      <field name="model">hr.employee.payrollcc</field>
+        <field name="arch" type="xml">
+            <tree string="sector ccnomina">
+                <field name="identifier" string="Identificador"/>
+                <field name="name" string="CC-Nomina"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hr_employee_payrollcc" model="ir.actions.act_window">
+        <field name="name">CC Nómina</field>
+        <field name="res_model">hr.employee.payrollcc</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            CC-Nomina
+          </p>
+        </field>
+    </record>
+
+    <menuitem name='CC-Nomina'
+            action='action_hr_employee_payrollcc'
+            id='menu_hr_employee_payrollcc'
+            parent='hr_recruitment.menu_hr_recruitment_configuration'
+            sequence='23'/> 
+    </data>   
+</odoo>

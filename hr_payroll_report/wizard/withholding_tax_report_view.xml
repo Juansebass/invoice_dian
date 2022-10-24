@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- View Form -->
+        <record id="withholding_tax_wizard_view_form" model="ir.ui.view">
+            <field name="name">withholding_tax_wizard_view_form</field>
+            <field name="model">withholding.tax.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <group string="Withholding Tax">
+                        <group>
+                            <field name="report_type" required="1"/>
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                        <button string="Render Report (XLSX)" name="print_xlsx" type="object" class="btn-primary"
+                                attrs="{'invisible':[('report_type','!=','xlsx')]}"/>
+                        <button string="Render Report (PDF)" name="print_pdf" type="object" class="btn-primary"
+                                attrs="{'invisible':[('report_type','!=','pdf')]}"/>
+
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_generate_withholding_tax_Report" model="ir.actions.act_window">
+            <field name="name">Withholding Tax Report</field>
+            <field name="res_model">withholding.tax.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="hr_payroll.model_hr_payslip"/>
+            <field name="binding_view_types">form,list</field>
+        </record>
+
+    </data>
+</odoo>

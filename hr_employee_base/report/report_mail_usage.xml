@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_mail_usage">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <style>
+                    hr{border-top: 2px solid black;}
+                    p {font-size:14px;}
+                    span {font-size:14px;}
+                    TD {font-size:13px;}
+                    table {
+                    border-collapse: collapse;
+                    }
+                    table, th, td {
+                    border: 1px solid black;
+                    }
+                </style>
+                <div class="page">
+                    <br></br>
+                    <p align="right">SYC-FOR-050-V2</p> 
+                    <p align="justify"><span>Asunto: </span>  <strong><span>Autorización para envío de comprobante de nómina, seguridad social e informativo de entidades por correo electrónico.</span></strong></p>
+                    <p align="justify">Yo  <strong><span t-field="o.employee_id"></span></strong> identificado con cedula de ciudadanía No. <strong><span t-field="o.employe_identification"></span></strong> me permito autorizar a la empresa  <strong><span t-field="o.company_id"></span></strong>  para enviar los comprobantes antes mencionados, a mi correo personal <strong> <span t-field="o.employee_email"></span> </strong></p>
+                    <p align="justify">De igual forma me comprometo a actualizar mi correo personal en caso de cambio del mismo, para continuar recibiendo la información de forma adecuada.</p>
+                    <p>Cordialmente,</p>
+                    <p><img t-att-src="'data:image/png;base64,%s' % to_text(o.firma)" width="210" height="100"/></p>
+                    <p>Firma</p>
+                    <p>No. Documento: <span t-field="o.employe_identification"></span></p>
+                    <p>Fecha de autorización: <span t-field="o.firma_date"></span> </p> <br></br>
+                    <hr></hr>
+                </div>                
+            </t>
+        </t>
+    </template>
+</odoo>

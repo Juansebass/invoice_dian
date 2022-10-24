@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="hr.contract.type" id="contract_type_permanent">
+            <field name="name">Indefinido</field>
+            <field name="description">Contrato termino indefinido</field>
+        </record>
+        <record model="hr.contract.type" id="contract_type_fixed">
+            <field name="name">Fijo</field>
+            <field name="description">Contrato termino fijo</field>
+            <field name="date_end_required" eval="True" />
+        </record>
+        <record model="hr.contract.type" id="contract_type_half_time">
+            <field name="name">Medio Tiempo</field>
+            <field name="description">Contrato medio tiempo</field>
+            <field name="date_end_required" eval="True" />
+        </record>
+        <record model="hr.contract.type" id="contract_type_labor">
+            <field name="name">Obra o Labor</field>
+            <field name="description">Contrato obra o labor</field>
+            <field name="is_labor_contract" eval="True" />
+        </record>
+        <record model="hr.contract.type" id="contract_type_apprentice">
+            <field name="name">Aprendizaje</field>
+            <field name="description">Contrato de Aprendizaje</field>
+            <!-- <field name="date_end_required" eval="True" /> -->
+        </record>
+        <record model="hr.contract.type" id="contract_type_day">
+            <field name="name">Diario</field>
+            <field name="description">Contrato diario</field>
+            <field name="date_end_required" eval="True" />
+        </record>
+    </data>   
+</odoo>

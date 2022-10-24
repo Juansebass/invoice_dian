@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_reports_config,access_hr_reports_config,model_hr_reports_config,base.group_user,1,1,1,1
+access_hr_reports_config_line,access_hr_reports_config_line,model_hr_reports_config_line,base.group_user,1,1,1,1
+access_hr_pila_report_config,access_hr_pila_report_config,model_hr_pila_report_config,base.group_user,1,1,1,1
+access_hr_pila_report_config_line,access_hr_pila_report_config_line,model_hr_pila_report_config_line,base.group_user,1,1,1,1

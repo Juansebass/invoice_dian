@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="recruitment_reason1" model="hr.recruitment.reason">
+            <field name="name">RENUNCIA TITULAR</field>
+            <field name="requisition_reason" eval="True"/>
+            <!-- <field name="abbreviation"></field> -->
+        </record>
+        <record id="recruitment_reason2" model="hr.recruitment.reason">
+            <field name="name">CANCELACIÓN DE CONTRATO</field>
+            <field name="requisition_reason" eval="True"/>
+            <!-- <field name="abbreviation"></field> -->
+        </record>
+        <record id="recruitment_reason3" model="hr.recruitment.reason">
+            <field name="name">VENCIMIENTO DE CONTRATO</field>
+            <field name="requisition_reason" eval="True"/>
+            <!-- <field name="abbreviation"></field> -->
+        </record>
+        <record id="recruitment_reason4" model="hr.recruitment.reason">
+            <field name="name">EVALUACIÓN DE ASCENSO</field>
+            <field name="requisition_reason" eval="True"/>
+            <!-- <field name="abbreviation"></field> -->
+        </record>
+        <record id="recruitment_reason5" model="hr.recruitment.reason">
+            <field name="name">AMPLIACIÓN DE PLANTA</field>
+            <field name="requisition_reason" eval="True"/>
+            <!-- <field name="abbreviation"></field> -->
+        </record>
+        <record id="recruitment_reason6" model="hr.recruitment.reason">
+            <field name="name">TRANSLADO</field>
+            <field name="requisition_reason" eval="True"/>
+            <!-- <field name="abbreviation"></field> -->
+        </record>
+        <record id="recruitment_reason7" model="hr.recruitment.reason">
+            <field name="name">SUSTITUCIÓN PATRONAL</field>
+            <field name="requisition_reason" eval="True"/>
+            <!-- <field name="abbreviation"></field> -->
+        </record>
+        <record id="recruitment_reason8" model="hr.recruitment.reason">
+            <field name="name">VACACIONES</field>
+            <field name="requisition_reason" eval="True"/>
+            <!-- <field name="abbreviation"></field> -->
+        </record>
+        <record id="recruitment_reason9" model="hr.recruitment.reason">
+            <field name="name">FUNCIONARIO PROMOVIDO</field>
+            <field name="requisition_reason" eval="True"/>
+            <!-- <field name="abbreviation"></field> -->
+        </record>
+        <record id="recruitment_reason10" model="hr.recruitment.reason">
+            <field name="name">INCAPACIDAD / LICENCIA</field>
+            <field name="requisition_reason" eval="True"/>
+            <!-- <field name="abbreviation"></field> -->
+        </record>
+        <record id="recruitment_reason11" model="hr.recruitment.reason">
+            <field name="name">CREACIÓN DE CARGO</field>
+            <field name="requisition_reason" eval="True"/>
+            <!-- <field name="abbreviation"></field> -->
+        </record>
+        <record id="recruitment_reason12" model="hr.recruitment.reason">
+            <field name="name">PENSIÓN</field>
+            <field name="requisition_reason" eval="True"/>
+            <!-- <field name="abbreviation"></field> -->
+        </record>
+    </data>
+</odoo>

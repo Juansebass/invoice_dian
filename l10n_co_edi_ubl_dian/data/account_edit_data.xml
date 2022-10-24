@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="edi_dian_connector" model="account.edi.format">
+            <field name="name">UBL 2.1 (Colombia - Conexión Directa a la DIAN)</field>
+            <field name="code">ubl_dian_connector</field>
+        </record>
+
+    </data>
+</odoo>

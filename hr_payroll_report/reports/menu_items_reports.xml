@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Zconcept -->
+        <menuitem id="menu_action_zconcept_payroll"
+                  name="Zconcept Payroll"
+                  action="zconcept_report_wizard"
+                  parent="hr_payroll.menu_hr_payroll_report"/>
+
+        <!-- Zprenomina -->
+        <menuitem id="menu_action_zprenomina_payroll"
+                  name="ZPrenomina Payroll"
+                  action="zprenomina_report_wizard"
+                  parent="hr_payroll.menu_hr_payroll_report"/>
+
+    </data>
+</odoo>

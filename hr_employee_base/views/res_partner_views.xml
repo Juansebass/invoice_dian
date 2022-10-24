@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_partner_form_inherit" model="ir.ui.view">
+        <field name="name">res.partner.form.view.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="features" string="Features">
+                    <group col="4">
+                        <field name="is_found_layoffs"/>
+                        <field name="is_ccf"/>
+                        <field name="is_eps"/>
+                        <field name="required_physical_evidence"/>
+                        <field name="is_unemployee_fund"/>
+                        <field name="is_arl"/>
+                        <field name="is_prepaid_medicine"/>
+                        <field name="is_afc"/>
+                        <field name="is_afp"/>
+                        <field name="is_voluntary_contribution"/>
+                    </group>
+                </page>
+                <!-- <xpath expr="//span[@name='address_name']" position="before">
+                    <field name="first_name" string="Nombre 1" attrs="{'invisible': [['company_type','=','company']], 'required': [['company_type','=','person']]}"/>
+                    <field name="second_name" string="Otros Nombres" attrs="{'invisible': [['company_type','=','company']]}"/>
+                    <field name="first_surname" string="Apellido" attrs="{'invisible': [['company_type','=','company']], 'required': [['company_type','=','person']]}"/>
+                    <field name="second_surname" string="Otros Apellidos" attrs="{'invisible': [['company_type','=','company']]}"/>
+                </xpath> -->
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_res_partner_filter_inherit" model="ir.ui.view">
+        <field name="name">view.res.partner.filter.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <field name="name" position="before">
+                <field name="vat"/>
+            </field>
+
+            <filter name="inactive" position="after">
+                <filter string="Found Layoffs" name="is_found_layoffs"
+                        domain="[('is_found_layoffs','!=',False)]"/>
+                <filter string="Compensation Box" name="is_ccf"
+                        domain="[('is_ccf','!=',False)]"/>
+                <filter string="EPS" name="is_eps"
+                        domain="[('is_eps','!=',False)]"/>
+                <filter string="Unemployee Fund" name="is_unemployee_fund"
+                        domain="[('is_unemployee_fund','!=',False)]"/>
+                <filter string="ARL" name="is_arl"
+                        domain="[('is_arl','!=',False)]"/>
+                <filter string="Prepaid Medicine" name="is_prepaid_medicine"
+                        domain="[('is_prepaid_medicine','!=',False)]"/>
+                <filter string="AFC" name="is_afc"
+                        domain="[('is_afc','!=',False)]"/>
+                <filter string="AFP" name="is_afp"
+                        domain="[('is_afp','!=',False)]"/>
+                <filter string="Voluntary Contribution" name="is_voluntary_contribution"
+                        domain="[('is_voluntary_contribution','!=',False)]"/>
+            </filter>
+        </field>
+    </record>
+</odoo>                      

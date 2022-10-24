@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="cargue_horas_extras_view_tree" model="ir.ui.view">
+        <field name="name">cargue.horas.extras.view.tree</field>
+        <field name="model">cargue.horas.extras</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="create_uid"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="cargue_horas_extras_view_form" model="ir.ui.view">
+        <field name="name">cargue.horas.extras.view.form</field>
+        <field name="model">cargue.horas.extras</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar"/>
+                    <button name="upload_data" class="oe_highlight"
+                            string="Upload Data" type="object"
+                            attrs="{'invisible': ['|',('file', '=', False),('state', '!=', 'draft')]}"/>
+                    <button name="action_approved" class="oe_highlight"
+                            string="Process" type="object"
+                            attrs="{'invisible': ['|',('cargue_horas_extras_line_ids','=',[]),('state', '!=', 'draft')]}"/>
+                    <button name="action_cancelled"
+                            string="Cancelled" type="object"
+                            states="approved"/>
+                    <button name="action_paid" class="oe_highlight"
+                            string="Paid" type="object"
+                            states="approved"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group colspan="4" col="4">
+                            <field name="create_uid"/>
+                            <field name="file"
+                                   attrs="{'readonly': [('state', 'in', ('approved', 'cancelled', 'paid'))]}"/>
+                            <field name="created_on"/>
+                            <field name="message"/>
+                            <field name="company_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="cargue_horas_extras_line_ids" nolabel="1"
+                               attrs="{'readonly': [('state', 'in', ('approved', 'cancelled', 'paid'))]}">
+                            <tree>
+                                <field name="identification"/>
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                                <field name="concept"/>
+                                <field name="quantity_hours"/>
+                                <field name="status"/>
+                                <field name="company_id" invisible="1"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="cargue_horas_extras_action" model="ir.actions.act_window">
+        <field name="name">Load Extra Hours</field>
+        <field name="res_model">cargue.horas.extras</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="cargue_horas_extras_menu"
+            action="cargue_horas_extras_action"
+            parent="extra_hours_menu"
+            name="Load Extra Hours"/>
+
+</odoo>

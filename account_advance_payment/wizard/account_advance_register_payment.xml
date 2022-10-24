@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_account_advance_payment_register_form" model="ir.ui.view">
+            <field name="name">account.advance.payment.register.form</field>
+            <field name="model">account.advance.payment.register</field>
+            <field name="arch" type="xml">
+                <form string="Registrar Pago de Anticipo">
+                    <field name="payment_type" invisible="1" force_save="1"/>
+                    <field name="partner_type" invisible="1" force_save="1"/>
+                    <field name="company_id" invisible="1" force_save="1"/>
+                    <field name="partner_id" invisible="1" force_save="1"/>
+                    <field name="company_currency_id" invisible="1"/>
+                    <field name="available_partner_bank_ids" invisible="1"/>
+                    <group>
+                        <group name="group1">
+                            <field name="payment_type" widget="radio" context="{'default_payment_type': 'outbound'}" required="1"/>
+                            <field name="partner_type" widget="selection" context="{'default_payment_type': 'supplier'}" required="1"/>
+                            <field name="journal_id" required="1"/>
+                            <field name="partner_bank_id"/>
+                            <field name="payment_group" readonly="True"/>
+                        </group>
+                        <group name="group2">
+                            <label for="amount"/>
+                            <div name="amount_div" class="o_row">
+                                <field name="amount"/>
+                                <field name="currency_id"
+                                       options="{'no_create': True, 'no_open': True}"
+                                       groups="base.group_multi_currency" readonly="True"/>
+                            </div>
+                            <field name="payment_date"/>
+                            <field name="communication"/>
+                            <field name="payment_exchange_allow_ok" invisible="True"/>
+                            <field name="currency_rate"/>
+                            <field name="payment_has_exchange_rate"
+                                     groups="base.group_multi_currency"
+                                     attrs="{
+                                            'invisible': [('payment_exchange_allow_ok','=',False)],
+                                     }"/>
+                            <field name="payment_exchange_rate" groups="base.group_multi_currency"
+                                     attrs="{
+                                            'invisible': [('payment_has_exchange_rate','=',False)],
+                                     }"/>
+                            <field name="amount_signed" groups="base.group_multi_currency"
+                             attrs="{'invisible': [('payment_exchange_allow_ok','=',False)]}" readonly="True"/>
+                            <field name="company_currency_id" invisible="1"/>
+                        </group>
+                        <group name="group3">
+                            <field name="advance_ids" readonly="0" string="">
+                            <tree create="false" delete="false">
+                                <field name="account_advance_payment_id" invisible="True"/>
+                                <field name="account_advance_payment_name"/>
+                                <field name="amount_original" invisible="1"/>
+                                <field name="amount"/>
+                                <field name="currency_signed_id" string=''/>
+                                <field name="amount_signed"/>
+                                <field name="currency_id" string=''/>
+                                <field name="supplier_id"/>
+                                <field name="beneficiary_id"/>
+                                <field name="date_request"/>
+                            </tree>
+                            <form>
+                                <script>
+                                    $(document).ready(function(){
+                                    $(".btn-primary").hide();
+                                    $(".btn-primary").hide();
+                                    $("#account_advance_payment_register").show();
+                                    });
+                                </script>
+                                <group>
+                                    <group>
+                                        <field name="account_advance_payment_id" readonly="1"/>
+                                        <field name="account_advance_payment_name" readonly="1"/>
+                                        <field name="amount" readonly="1"/>
+                                        <field name="amount_signed" readonly="1"/>
+                                        <field name="supplier_id" readonly="1"/>
+                                        <field name="beneficiary_id" readonly="1"/>
+                                        <field name="date_request" readonly="1"/>
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Crear Pago" name="action_create_payments" type="object" class="oe_highlight"/>
+                        <button string="Cancel" class="btn btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_account_advance_payment_wizard" model="ir.actions.act_window">
+            <field name="name">Pagar Anticipos a Proveedores</field>
+            <!--<field name="type">ir.actions.act_window</field>-->
+            <field name="res_model">account.advance.payment.register</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="account_advance_payment.view_account_advance_payment_register_form"/>
+            <field name="binding_model_id" ref="model_account_advance_payment"/>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

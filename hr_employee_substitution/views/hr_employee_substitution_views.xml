@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_employee_substitution_view_form" model="ir.ui.view">
+            <field name="name">hr_employee_substitution_view_form</field>
+            <field name="model">hr.employee.substitution</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="process" type="object" string="Process"
+                                states='draft'/>
+                        <button name="cancel" type="object" string="Cancel"
+                                states='processed,completed'/>
+                        <button name="completed" type="object" string="Completed"
+                                states='processed'/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <h1><field name="name" readonly="1" force_save="1"/></h1>
+                        <group string="General Information">
+
+                            <field name="currency_id" invisible="1"/>
+
+                            <group>
+                                <field name="start_date" placeholder="Start Date"/>
+                                <field name="end_date" placeholder="End Date"/>
+                                <field name="identification_id" required="1"
+                                       attrs="{'readonly':[('state','in',('processed','completed','cancel'))]}"/>
+                                <field name="employee_id"
+                                       required="1" options="{'no_create': True, 'no_create_edit':True}"
+                                       attrs="{'readonly':[('state','in',('processed','completed','cancel'))]}"/>
+                                <field name="contract_id" required="1" readonly="1" force_save="1"
+                                       options="{'no_create': True, 'no_create_edit':True}"
+                                       attrs="{'readonly':[('state','in',('processed','completed','cancel'))]}"/>
+                                <field name="wage" widget="monetary"
+                                       readonly="1" force_save="1"/>
+                            </group>
+
+                            <group>
+                                <field name="creation_date" readonly="1" force_save="1"/>
+                                <field name="validation_date" readonly="1" force_save="1"/>
+                                <field name="check_cost_center"
+                                       attrs="{'readonly':[('state','in',('processed','completed','cancel'))]}"/>
+                                <field name="check_job"
+                                       attrs="{'readonly':[('state','in',('processed','completed','cancel'))]}"/>
+                                <field name="check_division"
+                                       attrs="{'readonly':[('state','in',('processed','completed','cancel'))]}"/>
+                                <field name="check_salary"
+                                       attrs="{'readonly':[('state','in',('processed','completed','cancel'))]}"/>
+                            </group>
+
+                        </group>
+
+                        <group string="Company's">
+                            <group>
+                                <field name="current_company_id"
+                                       options="{'no_create': True, 'no_create_edit':True}"
+                                       attrs="{'readonly':[('state','in',('processed','completed','cancel'))]}"/>
+                            </group>
+                            <group>
+                                <field name="new_company_id" required="1"
+                                       options="{'no_create': True, 'no_create_edit':True}"
+                                       domain="[('id','!=',current_company_id)]"
+                                       attrs="{'readonly':[('state','in',('processed','completed','cancel'))]}"/>
+                            </group>
+                        </group>
+
+                        <group string="Work Planning">
+                            <group>
+                                <field name="current_resource_calendar_id" readonly="1" force_save="1"/>
+                            </group>
+                            <group>
+                                <field name="new_resource_calendar_id" required="1"
+                                       domain="[('company_id','=',new_company_id)]"
+                                       options="{'no_create': True, 'no_create_edit':True}"
+                                       attrs="{'readonly':[('state','in',('processed','completed','cancel'))]}"/>
+                            </group>
+                        </group>
+
+
+                        <notebook>
+
+                            <page string="Employee">
+
+                                <group>
+                                    <group string="Current Organization Unit">
+                                        <field name="current_organization_unit_id" readonly="1" force_save="1"/>
+                                    </group>
+                                    <group string="New Organization Unit">
+                                        <field name="current_organization_unit_id" required="1"/>
+                                    </group>
+                                </group>
+
+
+                                <group>
+                                    <group string="Grupo de Personal Actual">
+                                        <field name="current_grupo_seleccion_emp" readonly="1" force_save="1"/>
+                                    </group>
+                                    <group string="Nuevo Grupo de Personal">
+                                        <field name="new_grupo_seleccion_emp"/>
+                                    </group>
+                                </group>
+
+                                <group>
+                                    <group string="Area de Personal Actual">
+                                        <field name="current_personal_area_id" readonly="1" force_save="1"/>
+                                    </group>
+                                    <group string="Nueva Area de Personal">
+                                        <field name="new_personal_area_id"/>
+                                    </group>
+                                </group>
+
+                                <group>
+                                    <group string="Realación Laboral Actual">
+                                        <field name="current_relacion_laboral_emp" readonly="1" force_save="1"/>
+                                    </group>
+                                    <group string="Nueva Relación Laboral">
+                                        <field name="new_relacion_laboral_emp"/>
+                                    </group>
+                                </group>
+
+                            </page>
+
+                            <page string="Contract">
+                                <group>
+                                    <group string="Current Contract Type">
+                                        <field name="current_contract_type_id" readonly="1" force_save="1"/>
+                                    </group>
+                                    <group string="New Contract Type">
+                                        <field name="new_contract_type_id" required="1"/>
+                                    </group>
+                                </group>
+                            </page>
+
+                            <page string="ARL Y CFF">
+
+                                <group>
+                                    <group string="Current ARL">
+                                        <field name="current_arl_id" readonly="1" force_save="1"/>
+                                    </group>
+                                    <group string="New ARL">
+                                        <field name="new_arl_id" required="1"/>
+                                    </group>
+                                </group>
+
+                                <group>
+                                    <group string="Current ARL Percentage">
+                                        <field name="current_arl_percentage" readonly="1" force_save="1"/>
+                                    </group>
+                                    <group string="New ARL Percentage">
+                                        <field name="new_arl_percentage"/>
+                                    </group>
+                                </group>
+
+                                <group>
+                                    <group string="Current Compensation Box">
+                                        <field name="current_ccf_id" readonly="1" force_save="1"/>
+                                    </group>
+
+                                    <group string="New Compensation Box">
+                                        <field name="new_ccf_id" required="1"/>
+                                    </group>
+                                </group>
+
+                            </page>
+
+                            <page string="Cost Center" attrs="{'invisible':[('check_cost_center','=',False)]}">
+                                <group>
+                                    <group string="Current Center Cost">
+                                        <field name="current_center_cost_id" nolabel="1" readonly="1" force_save="1">
+                                            <tree>
+                                                <field name="name"/>
+                                                <field name="percent"/>
+                                                <field name="account_analytic_id"/>
+                                                <field name="direct_indirect"/>
+                                            </tree>
+                                        </field>
+                                    </group>
+                                    <group string="New Center Cost">
+                                        <field name="new_center_cost_id" nolabel="1"
+                                               attrs="{'readonly':[('state','in',('processed','completed','cancel'))]}">
+                                            <tree editable="top">
+                                                <field name="company_id" invisible="1"/>
+                                                <field name="name"/>
+                                                <field name="percent"/>
+                                                <field name="account_analytic_id"
+                                                       domain="[('company_id','=',parent.new_company_id)]"/>
+                                                <field name="direct_indirect"/>
+                                            </tree>
+                                        </field>
+                                    </group>
+                                </group>
+                            </page>
+
+                            <page string="Job" attrs="{'invisible':[('check_job','=',False)]}">
+                                <group>
+                                    <group string="Current Job">
+                                        <field name="current_job_id"/>
+                                    </group>
+                                    <group string="New Job">
+                                        <field name="new_job_id" domain="[('company_id','=',new_company_id)]"
+                                               options="{'no_create': True, 'no_create_edit':True}"
+                                               attrs="{'readonly':[('state','in',('processed','completed','cancel'))]}"/>
+                                    </group>
+                                </group>
+                            </page>
+
+                            <page string="Division" attrs="{'invisible':[('check_division','=',False)]}">
+
+                                <group>
+                                    <group string="Current Division">
+                                        <field name="current_division_id" readonly="1" force_save="1"/>
+                                    </group>
+                                    <group string="New Division">
+                                        <field name="new_division_id"
+                                               options="{'no_create': True, 'no_create_edit':True}"/>
+                                    </group>
+                                </group>
+
+                            </page>
+
+                            <page string="Salary" attrs="{'invisible':[('check_salary','=',False)]}">
+                                <group>
+                                    <group string="New Salary">
+                                        <field name="new_salary"
+                                               attrs="{'readonly':[('state','in',('processed','completed','cancel'))]}"/>
+                                    </group>
+                                    <group string="New Salary Fixed">
+                                        <field name="new_salary_fixed"
+                                               attrs="{'readonly':[('state','in',('processed','completed','cancel'))]}"/>
+                                    </group>
+                                </group>
+
+                                <group>
+                                    <group string="Current Contract Salary Type">
+                                        <field name="current_salary_type"
+                                               readonly="1" force_save="1"/>
+                                    </group>
+                                    <group string="New Contract Salary Type">
+                                        <field name="new_salary_type"
+                                               attrs="{'readonly':[('state','in',('processed','completed','cancel'))]}"/>
+                                    </group>
+                                </group>
+
+                            </page>
+
+
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_employee_substitution_view_tree" model="ir.ui.view">
+            <field name="name">hr_employee_substitution_view_tree</field>
+            <field name="model">hr.employee.substitution</field>
+            <field name="arch" type="xml">
+                <tree string="hr_employee_substitution_tree">
+                    <field name="name" width="20%"/>
+                    <field name="identification_id" width="20%"/>
+                    <field name="employee_id" width="20%"/>
+                    <field name="creation_date" width="20%"/>
+                    <field name="state" width="20%"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_employee_substitution_search_view" model="ir.ui.view">
+            <field name="name">hr_employee_substitution_search_view</field>
+            <field name="model">hr.employee.substitution</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employee_id" string="Employee"/>
+                    <field name="current_company_id" string="Current Company"/>
+                    <field name="name" string="Name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="hr_employee_substitution_action" model="ir.actions.act_window">
+            <field name="name">Employer Substitution</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.substitution</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

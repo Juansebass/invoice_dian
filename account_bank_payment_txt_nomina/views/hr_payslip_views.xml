@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="action_generate_txt_hr_payslip" model="ir.actions.server">
+            <field name="name">Generate txt bank</field>
+            <field name="model_id" ref="hr_payroll.model_hr_payslip"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = records.action_generate_txt_wizard()
+            </field>
+        </record>
+
+        <!-- hr.payslip inherit form view -->
+        <record id="view_hr_payslip_form" model="ir.ui.view">
+            <field name="name">hr.payslip.inherit.view.form</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_generate_txt_wizard"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-file-text-o"
+                            string="Generate Txt"
+                            context="{'default_company_id': company_id,}">
+                            <!--confirm="(Un)archiving a project automatically (un)archives its tasks and issues. Do you want to proceed?" 
+                                <field name="state" widget="boolean_button" options='{"terminology": "archive"}'/> -->
+                    </button>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="inherit_view_hr_pv_form" model="ir.ui.view">
+            <field name="name">inherit_view_hr_pv_form</field>
+            <field name="model">hr.pv</field>
+            <field name="inherit_id" ref="hr_payroll_variations.view_hr_pv_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='contribution_deduction']" position="after">
+                    <field name="is_dis_aid" invisible="1"/>
+                </xpath>
+                <group name="payment_type" position="after">
+                    <group string="Discounts" name="discounts" attrs="{'invisible': [('is_dis_aid','=',False)]}"
+                           col="4">
+                        <field name="dis_aid_id"/>
+                        <field name="capital_amount"/>
+                        <field name="interest_amount"/>
+                    </group>
+                </group>
+            </field>
+        </record>
+
+    </data>
+</odoo>

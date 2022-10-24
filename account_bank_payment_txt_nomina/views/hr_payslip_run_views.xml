@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- account.batch.payment inherit form view -->
+        <record id="hr_payslip_run_txt" model="ir.ui.view">
+            <field name="name">hr.payslip.run.inherit.view.form</field>
+            <field name="model">hr.payslip.run</field>
+            <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="account_bank_payment_txt_nomina.payment_txt_payslip_run_wizard_action"
+                            type="action"
+                            class="oe_stat_button"
+                            icon="fa-file-text-o"
+                            string="Generate Txt"
+                            context="{'default_company_id': company_id,}">
+                            <!--confirm="(Un)archiving a project automatically (un)archives its tasks and issues. Do you want to proceed?" 
+                                <field name="state" widget="boolean_button" options='{"terminology": "archive"}'/> -->
+                    </button>
+                </xpath>
+                
+                <xpath expr="//sheet/group/group" position="inside">
+                    <field name="txt_filename" invisible="1"/>
+                    <field name="txt_file" filename="txt_filename" widget="binary" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+        
+    </data>
+</odoo>

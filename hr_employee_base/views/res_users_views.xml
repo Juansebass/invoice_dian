@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<odoo>
+    <record id="view_users_form_inherit_recruitment" model="ir.ui.view">
+        <field name="name">res.users.form.inherit.recruitment</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//group/field[@name='partner_id']" position="after">
+                <field name="is_recruitment_leader"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

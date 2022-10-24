@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_partner_form_inherit" model="ir.ui.view">
+        <field name="name">res.partner.form.view.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <field name="is_found_layoffs" position="replace">
+                <field name="is_found_layoffs" string="E1 Found Layoffs"/>
+                <field name="code_found_layoffs" string="C1"
+                       attrs="{'invisible': [('is_found_layoffs','=',False)]}"/>
+            </field>
+            <field name="is_ccf" position="replace">
+                <field name="is_ccf" string="E2 CCF"/>
+                <field name="code_compensation_box" string="C2"
+                       attrs="{'invisible': [('is_ccf','=',False)]}"/>
+            </field>
+            <field name="is_eps" position="replace">
+                <field name="is_eps" string="E3 EPS"/>
+                <field name="code_eps" string="C3"
+                       attrs="{'invisible': [('is_eps','=',False)]}"/>
+            </field>
+            <field name="required_physical_evidence" position="replace">
+                <field name="required_physical_evidence" string="E4 Physical Evidence"/>
+                <field name="code_required_physical_evidence" string="C4"
+                       attrs="{'invisible': [('required_physical_evidence','=',False)]}"/>
+            </field>
+            <field name="is_unemployee_fund" position="replace">
+                <field name="is_unemployee_fund" string="E5 Unemployment Fund"/>
+                <field name="code_unemployee_fund" string="C5"
+                       attrs="{'invisible': [('is_unemployee_fund','=',False)]}"/>
+            </field>
+            <field name="is_arl" position="replace">
+                <field name="is_arl" string="E6 ARL"/>
+                <field name="code_arl" string="C6"
+                       attrs="{'invisible': [('is_arl','=',False)]}"/>
+            </field>
+            <field name="is_prepaid_medicine" position="replace">
+                <field name="is_prepaid_medicine" string="E7 Prepaid Medecine"/>
+                <field name="code_prepaid_medicine" string="C7"
+                       attrs="{'invisible': [('is_prepaid_medicine','=',False)]}"/>
+            </field>
+            <field name="is_afc" position="replace">
+                <field name="is_afc" string="E8 AFC"/>
+                <field name="code_afc" string="C8"
+                       attrs="{'invisible': [('is_afc','=',False)]}"/>
+            </field>
+            <field name="is_afp" position="replace">
+                <field name="is_afp" string="E9 AFP"/>
+                <field name="code_afp" string="C9"
+                       attrs="{'invisible': [('is_afp','=',False)]}"/>
+            </field>
+            <field name="is_voluntary_contribution" position="replace">
+                <field name="is_voluntary_contribution" string="E10 Voluntary Contribution"/>
+                <field name="code_voluntary_contribution" string="C10"
+                       attrs="{'invisible': [('is_voluntary_contribution','=',False)]}"/>
+            </field>
+
+            <xpath expr="//page[@name='features']/group[1]" position="after">
+                <group string="Other Pila Fields">
+
+                    <!-- <field name="document_type_id"/> -->
+                    <!-- <field name="identification_document"/> -->
+                    <!-- <field name="check_digit"/> -->
+                    <field name="contributor_class"/>
+                    <field name="legal_nature"/>
+                    <field name="person_pila_type"/>
+                    <field name="commercial_register"/>
+                    <field name="commercial_register_date"/>
+                    <field name="ciiu"/>
+
+                </group>
+
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

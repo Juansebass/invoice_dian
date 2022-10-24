@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data >
+        <!-- res.bank.txt_config inherit form view -->
+        <record id="res_bank_txt_config_view_form" model="ir.ui.view">
+            <field name="name">res.bank.txt_config.inherit.view.form</field>
+            <field name="model">res.bank.txt_config</field>
+            <field name="inherit_id" ref="account_bank_payment_txt_generator.res_bank_txt_config_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="is_nomina"/>
+                </xpath>
+                <xpath expr="//page[@name='help']/div/div/table/tbody" position="attributes">
+                    <attribute name="attrs">{'invisible': [('is_nomina','=',True)]}</attribute>
+                </xpath>
+                <xpath expr="//page[@name='help']/div/div/table/tbody" position="after">
+                    <tbody attrs="{'invisible': [('is_nomina','=',False)]}">
+                        <tr>
+                            <td>batch_payment</td>
+                            <td>Objeto de la ventana de dialogo (Wizard)</td>
+                            <td>Header, Body, Footer</td>
+                        </tr>
+                        <tr>
+                            <td>set_payments</td>
+                            <td>Conjunto de pagos (nóminas) (hr.payslip)</td>
+                            <td>Header, Body, Footer</td>
+                        </tr>
+                        <tr>
+                            <td>payment</td>
+                            <td>Objeto linea de pago (nómina) (hr.payslip)</td>
+                            <td>Body</td>
+                        </tr>
+                    </tbody>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="account_bank_payment_txt_generator.res_bank_txt_config_action" model="ir.actions.act_window">
+            <field name="domain" eval="[('is_nomina', '=', False),]"/>
+            <field name="context" eval="{'default_is_nomina': False,}"/>
+        </record>
+        
+        <record id="res_bank_txt_config_hr_action" model="ir.actions.act_window">
+            <field name="name">Configuración txt nómina</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.bank.txt_config</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain" eval="[('is_nomina','=',True),]"/>
+            <field name="context" eval="{'default_is_nomina': True,}"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Agregar configuración de txt de banco para nómina 
+                </p>
+                <p>
+                    Registro de configuración para generar archivo TXT para subir el pago al portal bancario.
+                </p>
+            </field>
+        </record>
+        
+        <menuitem id="res_bank_txt_config_hr_menu_act" name="Configuración de txt de banco" parent="hr_payroll.menu_hr_payroll_configuration" action="res_bank_txt_config_hr_action" sequence="20"/>
+    </data>
+</odoo>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="inherit_fields_hr_contract" model="ir.ui.view">
+            <field name="name">inherit_fields_hr_contract</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//page[@name='other']" position="after">
+                    <page string="Other Fields">
+                        <group>
+                            <group>
+                                <field name="req_city"/>
+                            </group>
+                            <group string="Apprentice Sena">
+                                <field name="trainee_type"/>
+                                <field name="teaching_stage_end_date"/>
+                                <field name="productive_stage_start_date"/>
+                                <field name="productive_stage_end_date"/>
+                            </group>
+
+                        </group>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

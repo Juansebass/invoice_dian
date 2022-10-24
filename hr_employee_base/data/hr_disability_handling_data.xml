@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="hr.disability.handling" id="disability_handling100">
+            <field name="name">PAGAR AL 100%</field>
+        </record>
+        <record model="hr.disability.handling" id="disability_handling66">
+            <field name="name">PAGAR AL 66%</field>
+        </record>
+    </data>   
+</odoo>

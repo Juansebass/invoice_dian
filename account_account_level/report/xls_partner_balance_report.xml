@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="xls_partner_balance_report_wizard">
+            <field name="name">xls partner balance report</field>
+            <field name="model">xls.partner.balance.report</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="start_date"/>
+                            </group>
+                            <group>
+                                <field name="end_date"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="account_ids" widget="many2many_tags"/>
+                            </group>
+                            <group>
+                                <field name="partner_ids" widget="many2many_tags"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="company_id" widget="selection" require="True"/>
+                            </group>
+                            <group>
+                                <field name="level"/>
+                                <field name="with_zero_balance"/>
+                            </group>
+                        </group>
+                        <group string="Archivo Excel" attrs="{'invisible': [('xls_output', '=', False)]}">
+                            <group>
+                                <field name="xls_output"/>
+                            </group>
+                        </group>
+                        <!--<notebook>
+                            <page string="Vendedor">
+                                <field name="product_ids"/>
+                            </page>
+                            <page string="Location Picking">
+                                <field name="location_ids"/>
+                            </page>
+                        </notebook>-->
+                    </sheet>
+                    <footer>
+                        <button string="Generar Reporte Excel" class="btn-primary" name="action_generate_xls" type="object"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_partner_balance_report_wizard">
+            <field name="name">Balance de Prueba</field>
+            <field name="res_model">xls.partner.balance.report</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!--<record id="xls_partner_balance_report_download_view" model="ir.ui.view">
+            <field name="name">xls.product.valuation.download.form</field>
+            <field name="model">xls.partner.balance.report</field>
+            <field name="arch" type="xml">
+                <form string="Excel Output">
+                    <seperator colspan="4" string="Please Save file as .xls excel formate"/>
+                    <field name="name" invisible="1"/>
+                    <field name="xls_output" filename="name"/>
+                    <footer>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>-->
+
+        <menuitem name="Balance de Prueba"
+              id="wizard_partner_balance_report"
+              parent="account.account_reports_management_menu"
+              action="action_partner_balance_report_wizard"
+              sequence="1" groups="account.group_account_user"/>
+    </data>
+</odoo>

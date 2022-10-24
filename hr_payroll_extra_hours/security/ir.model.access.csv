@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_ehours_sir,access_hr_ehours_sir,model_hr_ehours_sir,base.group_user,1,1,1,1
+access_hr_ehours_sir_line,access_hr_ehours_sir_line,model_hr_ehours_sir_line,base.group_user,1,1,1,1
+access_hr_extra_hours_conf,access_hr_extra_hours_conf,model_hr_extra_hours_conf,base.group_user,1,1,0,0
+access_hr_ehours_pres_subs,access_hr_ehours_pres_subs,model_hr_ehours_pres_subs,base.group_user,1,1,1,1
+access_hr_ehours_pres_subs_line,access_hr_ehours_pres_subs_line,model_hr_ehours_pres_subs_line,base.group_user,1,1,1,1
+access_cargue_horas_extras,access_cargue_horas_extras,model_cargue_horas_extras,base.group_user,1,1,1,1
+access_cargue_horas_extras_line,access_cargue_horas_extras_line,model_cargue_horas_extras_line,base.group_user,1,1,1,1
+access_overtime_settlement,access_overtime_settlement,model_overtime_settlement,base.group_user,1,1,1,1
+access_overtime_settlement_line,access_overtime_settlement_line,model_overtime_settlement_line,base.group_user,1,1,1,1

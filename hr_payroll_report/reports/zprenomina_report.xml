@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="internal_layout_payslip">
+            <t t-if="not o" t-set="o" t-value="doc"/>
+
+            <t t-if="not company">
+                <!-- Multicompany -->
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id"/>
+                </t>
+                <t t-elif="o and 'company_id' in o">
+                    <t t-set="company" t-value="o.company_id.sudo()"/>
+                </t>
+                <t t-else="else">
+                    <t t-set="company" t-value="res_company"/>
+                </t>
+            </t>
+
+            <div class="header">
+                <div class="row" style="border: 1px solid black">
+                    <div class="col-3 mb4">
+                        <br/>
+                        <t t-esc="company.name"/>
+                        <br/>
+                        <br/>
+                        <span>Del: </span><t t-esc="o.date_from"/><span> Al: </span> <t t-esc="o.date_to"/>
+                    </div>
+                    <div class="col-2"/>
+                    <div class="col-4">
+                        <br/>
+                        <br/>
+                        <span>
+                            P R E N O M I N A
+                        </span>
+                        <br/>
+                        <span>SEPTIEMBRE/2020</span>
+                    </div>
+                    <div class="col-3 text-right" style="font-size: 16px;">
+                        <br/>
+                        <span>Page No. </span><span class="list-inline-item"><span class="page"/></span>
+                        <br/>
+                        <span t-esc="o.compute_date"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div t-attf-class="footer o_standard_footer">
+            </div>
+
+            <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+                 t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <t t-out="0"/>
+            </div>
+
+        </template>
+
+
+        <template id="report_payslip" inherit_id="hr_payroll.report_payslip">
+            <xpath expr="//t[@t-call='web.internal_layout']" position="replace">
+                <t t-call="hr_payroll_report.internal_layout_payslip">
+                    <div class="page mt-5 pt-5">
+                        <br/>
+                        <div class="row pt-5">
+                            <div class="col-12">
+                                <table class="table pt-3"
+                                       style="border: 1px solid black; border-top: 2px solid black; font-size: 12px;">
+
+                                    <tr>
+                                        <td colspan="2">
+                                            <span>0001 100066 </span> <span t-field="o.employee_id.name"/>
+                                            <br/>
+                                            <span>T Cont: </span> <span t-field="o.contract_id.name"/>
+                                            <br/>
+                                            <span>IBC Anterior:</span>
+                                        </td>
+                                        <td colspan="2" style="text-align: left;">
+                                            <span>I. D: </span><span t-field="o.employee_id.identification_id"/> <span>
+                                            Sueldo: </span> <span t-field="o.basic_wage"/>
+                                            <br/>
+                                            <span>Regimen: Ley 50</span>
+                                            <span>T Ret: Porcen</span>
+                                        </td>
+                                        <td colspan="3" style="text-align: right; width: 5%;">
+                                            <span style="margin-left: 12px;">F-Ing:</span>
+                                            <br/>
+                                            <span>Empresa: 1100 </span><span t-esc="o.company_id.name"/>
+                                        </td>
+                                    </tr>
+
+                                    <tr style="border-top: 2px solid black;">
+                                        <th style="width: 5%">No.</th>
+                                        <th style="width: 35%">Description</th>
+                                        <th style="width: 12%">Quantity</th>
+                                        <th style="width: 12%">Accruals</th>
+                                        <th style="width: 12%">Deductions</th>
+                                        <th style="width: 12%">Net</th>
+                                        <th style="width: 12%">Credit Balance</th>
+                                    </tr>
+
+                                    <tr style="line-height: 8px;" t-foreach="o.line_ids"
+                                        t-as="line">
+                                        <td style="border-right; 2px solid black">
+                                            <span t-esc="line.code"/>
+                                        </td>
+
+                                        <td>
+                                            <span t-esc="line.name"/>
+                                        </td>
+
+                                        <td>
+                                            <span t-esc="line.days"/>
+                                        </td>
+
+                                        <td>
+                                            <t t-if="line.amount &gt; 0">
+                                                <span t-esc="'{0:,.2f}'.format(int(line.amount))"/>
+                                            </t>
+                                        </td>
+                                        <td>
+                                            <t t-if="line.amount &lt; 0">
+                                                <span t-esc="'{0:,.2f}'.format(int(line.amount))"/>
+                                            </t>
+                                        </td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+
+                                    </tr>
+                                    <tfooter style="border-top: 2px solid black;">
+                                        <tr style="border-top: 2px solid black; line-height: 15px;">
+                                            <td colspan="3">Total Employee</td>
+
+                                            <td style="text-cemter: right;"><t
+                                                    t-esc="'{0:,.2f}'.format(int(o.get_totals()[0]['total_accruals']))">
+                                            </t>
+                                            </td>
+
+                                            <td style="text-center: right;"><t
+                                                    t-esc="'{0:,.2f}'.format(int(o.get_totals()[0]['total_deductions']))">
+                                            </t>
+                                            </td>
+                                            <td style="text-cemter: right;">
+                                                <t
+                                                        t-esc="'{0:,.2f}'.format(int(o.get_totals()[0]['total_net']))">
+                                                </t>
+                                            </td>
+                                            <td/>
+                                        </tr>
+
+                                        <tr style="border-top: 2px solid black; line-height: 15px;">
+                                            <td colspan="3">Total Center Cost</td>
+                                            <td style="text-cemter: right;">0</td>
+                                            <td style="text-center: right;">0</td>
+                                            <td style="text-cemter: right;">0</td>
+                                            <td/>
+                                        </tr>
+
+                                        <tr style="border-top: 2px solid black; line-height: 15px;">
+                                            <td colspan="3">Total Company</td>
+                                            <td style="text-cemter: right;">0</td>
+                                            <td style="text-center: right;">0</td>
+                                            <td style="text-cemter: right;">0</td>
+                                            <td/>
+                                        </tr>
+
+                                    </tfooter>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

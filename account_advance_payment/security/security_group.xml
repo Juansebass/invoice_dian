@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="0">
+		<record id="account_advance_payment_authorized_group_user" model="res.groups">
+			<field name="name">Anticipo de Proveedores</field>
+			<field name="category_id" ref="base.module_category_hidden"/>
+		</record>
+        <record id="account_advance_payment_authorized_to_draft_group_user" model="res.groups">
+			<field name="name">Anticipo de Proveedores - Pasar Rechazados a Borrador</field>
+			<field name="category_id" ref="base.module_category_hidden"/>
+		</record>
+	</data>
+</openerp>

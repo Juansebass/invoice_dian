@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+      <record id="view_hr_employee_salary_type_form" model="ir.ui.view">
+      <field name="name">hr.employee.salary.type.form</field>
+      <field name="model">hr.employee.salary.type</field>
+      <field name="arch" type="xml">
+        <form string="salario">
+           <group>
+             <group>
+                <field name="name" string="Clase de Salario"/>
+             </group>
+           </group>   
+        </form>
+      </field>
+    </record> 
+
+    <record id="view_hr_employee_salary_type_tree" model="ir.ui.view">
+      <field name="name">hr.employee.salary.type.tree</field>
+      <field name="model">hr.employee.salary.type</field>
+        <field name="arch" type="xml">
+            <tree string="sector salario">
+                <field name="name" string="Clase de Salario"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hr_employee_salary_type" model="ir.actions.act_window">
+        <field name="name">Clase de Salario</field>
+        <field name="res_model">hr.employee.salary.type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Clase de Salario
+          </p>
+        </field>
+    </record>
+
+    <!-- <menuitem name='Clase de Salario'
+            action='action_hr_employee_salary_type'
+            id='menu_hr_employee_salary_type'
+            parent='hr_recruitment.menu_hr_recruitment_configuration'
+            sequence='27'/>  -->
+    </data>   
+</odoo>

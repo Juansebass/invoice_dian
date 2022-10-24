@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+      <record id="view_hr_employee_son_form" model="ir.ui.view">
+      <field name="name">view.hr.employee.son.form</field>
+      <field name="model">hr.employee.son</field>
+      <field name="arch" type="xml">
+        <form string="Hijos">
+           <group>
+             <group>
+              <field name="employee_id" string="Padre/Madre: Empleado"/>
+              <field name="applicant_id" string="Padre/Madre: Aplicante"/>             
+              <field name="first_surname" string="Primer Apellido" required="True"/>
+              <field name="second_surname" string="Segundo Apellido"/>
+              <field name="name" string="Primer Nombre" required="True"/>
+              <field name="second_name" string="Segundo Nombre"/> 
+              <field name="id_document" string="Identificación" required="True"/>
+              <field name="education" string="Nivel de Escolaridad"/>
+              <field name="occupation" string="Ocupación"/>
+             </group>
+
+             <group>
+              <field name="birth_date" string="Fecha de Nacimiento" required="True"/>
+              <field name="gender" string="Genero" required="True"/>
+              <field name="blood_group" string="Grupo Sanguíneo" required="True"/>
+              <field name="nacionality" string="Nacionalidad" required="True"/>
+              <field name="birth_country_id" string="País de Nacimiento" required="True"/>
+              <field name="is_stepson" string="Hijastro"/>
+             </group>
+           </group>
+        </form>
+      </field>
+    </record> 
+
+    <record id="view_hr_employee_son_tree" model="ir.ui.view">
+      <field name="name">view.hr.employee.son.tree</field>
+      <field name="model">hr.employee.son</field>
+        <field name="arch" type="xml">
+            <tree string="sector hijo">
+               <field name="employee_id" string="Padre/Madre: Empleado"/>
+              <field name="applicant_id" string="Padre/Madre: Aplicante"/> 
+               <field name="first_surname" string="Primer Apellido"/>
+               <field name="second_surname" string="Segundo Apellido"/>
+               <field name="first_surname" string="Primer Nombre"/>
+               <field name="second_name" string="Segundo Nombre"/>
+               <field name="birth_date" string="Fecha de Nacimiento"/>
+               <field name="gender" string="Genero"/>
+               <field name="blood_group" string="Grupo Sanguíneo"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hr_employee_son" model="ir.actions.act_window">
+        <field name="name">Información de Hijos</field>
+        <field name="res_model">hr.employee.son</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Hijos
+          </p>
+        </field>
+    </record>
+
+    <menuitem name='Hijos'
+            action='action_hr_employee_son'
+            id='menu_hr_employee_son'
+            parent='hr_recruitment.menu_hr_recruitment_configuration'
+            sequence='80' /> 
+
+    </data>
+</odoo>
+

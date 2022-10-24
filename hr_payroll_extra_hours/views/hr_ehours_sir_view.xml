@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_ehours_sir_view_tree" model="ir.ui.view">
+        <field name="name">hr.ehours.sir.view.tree</field>
+        <field name="model">hr.ehours.sir</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="create_uid"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_ehours_sir_view_form" model="ir.ui.view">
+        <field name="name">hr.ehours.sir.view.form</field>
+        <field name="model">hr.ehours.sir</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar"/>
+                    <button name="upload_data" class="oe_highlight"
+                            string="Upload Data" type="object"
+                            attrs="{'invisible': ['|',('file', '=', False),('state', '!=', 'draft')]}"/>
+                    <button name="action_approved" class="oe_highlight"
+                            string="Approved" type="object"
+                            attrs="{'invisible': ['|',('hr_ehours_sir_line_ids','=',[]),('state', '!=', 'draft')]}"/>
+                    <button name="action_cancelled" class="oe_highlight"
+                            string="Cancelled" type="object"
+                            states="approved"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group colspan="4" col="4">
+                            <field name="create_uid"/>
+                            <field name="file"
+                                   attrs="{'readonly': [('state', 'in', ('approved', 'cancelled'))]}"/>
+                            <field name="created_on"/>
+                            <field name="message"/>
+                            <field name="company_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="hr_ehours_sir_line_ids" nolabel="1"
+                               attrs="{'readonly': [('state', 'in', ('approved', 'cancelled'))]}">
+                            <tree>
+                                <field name="zone"/>
+                                <field name="location"/>
+                                <field name="identification"/>
+                                <field name="company_id"/>
+                                <field name="status"/>
+                            </tree>
+                            <form>
+                                <group colspan="4" col="4">
+                                    <field name="zone"/>
+                                    <field name="location"/>
+                                    <field name="position"/>
+                                    <field name="identification"/>
+                                    <field name="number"/>
+                                    <field name="name"/>
+                                    <field name="n_noct_charger_hours"/>
+                                    <field name="n_daylight_hours"/>
+                                    <field name="n_nightly_hours"/>
+                                    <field name="n_holiday_charge_hours"/>
+                                    <field name="n_extra_holiday_dayligth_hours"/>
+                                    <field name="n_extra_holiday_nigthlly_hours"/>
+                                    <field name="n_total_hours"/>
+                                    <field name="n_trans_sir_1"/>
+                                    <field name="n_trans_sir_2"/>
+                                    <field name="contador"/>
+                                    <field name="r_noct_charger_hours"/>
+                                    <field name="r_daylight_hours"/>
+                                    <field name="r_nightly_hours"/>
+                                    <field name="r_holiday_charge_hours"/>
+                                    <field name="r_extra_holiday_dayligth_hours"/>
+                                    <field name="r_extra_holiday_nigthlly_hours"/>
+                                    <field name="r_total_hours"/>
+                                    <field name="r_trans_sir_1"/>
+                                    <field name="r_trans_sir_2"/>
+                                    <field name="repeated"/>
+                                    <field name="extra_hours"/>
+                                    <field name="company_id"/>
+                                    <field name="database"/>
+                                    <field name="status"/>
+                                </group>
+                            </form>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_ehours_sir_action" model="ir.actions.act_window">
+        <field name="name">Load Sir File</field>
+        <field name="res_model">hr.ehours.sir</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="extra_hours_menu"
+            name="Extra Hours"
+            parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root"/>
+
+    <menuitem
+            id="hr_ehours_sir_menu"
+            action="hr_ehours_sir_action"
+            parent="extra_hours_menu"
+            name="Load Sir File"/>
+
+</odoo>

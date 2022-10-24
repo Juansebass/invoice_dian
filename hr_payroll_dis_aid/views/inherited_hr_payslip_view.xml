@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="view_hr_payslip_line_dis_aid_inherit" model="ir.ui.view">
+        <field name="name">hr.payslip.line.form.dis.aid.view.inherit</field>
+        <field name="model">hr.payslip.line</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_line_tree"/>
+        <field name="arch" type="xml">
+            <field name="employee_id" position="after">
+                <field name="contract_completion_id" invisible="1"/>
+                <field name="dis_aid_ids" widget="many2many_tags"
+                       options="{'no_create': True, 'no_create_edit': True}"
+                       attrs="{'invisible': [('contract_completion_id', '=', False)]}"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_hr_payslip_dis_aid_inherit_form" model="ir.ui.view">
+        <field name="name">Payslip Dis/Aid Inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='line_ids']/form[1]/group[1]/field[@name='salary_rule_id']"
+                   position="after">
+                <field name="contract_completion_id" invisible="1"/>
+                <field name="dis_aid_ids" widget="many2many_tags"
+                       attrs="{'invisible': [('contract_completion_id', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="dis_aid_root" name="Discounts or Aids" parent="hr.menu_human_resources_configuration"/>
+
+        <record id="action_dis_aid_simulate" model="ir.actions.server">
+            <field name="name">Simulate</field>
+            <field name="model_id" ref="hr_payroll_dis_aid.model_hr_payroll_dis_aid"/>
+            <field name="binding_model_id" ref="hr_payroll_dis_aid.model_hr_payroll_dis_aid"/>
+            <field name="state">code</field>
+            <field name="code">action = records.action_dis_aid_simulate()</field>
+        </record>
+
+        <record id="action_dis_aid_approve" model="ir.actions.server">
+            <field name="name">Approve</field>
+            <field name="model_id" ref="hr_payroll_dis_aid.model_hr_payroll_dis_aid"/>
+            <field name="binding_model_id" ref="hr_payroll_dis_aid.model_hr_payroll_dis_aid"/>
+            <field name="state">code</field>
+            <field name="code">action = records.action_dis_aid_approve()</field>
+        </record>
+
+
+        <!-- Hr Payroll Discounts views -->
+        <record id="hr_payroll_dis_aid_view_form" model="ir.ui.view">
+            <field name="name">hr_payroll_dis_aid_view_form</field>
+            <field name="model">hr.payroll.dis.aid</field>
+            <field name="arch" type="xml">
+                <form string="hr_payroll_dis_aid_form">
+                    <header>
+                        <button name="action_simulate" string="Simulate" class="oe_highlight" type="object"
+                                attrs="{'invisible': [('state','!=','draft')]}"/>
+                        <button name="action_approve" string="Approved" class="oe_highlight" type="object"
+                                attrs="{'invisible': [('state','!=','draft')]}"/>
+                        <button name="%(hr_payroll_dis_aid.refinancing_wizard)d" type="action"
+                                string="Refinance / Pay" class="oe_highlight"
+                                attrs="{'invisible':[('state','!=','approved')]}"/>
+                        <button name="%(hr_payroll_dis_aid.confirm_cancel_wizard)d" string="Cancel" class="oe_highlight"
+                                type="action"
+                                attrs="{'invisible': [('state','not in',('draft', 'approved'))]}"/>
+                        <button name="%(hr_payroll_dis_aid.confirm_finish_wizard)d" string="Finish" class="oe_highlight"
+                                type="action"
+                                attrs="{'invisible': [('state','!=','approved')]}"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div>
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <field name="has_partner" invisible="1"/>
+                        <group name="general_information" string="General">
+                            <!-- invisible fields -->
+                            <field name="currency_id" invisible="1"/>
+                            <field name="salary_employee" invisible="1"/>
+                            <field name="concept_type" invisible="1"/>
+                            <field name="total_pay" invisible="1"/>
+                            <group>
+                                <field name="credit_number" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="debt_capacity_id" readonly="1" force_save="1"/>
+                                <field name="total_debt_capacity" readonly="1" force_save="1"/>
+                                <field name="date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="first_payment_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="end_date" force_save="True"
+                                       attrs="{'readonly': True, 'invisible': [('control_balance','=',False), ('state','!=','finalized')]}"/>
+                                <!--
+                                <field name="real_end_date" force_save="True"
+                                       attrs="{'readonly': True, 'invisible': [('state','!=','finalized')]}"/>
+                                -->
+                                <field name="concept_id" attrs="{'readonly':[('state','!=','draft')]}"
+                                       domain="['|',('company_id','=',False),('company_id','=',company_id)]"/>
+                                <field name="partner_id"
+                                       attrs="{'invisible':[('has_partner','=',False)]}"/>
+
+                            </group>
+
+                            <group>
+
+                                <field name="control_balance" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="has_fixed_quota"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="has_manual_terms"
+                                       attrs="{'invisible':['|', ('control_balance','=',False), ('has_fixed_quota','=',False)], 'readonly':[('state','!=','draft')]}"/>
+
+                                <field name="company_id" groups="base.group_multi_company"
+                                       attrs="{'readonly':[('state','!=','draft')]}"
+                                       options="{'no_create': True}"/>
+
+                                <field name="payment_type" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="half_value" widget="monetary" readonly="1"
+                                       options="{'currency_field': 'currency_id'}"
+                                       attrs="{'invisible':[('payment_type','!=','both')]}" force_save="1"/>
+
+                                <field name="identification_id" attrs="{'readonly':[('state','!=','draft')]}"
+                                       invisible="1"/>
+                                <field name="employee_id" attrs="{'readonly':[('state','!=','draft')]}"
+                                       domain="[('company_id','=',company_id)]"/>
+
+                                <field name="manual_simulation" widget="boolean_toggle"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="simulation_file" attrs="{'invisible':[('manual_simulation','=',False)]}"
+                                       filename="simulation_file_name"/>
+                                <button name="load_data" string="Load Data" class="btn btn-info" type="object"
+                                        attrs="{'invisible': [('manual_simulation','=',False)]}"/>
+                            </group>
+
+                        </group>
+
+                        <group name="committeds" string="Committed" attrs="{'readonly':[('state','!=','draft')]}">
+                            <field name="committed_ids" nolabel="1" attrs="{'readonly':[('state','!=','draft')]}">
+                                <tree editable="bot">
+                                    <field name="type_id" width="20%"/>
+                                    <field name="start_date" width="15%"/>
+                                    <field name="end_date" width="15%"/>
+                                    <field name="select_fix" width="20%"/>
+                                    <field name="change_date" width="10%"
+                                           attrs="{'readonly': [('select_fix','!=','val_ipc'),('select_fix','!=','val_percent')]}"/>
+                                    <field name="fix_value" width="10%"
+                                           attrs="{'readonly': ['|',('select_fix','!=', 'value'),('select_fix','=', 'compute'),('select_fix','!=','val_ipc'),('select_fix','!=','val_percent')]}"/>
+                                    <field name="fix_percent" width="10%"
+                                           attrs="{'readonly': ['|',('select_fix','!=', 'percent'),('select_fix','=', 'compute'),('select_fix','!=','val_percent')]}"/>
+                                </tree>
+                            </field>
+                        </group>
+
+                        <group name="terms"
+                               attrs="{'invisible':[('has_manual_terms','=',False)]}">
+                            <group>
+                                <field name="terms_in_years"
+                                       attrs="{'required':[('control_balance','=',True)],'invisible':[('control_balance','=',False)],'readonly':[('state','!=','draft')]}"/>
+                                <field name="terms_in_months"
+                                       attrs="{'required':[('control_balance','=',True)],'invisible':[('control_balance','=',False)], 'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                        </group>
+
+                        <group name="calculate_quote"
+                               attrs="{'invisible':[('has_fixed_quota','=',True)],'readonly':[('state','!=','draft')]}">
+                            <group string="">
+                                <field name="total" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="annual_effective_rate" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="annual_nominal_rate" invisible="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="monthly_effective_rate" invisible="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="monthly_nominal_rate" invisible="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                        </group>
+
+                        <group name="fixed_quote"
+                               attrs="{'invisible':[('has_fixed_quota','=',False)],'readonly':[('state','!=','draft')]}">
+                            <group>
+                                <field name="fixed_quota_amount" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"
+                                       attrs="{'readonly':[('state','!=','draft')], 'required':[('has_fixed_quota','=',True)]}"/>
+                                <field name="total" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"
+                                       attrs="{'readonly':[('state','!=','draft')],
+                                       'invisible':['|', ('control_balance','=',False), ('has_manual_terms','=',True)], 'required':[('control_balance','=',True)]}"/>
+                            </group>
+                        </group>
+
+                        <group col="1"
+                               attrs="{'invisible':[('concept_type','!=','embargoe')], 'readonly':[('state','!=','draft')]}">
+                            <group string="Embargoes">
+                                <field name="embargo" attrs="{'required':[('concept_type','==','embargoe')]}"/>
+                                <field name="process_number"
+                                       attrs="{'required':[('concept_type','==','embargoe')]}"/>
+                                <field name="court_account_number"
+                                       attrs="{'required':[('concept_type','==','embargoe')]}"/>
+                                <field name="file_number" attrs="{'required':[('concept_type','==','embargoe')]}"/>
+                                <field name="date_foreclosure"/>
+                                <field name="embargo_type" attrs="{'required':[('concept_type','==','embargoe')]}"/>
+                                <field name="priority" widget="integer" attrs="{'readonly': True}" force_save="1"/>
+                                <field name="respect_smlv" widget="boolean_toggle"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="respect_legal_discount" widget="boolean_toggle"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+
+                                <!-- <field name="initial_balance" attrs="{'invisible':[('control_balance','=',False)]}"/>
+                                 <field name="current_balance"/>
+                                 -->
+
+                            </group>
+
+                            <group>
+                                <group string="Court">
+                                    <field name="court_id"
+                                           attrs="{'required':[('concept_type','==','embargoe')], 'readonly':[('state','!=','draft')]}"/>
+                                    <field name="court_code"/>
+                                    <field name="court_nit"/>
+                                    <field name="court_phone"/>
+                                    <field name="court_city"/>
+                                    <field name="court_address"/>
+                                </group>
+
+                                <group string="Plaintiff">
+                                    <field name="type_identification_applicant"
+                                           attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="number_claimant_identification"
+                                           attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="company_name_names" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="surname" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                </group>
+                            </group>
+                        </group>
+
+                        <group string="Summary" col="1">
+                            <group>
+                                <field name="observation" widget="text" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="initial_balance" widget="monetary"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+
+                            <group col="3">
+                                <group>
+                                    <field name="monthly_fee" widget="monetary" readonly="1"
+                                           options="{'currency_field': 'currency_id'}" force_save="1"/>
+                                    <field name="total_amount" widget="monetary" readonly="1" force_save="1"/>
+                                </group>
+                                <group>
+                                    <field name="total_to_pay" widget="monetary" readonly="1" force_save="1"/>
+                                    <field name="total_paid" widget="monetary" readonly="1" force_save="1"/>
+                                    <field name="total_payable" widget="monetary" readonly="1" force_save="1"/>
+                                </group>
+                                <group>
+                                    <field name="quote_to_pay" readonly="1" force_save="1"/>
+                                    <field name="quote_payed" readonly="1" force_save="1"/>
+                                    <field name="total_quote" readonly="1" force_save="1"/>
+                                </group>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page name="line_ids" string="Amortization Table">
+                                <field name="line_ids">
+                                    <tree editable="true" decoration-danger="state == 'cancel'"
+                                          decoration-success="state == 'payed'"
+                                          decoration-warning="state == 'approved'">
+                                        <field name="code" width="10%"/>
+                                        <field name="name" width="10%"/>
+                                        <field name="date" width="10%"/>
+                                        <field name="end_date" width="10%"/>
+                                        <field name="capital_pay" width="20%"/>
+                                        <field name="interest_pay" width="20%"/>
+                                        <field name="monthly_pay" width="20%"/>
+                                        <field name="balance" width="20%"/>
+                                        <field name="state"/>
+                                        <field name="pv_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page name="payment_line_ids" string="Payments Table">
+                                <field name="payment_line_ids">
+                                    <tree editable="false">
+                                        <field name="code" width="20%"/>
+                                        <field name="name" width="20%"/>
+                                        <field name="date" width="20%"/>
+                                        <field name="payment_value" width="40%"/>
+                                        <field name="payslip_line_id" width="30%"/>
+                                        <field name="balance" width="30%"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_payroll_discounts_view_tree" model="ir.ui.view">
+            <field name="name">hr_payroll_discounts_view_tree</field>
+            <field name="model">hr.payroll.dis.aid</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Discounts">
+                    <field name="name"/>
+                    <field name="concept_id"/>
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                    <field name="end_date"/>
+                    <field name="terms_in_months"/>
+                    <field name="total_amount"/>
+                    <field name="total_to_pay"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_payroll_dis_aid_action" model="ir.actions.act_window">
+            <field name="name">Discounts / Aids</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.payroll.dis.aid</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="hr_payroll_dis_aid_root" name="Discounts/Aid" parent="hr.menu_hr_root" sequence="15"/>
+
+        <menuitem id="hr_payroll_dis_aid_menuitem" name="Discounts/Aid" parent="hr_payroll_dis_aid_root"
+                  action="hr_payroll_dis_aid_action" sequence="1"/>
+
+
+        <!-- Hr Payroll Discount Concept Views -->
+        <record id="hr_dis_aid_concept_view_form" model="ir.ui.view">
+            <field name="name">hr_dis_aid_concept_view_form</field>
+            <field name="model">hr.payroll.dis.aid.concept</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <separator string="Concepts"/>
+                        <group>
+                            <group>
+                                <field name="company_id"/>
+                                <field name="code"/>
+                                <field name="name"/>
+                                <field name="event_id"
+                                       domain="[('type_id.name','=','Económica'),'|',('company_id', '=', False), ('company_id', '=', company_id)]"/>
+                                <field name="type"/>
+                                <field name="sequence_id"/>
+                                <field name="default_rate"/>
+                                <field name="has_partner"/>
+                                <field name="partner_id"
+                                       attrs="{'invisible':[('has_partner','=',False)], 'required':[('has_partner','=',True)]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_dis_aid_concepts_view_tree" model="ir.ui.view">
+            <field name="name">hr_dis_aid_concepts_view_tree</field>
+            <field name="model">hr.payroll.dis.aid.concept</field>
+            <field name="arch" type="xml">
+                <tree string="hr_dis_aid_concepts_tree">
+                    <field name="code" width="10%"/>
+                    <field name="name" width="30%"/>
+                    <field name="sequence_id" width="30%"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_dis_aid_concept_action" model="ir.actions.act_window">
+            <field name="name">Concepts</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.payroll.dis.aid.concept</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+
+        <menuitem id="hr_dis_aid_concept_menuitem" name="Concepts" parent="dis_aid_root"
+                  action="hr_dis_aid_concept_action"/>
+
+        <!-- Hr Payroll Discount Discount Type Views -->
+        <record id="hr_payroll_dis_aid_type_view_form" model="ir.ui.view">
+            <field name="name">hr_payroll_dis_aid_type_view_form</field>
+            <field name="model">hr.payroll.dis.aid.type</field>
+            <field name="arch" type="xml">
+                <form string="hr_payroll_dis_aid_type_form">
+                    <sheet>
+                        <separator string="Discount/Aid Type"/>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                                <field name="name"/>
+                                <field name="event_id" domain="[('type_id.name','=','Económica')]"/>
+                                <field name="frequency"/>
+                                <!-- <field name="month" attrs="{'invisible':[('frequency','!=','annual')]}"/> -->
+                                <field name="min_percent"/>
+                                <field name="max_percent"/>
+                                <field name="allow_out_of_range"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_dis_aid_type_view_tree" model="ir.ui.view">
+            <field name="name">hr_dis_aid|_type_view_tree</field>
+            <field name="model">hr.payroll.dis.aid.type</field>
+            <field name="arch" type="xml">
+                <tree string="hr_dis_aid_type_tree">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_dis_aid_type_action" model="ir.actions.act_window">
+            <field name="name">Discount/Aid Type</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.payroll.dis.aid.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="hr_dis_aid_type_menuitem" name="Discount Type" parent="dis_aid_root"
+                  action="hr_dis_aid_type_action"/>
+
+        <!--
+        <record id="hr_dis_aid_base_view_form" model="ir.ui.view">
+            <field name="name">hr_dis_aid_base_view_form</field>
+            <field name="model">hr.payroll.dis.aid.committed</field>
+            <field name="arch" type="xml">
+                <form name="hr_dis_aid_base_form">
+                    <sheet>
+                        <group string="Base">
+                            <group>
+
+                            </group>
+                            <group>
+                                <field name="name"/>
+                                <field name="type_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_dis_aid_base_view_tree" model="ir.ui.view">
+            <field name="name">hr_dis_aid_base_view_tree</field>
+            <field name="model">hr.payroll.dis.aid.committed</field>
+            <field name="arch" type="xml">
+                <tree string="hr_dis_aid_base_tree">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_dis_aid_base_action" model="ir.actions.act_window">
+            <field name="name">Commited</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.payroll.dis.aid.committed</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="hr_dis_aid_base_menuitem" name="Base" parent="dis_aid_root" action="hr_dis_aid_base_action"/>-->
+
+    </data>
+</odoo>

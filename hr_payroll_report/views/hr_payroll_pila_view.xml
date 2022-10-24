@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_payroll_pila_view_tree" model="ir.ui.view">
+        <field name="name">hr.payroll.pila.view.tree</field>
+        <field name="model">hr.payroll.pila</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="company_id"/>
+                <field name="year"/>
+                <field name="month"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_payroll_pila_view_form" model="ir.ui.view">
+        <field name="name">hr.payroll.pila.view.form</field>
+        <field name="model">hr.payroll.pila</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar"/>
+
+                    <button name="action_generate_report"
+                            string="Generate Report" type="object" attrs="{'invisible':[('state','=','done')]}"/>
+
+                    <button name="print_xlsx" type="object" string="Print XLSX"
+                            attrs="{'invisible':[('state','!=','done')]}"/>
+                </header>
+
+                <sheet>
+                    <field name="check_log" invisible="1"/>
+                    <group>
+                        <group colspan="4" col="4">
+                            <group colspan="2" col="2">
+                                <field name="company_id" groups="base.group_multi_company"
+                                       attrs="{'readonly':[('state','!=','initial')]}"
+                                       options="{'no_create': True}"/>
+                            </group>
+                        </group>
+                        <group colspan="4" col="4">
+                            <field name="month" attrs="{'readonly':[('state','!=','initial')]}"/>
+                            <field name="year" attrs="{'readonly':[('state','!=','initial')]}"/>
+                            <field name="file1_name" invisible="1"/>
+                            <field name="file2_name" invisible="1"/>
+                            <field name="file1" filename="file1_name"
+                                   attrs="{'invisible': [('file1_name','=',False)]}"/>
+                            <field name="file2" filename="file2_name"
+                                   attrs="{'invisible': [('file2_name','=',False)]}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="File 1" name="file1" invisible="1">
+                            <group>
+                                <field name="line1_ids" nolabel="1">
+                                    <tree>
+                                        <field name="company_name"/>
+                                        <field name="document_type"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group colspan="4" col="4">
+                                                <field name="company_name"/>
+                                                <field name="document_type"/>
+                                                <field name="identification_number"/>
+                                                <field name="verification_code"/>
+                                                <field name="sucursal_code"/>
+                                                <field name="sucursal_name"/>
+                                                <field name="contributor_class"/>
+                                                <field name="legal_nature"/>
+                                                <field name="person_type"/>
+                                                <field name="presentation_form"/>
+                                                <field name="street"/>
+                                                <field name="divpola_code"/>
+                                                <field name="state"/>
+                                                <field name="ica_activity"/>
+                                                <field name="phone"/>
+                                                <field name="mobile"/>
+                                                <field name="email"/>
+                                                <field name="rl_identification_id"/>
+                                                <field name="rl_verification_code"/>
+                                                <field name="rl_document_type"/>
+                                                <field name="rl_third_name"/>
+                                                <field name="rl_fourth_name"/>
+                                                <field name="rl_first_name"/>
+                                                <field name="rl_second_name"/>
+                                                <field name="concordate_date"/>
+                                                <field name="action_type"/>
+                                                <field name="concordate_end_date"/>
+                                                <field name="operator"/>
+                                                <field name="payment_period"/>
+                                                <field name="aportant_type"/>
+                                                <field name="commercial_register_date"/>
+                                                <field name="state_partner"/>
+                                                <field name="icbf"/>
+                                                <field name="benefit_ccf"/>
+                                                <field name="dummy_field" invisible="1"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="File 2" name="file2" invisible="1">
+                            <group string="Header">
+                                <field name="line2_1_ids" nolabel="1">
+                                    <tree>
+                                        <field name="register_type"/>
+                                        <field name="template_mode"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group colspan="4" col="4">
+                                                <field name="register_type"/>
+                                                <field name="template_mode"/>
+                                                <field name="consecutive"/>
+                                                <field name="company_name"/>
+                                                <field name="document_type"/>
+                                                <field name="identification_number"/>
+                                                <field name="verification_code"/>
+                                                <field name="template_type"/>
+                                                <field name="template_ref_number"/>
+                                                <field name="template_ref_payment_date"/>
+                                                <field name="presentation_form"/>
+                                                <field name="sucursal_code"/>
+                                                <field name="sucursal_name"/>
+                                                <field name="code_arl"/>
+                                                <field name="payment_period"/>
+                                                <field name="health_payment_period"/>
+                                                <field name="template_number"/>
+                                                <field name="payment_date"/>
+                                                <field name="total_employees"/>
+                                                <field name="total_payroll"/>
+                                                <field name="aportant_type"/>
+                                                <field name="operator_code"/>
+                                                <field name="dummy_field" invisible="1"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                            </group>
+                            <group string="Content">
+                                <field name="line2_2_ids" nolabel="1">
+                                    <tree>
+                                        <field name="register_type"/>
+                                        <field name="consecutive"/>
+                                        <field name="workly_hours"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group colspan="4" col="4">
+                                                <field name="register_type"/>
+                                                <field name="consecutive"/>
+                                                <field name="document_type"/>
+                                                <field name="identification_number"/>
+                                                <field name="contributor_type"/>
+                                                <field name="contributor_subtype"/>
+                                                <field name="is_foreign"/>
+                                                <field name="colombian_abroad"/>
+                                                <field name="state"/>
+                                                <field name="divpola_code"/>
+                                                <field name="third_name"/>
+                                                <field name="fourth_name"/>
+                                                <field name="first_name"/>
+                                                <field name="second_name"/>
+                                                <field name="is_ing"/>
+                                                <field name="is_ret"/>
+                                                <field name="is_tde"/>
+                                                <field name="is_tae"/>
+                                                <field name="is_tdp"/>
+                                                <field name="is_tap"/>
+                                                <field name="is_vsp"/>
+                                                <field name="is_correction"/>
+                                                <field name="is_vst"/>
+                                                <field name="is_sln"/>
+                                                <field name="is_ige"/>
+                                                <field name="is_lma"/>
+                                                <field name="is_vac_lr"/>
+                                                <field name="is_avp"/>
+                                                <field name="is_vct"/>
+                                                <field name="irl_days"/>
+                                                <field name="code_afp"/>
+                                                <field name="code_new_afp"/>
+                                                <field name="code_eps"/>
+                                                <field name="code_new_eps"/>
+                                                <field name="code_ccf"/>
+                                                <field name="pension_days"/>
+                                                <field name="health_days"/>
+                                                <field name="arl_days"/>
+                                                <field name="ccf_days"/>
+                                                <field name="salary"/>
+                                                <field name="is_integral_salary"/>
+                                                <field name="pension_ibc"/>
+                                                <field name="health_ibc"/>
+                                                <field name="arl_ibc"/>
+                                                <field name="ccf_ibc"/>
+                                                <field name="pension_rate"/>
+                                                <field name="pension_value"/>
+                                                <field name="pension_vol_emp"/>
+                                                <field name="pension_vol_com"/>
+                                                <field name="pension_total"/>
+                                                <field name="solidarity_fund_sol"/>
+                                                <field name="solidarity_fund_sub"/>
+                                                <field name="total_not_retained"/>
+                                                <field name="health_rate"/>
+                                                <field name="health_value"/>
+                                                <field name="upc_value"/>
+                                                <field name="disability_number"/>
+                                                <field name="disability_value"/>
+                                                <field name="maternity_disability_number"/>
+                                                <field name="maternity_disability_value"/>
+                                                <field name="arl_rate"/>
+                                                <field name="work_center"/>
+                                                <field name="arl_value"/>
+                                                <field name="ccf_rate"/>
+                                                <field name="ccf_value"/>
+                                                <field name="sena_rate"/>
+                                                <field name="sena_value"/>
+                                                <field name="icbf_rate"/>
+                                                <field name="icbf_value"/>
+                                                <field name="esap_rate"/>
+                                                <field name="esap_value"/>
+                                                <field name="men_rate"/>
+                                                <field name="men_value"/>
+                                                <field name="principal_document_type"/>
+                                                <field name="principal_identification_number"/>
+                                                <field name="exempt_from_payment"/>
+                                                <field name="arl_code"/>
+                                                <field name="risk_level"/>
+                                                <field name="special_pension"/>
+                                                <field name="ing_date"/>
+                                                <field name="ret_date"/>
+                                                <field name="vsp_date"/>
+                                                <field name="sln_initial_date"/>
+                                                <field name="sln_end_date"/>
+                                                <field name="ige_initial_date"/>
+                                                <field name="ige_end_date"/>
+                                                <field name="lma_initial_date"/>
+                                                <field name="lma_end_date"/>
+                                                <field name="vac_lr_initial_date"/>
+                                                <field name="vac_lr_end_date"/>
+                                                <field name="vct_initial_date"/>
+                                                <field name="vct_end_date"/>
+                                                <field name="irl_initial_date"/>
+                                                <field name="irl_end_date"/>
+                                                <field name="ibc_amount"/>
+                                                <field name="workly_hours"/>
+                                                <field name="abroad_date"/>
+                                                <field name="dummy_field" invisible="1"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Log" name="log" attrs="{'invisible':[('log','=','')]}">
+                            <field name="log"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_payroll_pila_action" model="ir.actions.act_window">
+        <field name="name">Payroll Pila</field>
+        <field name="res_model">hr.payroll.pila</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Payroll Pila"
+              id="hr_payroll_pila_menu"
+              action="hr_payroll_pila_action"
+              parent="hr_payroll.menu_hr_payroll_report"/>
+
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_survey_survey_form_inherit" model="ir.ui.view">
+        <field name="name">survey.survey.form.inherit</field>
+        <field name="model">survey.survey</field>
+        <field name="inherit_id" ref="survey.survey_form"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//field[@name='active']" position="after">
+                <field name="manejo_interno"/>
+                <field name="requisition_survey" string="Encuesta de requisición"/>
+                <field name="info_field_id" 
+                       domain="[('ttype', '=', 'text'),('model', '=', 'hr.requisition')]" 
+                       string="Campo información en Requisición"
+                       options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_survey_question_form_inherit" model="ir.ui.view">
+        <field name="name">survey.question.form.inherit</field>
+        <field name="model">survey.question</field>
+        <field name="inherit_id" ref="survey.survey_question_form"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//field[@name='question_type']" position="after">
+                <field name="requisition_survey" invisible="1"/>
+                <field name="req_field_ttype" invisible="1"/>
+                <field name="req_field_m2o_model" invisible="1"/>
+                <field name="req_field_id"
+                    attrs="{'invisible': [('requisition_survey','=',False)], 'required': [('requisition_survey','!=',False)]}"
+                    domain="[('model', '=', 'hr.requisition')]" 
+                    string="Campo en Requisición"
+                    options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
+                <field name="m2o_domain_field_ids"
+                    widget="many2many_tags"
+                    domain="[('model', '=', req_field_m2o_model)]"
+                    attrs="{'invisible': ['|', ('req_field_ttype','!=','many2one'), ('requisition_survey','=',False)], 'required': [('req_field_ttype','=','many2one'), ('requisition_survey','=',True)]}"
+                    options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/> 
+            </xpath>
+        </field>
+    </record>
+</odoo>

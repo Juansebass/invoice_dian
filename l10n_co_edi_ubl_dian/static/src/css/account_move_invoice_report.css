@@ -1,0 +1,141 @@
+.page {
+    font-size: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+th {
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+.border-color-left {
+     border-left: 1px solid white;
+}
+.border-color-right {
+     border-right: 1px solid white;
+}
+.center {
+    text-align: center;
+}
+.right {
+    text-align: right;
+}
+.company-logo {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 20%;
+    text-align: center;
+    padding-top: 100px;
+    margin-top: 10px;
+}
+.company-info {
+    position: fixed;
+    top: 0px;
+    left: 25%;
+    width: 20%;
+}
+.resolution-info {
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    width: 20%;
+}
+.invoice-number {
+    position: fixed;
+    top: 0px;
+    left: 75%;
+    width: 25%;
+    text-align: center;
+    border: 1px solid black;
+    vertical-align: middle;
+    padding-top: 5px
+}
+.invoice-number h6 {
+    vertical-align: middle;
+}
+.nit-info {
+    position: fixed;
+    top: 150px;
+    left: 0;
+    font-weight: bold;
+    width: 20%;
+}
+.cufe {
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    width: 50%;
+}
+.cufe_cude {
+    font-size: 8px;
+}
+.partner-info {
+    position:fixed;
+    top: 220px;
+    left: 0;
+    width: 60%;
+    height: 140px;
+}
+.partner-info th {
+    background-color: white;
+    color: black;
+    text-align: left;
+}
+.dates {
+    position:fixed;
+    top: 220px;
+    left: 60%;
+    width: 40%;
+    height: 140px;
+    text-align: center;
+}
+.dates th {
+    vertical-align: middle;
+}
+.border-color-black-right {
+     border-right:1px solid black;
+}
+.border-color-black-top {
+     border-top:1px solid black;
+}
+.products {
+    position: fixed;
+    top: 360px;
+    right: 0;
+    width: 100%;
+}
+.product-line-table td {
+    border: 1px solid black;
+}
+.white-space {
+    width: 100px;
+}
+.payment-info td {
+    border: 1px solid black;
+}
+.payment-text {
+     width: 40%;
+}
+.payment-qr {
+    width: 20%;
+    text-align: center;
+}
+.qr-code {
+    height:115px;
+    display: block;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+.footer {
+    font-size: 10px;
+    text-align: center;
+}
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="hr.employee.address" id="address1">
+            <field name="name">via</field>
+            <field name="identificador">1</field>
+        </record>
+    </data>   
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_relationship_view_tree" model="ir.ui.view">
+            <field name="name">relationship.view.tree</field>
+            <field name="model">res.relationship</field>
+            <field name="arch" type="xml">
+                <tree string="relationship_tree" editable="bottom">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="res_relationship_action" model="ir.actions.act_window">
+            <field name="name">Relationships</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.relationship</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="relationship_menu_item"
+                  name="Relationship"
+                  parent="hr.menu_human_resources_configuration_employee"
+                  action="res_relationship_action"/>
+
+    </data>
+</odoo>

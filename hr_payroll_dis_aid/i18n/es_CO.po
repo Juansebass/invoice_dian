@@ -1,0 +1,1710 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_payroll_dis_aid
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20201024\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-25 03:33+0000\n"
+"PO-Revision-Date: 2021-02-26 20:21-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_CO\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid ": has a problem for approve."
+msgstr ": tiene un problema para aprobar."
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid ": has a problem for simulate."
+msgstr ": tiene un problema para simular."
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_capacity_view_form
+msgid "Accruals"
+msgstr "Devengos"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__accrued
+msgid "Accrued"
+msgstr "Devengado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_needaction
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_needaction
+msgid "Action Needed"
+msgstr "Acción necesitada"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__activity_ids
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoración de Actividad  de Excepción"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__activity_state
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__activity_state
+msgid "Activity State"
+msgstr "Estado de la actividad"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_court__address
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__court_address
+msgid "Address"
+msgstr "Dirección"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_concept__type__aid
+msgid "Aid"
+msgstr "Auxilio"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_type__allow_out_of_range
+msgid "Allow out of Range"
+msgstr "Permitir Fuera de Rango"
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_view_form
+msgid "Amortization Table"
+msgstr "Tabla de Amortización"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_hr_payroll_dis_aid_line
+msgid "Amortization Table for HR Payroll Discount"
+msgstr "Tabla de amortización para HR Payroll Discount"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_loans_line__monthly_fee
+msgid "Amount"
+msgstr "Monto"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_type__frequency__annual
+msgid "Annual"
+msgstr "Anual"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__annual_effective_rate
+msgid "Annual Effective Rate"
+msgstr "Tasa Efectiva Anual"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__annual_nominal_rate
+msgid "Annual Nominal Rate"
+msgstr "Tasa Nominal Anual"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_type__is_extra_time
+msgid "Apply as Overtime"
+msgstr "Aplica Horas Extras"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.actions.server,name:hr_payroll_dis_aid.action_dis_aid_approve
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_capacity_view_form
+msgid "Approve"
+msgstr "Aprobado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__approved
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_debt_capacity__state__approved
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid__state__approved
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_line__state__approved
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_capacity_view_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_view_form
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.confirm_cancel_wizard_discounts_form
+msgid "Are you sure you want to <b>cancel</b> the discount / aid?"
+msgstr "Esta seguro que desea <b>cancelar</b> el descuento / auxilio?"
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.confirm_finish_wizard_discounts_form
+msgid "Are you sure you want to <b>finalize</b> the discount / aid?"
+msgstr "Esta seguro que desea <b>Finalizar</b> el descuento / auxilio?"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_committed__select_fix
+msgid "Assigned By"
+msgstr "Asignado Por"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__payment_type
+msgid "Assignment Type"
+msgstr "Frecuencia de Pago"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_attachment_count
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_attachment_count
+msgid "Attachment Count"
+msgstr "Adjunto"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__available_salary
+msgid "Available Salary"
+msgstr "Salario Disponible"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__balance
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_payment_line__balance
+msgid "Balance"
+msgstr "Saldo"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid__payment_type__2
+msgid "Bi-weekly"
+msgstr "Quincenal"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_type__frequency__biannual
+msgid "Biannual"
+msgstr "Bianual"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_type__frequency__biweekly
+msgid "Biweekly"
+msgstr "Quincenal"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_line__state__cancel
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.debt_capacity_wizard_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_view_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.refinancing_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid__state__canceled
+msgid "Canceled"
+msgstr "Cancelado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__capital_pay
+msgid "Capital Payment"
+msgstr "Capital Pagado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__capital_to_pay
+msgid "Capital to Pay"
+msgstr "Capital por Pagar"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__embargo_category_id
+msgid "Category"
+msgstr "Categoría"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_committed__change_date
+msgid "Change Date"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__check_change_terms
+msgid "Check Change Terms"
+msgstr "Verificar Cambio de Términos"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_court__city
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__court_city
+msgid "City"
+msgstr "Ciudad"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid__embargo_type__civil
+msgid "Civil"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_court__code
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__code
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__court_code
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_concept__code
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__code
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_payment_line__code
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_type__code
+msgid "Code"
+msgstr "Código"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__commissions
+msgid "Commissions"
+msgstr "Comisiones"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid "Commitments can not have two of calculated type."
+msgstr "Los compromisos no pueden tener dos de tipo calculado."
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__committed_ids
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_view_form
+msgid "Committed"
+msgstr "Comprometidos"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_hr_payroll_dis_aid_committed
+msgid "Committed to obtain founds to pay a Discount/Aid"
+msgstr "Comprometido a obtener fondos para pagar un Descuento/auxilio"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__company_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__company_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_concept__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__company_name_names
+msgid "Company Name / Names"
+msgstr "Nombre de Empresa / Nombres"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_committed__select_fix__compute
+msgid "Compute"
+msgstr "Calculado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_debt_capacity_wizard__concept_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__concept_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_concept__name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_loans_line__concept_id
+msgid "Concept"
+msgstr "Concepto"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__concept_type
+msgid "Concept Type"
+msgstr "Tipo de Concepto"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.actions.act_window,name:hr_payroll_dis_aid.hr_dis_aid_concept_action
+#: model:ir.ui.menu,name:hr_payroll_dis_aid.hr_dis_aid_concept_menuitem
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_dis_aid_concept_view_form
+msgid "Concepts"
+msgstr "Conceptos"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.actions.act_window,name:hr_payroll_dis_aid.confirm_cancel_wizard
+msgid "Confirm Cancel"
+msgstr "Confirmar la anulación"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.actions.act_window,name:hr_payroll_dis_aid.confirm_finish_wizard
+msgid "Confirm Finish"
+msgstr "Confirmar Finalizado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_court_view_form
+msgid "Contact Information"
+msgstr "Información de contacto"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__control_balance
+msgid "Control Balance"
+msgstr "Controla saldo"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid__embargo_type__cooperatives
+msgid "Cooperatives"
+msgstr "Cooperativas"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.actions.act_window,name:hr_payroll_dis_aid.hr_court_action
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__court_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_res_partner__is_court
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_res_users__is_court
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_court_view_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_view_form
+msgid "Court"
+msgstr "Juzgado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__court_account_number
+msgid "Court Account Number"
+msgstr "Número de Cuenta del Juzgado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_hr_court
+msgid "Court for embargoes in discounts/aids"
+msgstr "Juzgado para los embargos en los descuentos/ayudas"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.ui.menu,name:hr_payroll_dis_aid.hr_court_menu_item
+msgid "Courts"
+msgstr "Juzgados"
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.refinancing_form
+msgid "Create"
+msgstr "Crear"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.actions.act_window,name:hr_payroll_dis_aid.refinancing_wizard
+msgid "Create Appointment"
+msgstr "Crear una cita"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.actions.act_window,name:hr_payroll_dis_aid.debt_capacity_wizard
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.debt_capacity_wizard_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_capacity_view_form
+msgid "Create Discount"
+msgstr "Crear Descuento"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_line__state__created
+msgid "Created"
+msgstr "Creado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_debt_capacity_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_court__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_confirm_cancel__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_confirm_finish__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_refinancing__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_committed__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_concept__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_payment_line__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_type__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_discount_variable__create_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_loans_line__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_debt_capacity_wizard__create_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_court__create_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_confirm_cancel__create_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_confirm_finish__create_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_refinancing__create_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__create_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__create_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_committed__create_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_concept__create_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__create_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_payment_line__create_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_type__create_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_discount_variable__create_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_loans_line__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__credit_number
+msgid "Credit Number"
+msgstr "Número de Crédito"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__currency_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__current_balance
+msgid "Current Balance"
+msgstr "Balance Actual"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__date_received
+msgid "Date Received"
+msgstr "Fecha de Recibido"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__date_entry
+msgid "Date of Entry"
+msgstr "Fecha de Ingreso"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__date_foreclosure
+msgid "Date of Foreclosure"
+msgstr "Fecha del Embargo"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.actions.act_window,name:hr_payroll_dis_aid.hr_payroll_debt_capacity_action
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__debt_capacity_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_loans_line__debt_capacity_id
+#: model:ir.ui.menu,name:hr_payroll_dis_aid.hr_payroll_debt_capacity_menu_item
+msgid "Debt Capacity"
+msgstr "Capacidad de Endeudamiento"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_debt_capacity_wizard
+msgid "Debt Capacity Wizard"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_hr_payroll_debt_capacity
+msgid "Debt capacity for discounts"
+msgstr "Capacidad de Endudamiento "
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__deductions
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_capacity_view_form
+msgid "Deductions"
+msgstr "Deducciones"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_concept__default_rate
+msgid "Default Rate"
+msgstr "Tasa por Defecto"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__delivery_date
+msgid "Delivery Date"
+msgstr "Fecha de Entregado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_loans_line__dis_aid_id
+msgid "Description"
+msgstr "Descripción"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_hr_payroll_loans_line
+msgid "Detail Loans on Debt Capacity"
+msgstr "Detalle de Prestamos en Capacidad de Endeudamiento"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_employee__dis_aid_count
+msgid "Dis Aid Count"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/wizard/debt_capacity_wizard.py:0
+#, python-format
+msgid "Discount Created"
+msgstr "Descuento Creado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.ui.menu,name:hr_payroll_dis_aid.hr_dis_aid_type_menuitem
+msgid "Discount Type"
+msgstr "Tipo de Descuento"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_hr_payroll_discount_variable
+msgid "Discount Variable for Module Debt Capacity"
+msgstr "Variable de descuento para la capacidad de endeudamiento"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.actions.act_window,name:hr_payroll_dis_aid.hr_payroll_dis_discounts_action
+#: model:ir.ui.menu,name:hr_payroll_dis_aid.Discounts Variable
+msgid "Discount variable"
+msgstr "Variable de Descuento"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_committed__dis_aid_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__dis_aid_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_payment_line__dis_aid_id
+msgid "Discount/Aid"
+msgstr "Descuento/Auxilio"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_hr_payroll_dis_aid_concept
+msgid "Discount/Aid Concepts"
+msgstr "Conceptos Descuentos/Auxilios"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_payment_line__dis_aid_line_id
+msgid "Discount/Aid Line"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model:ir.actions.act_window,name:hr_payroll_dis_aid.hr_dis_aid_type_action
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_type_view_form
+msgid "Discount/Aid Type"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_hr_payroll_dis_aid_type
+msgid "Discount/Aid Types"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_hr_payroll_dis_aid
+msgid "Discount/Aids like liens, loans, etc. given to employee"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model:ir.actions.act_window,name:hr_payroll_dis_aid.hr_payroll_dis_aid_action
+msgid "Discounts / Aids"
+msgstr "Descuentos / Auxilios"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.ui.menu,name:hr_payroll_dis_aid.dis_aid_root
+msgid "Discounts or Aids"
+msgstr "Descuentos o Auxilios"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.ui.menu,name:hr_payroll_dis_aid.hr_payroll_dis_aid_menuitem
+#: model:ir.ui.menu,name:hr_payroll_dis_aid.hr_payroll_dis_aid_root
+msgid "Discounts/Aid"
+msgstr "Descuento/Auxilio"
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.discounts_inherit_hr_employee_view_form
+msgid "Discounts/Aids"
+msgstr "Descuentos/Auxilios"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_debt_capacity_wizard__display_name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_court__display_name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_confirm_cancel__display_name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_confirm_finish__display_name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_refinancing__display_name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__display_name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__display_name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_committed__display_name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_concept__display_name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__display_name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_payment_line__display_name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_type__display_name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_discount_variable__display_name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_loans_line__display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__documents_requested
+msgid "Documents Requested"
+msgstr "Documentos Requeridos"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_debt_capacity__state__draft
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid "El número de identificación no corresponde al empleado"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_capacity_view_form
+msgid "Elaborated"
+msgstr "Elaborado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__embargo
+msgid "Embargo"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__embargo_type
+msgid "Embargo Type"
+msgstr "Tipo de Embargo"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_concept__type__embargoe
+msgid "Embargoe"
+msgstr "Embargo"
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_view_form
+msgid "Embargoes"
+msgstr "Embargos"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_hr_employee
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__employee_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__employee_id
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_discounts_view_tree
+msgid "Employee Discounts"
+msgstr "Descuentos de Empleado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__end_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_committed__end_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__end_date
+msgid "End Date"
+msgstr "Fecha Fin (Estimada)"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_concept__event_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_type__event_id
+msgid "Event"
+msgstr "Evento"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__expiration
+msgid "Expiration"
+msgstr "Vencimiento"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_dis_aid_refinancing__type__extra_pay
+msgid "Extra Quote Pay"
+msgstr "Extra Cuota Pagada"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_refinancing__extra_quote_value
+msgid "Extra Quote Value"
+msgstr "Valor de Extra Cuota"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/wizard/refinancing.py:0
+#, python-format
+msgid "Extra payment"
+msgstr "Pago Extra"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/wizard/refinancing.py:0
+#, python-format
+msgid "Extra payment value is greater than the balance."
+msgstr "El valor de pago extra es mayor que el saldo."
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__simulation_file_name
+msgid "File Name"
+msgstr "Nombre del archivo"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__file_number
+msgid "File Number"
+msgstr "Número de Archivo"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_debt_capacity__state__finalized
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid__state__finalized
+msgid "Finalized"
+msgstr "Finalizado"
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_view_form
+msgid "Finish"
+msgstr "Terminar"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__first_payment_date
+msgid "First Payment Date"
+msgstr "Fecha del Primer Pago"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__fixed
+msgid "Fixed"
+msgstr "Fijo"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__fixed_quota_amount
+msgid "Fixed Quota Amount"
+msgstr "Monto Cuota Fija"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid "Fixed Quote"
+msgstr "Cuota Fija"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_follower_ids
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_channel_ids
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores Canal"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_partner_ids
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores Terceros"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid__embargo_type__food
+msgid "Food"
+msgstr "Alimentos"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_type__frequency
+msgid "Frequency"
+msgstr "Frecuencia"
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_view_form
+msgid "General"
+msgstr "General"
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_court_view_form
+msgid "General Information"
+msgstr "Información General"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__half_value
+msgid "Half Value"
+msgstr "Valor Quincenal"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_concept__has_partner
+msgid "Has Partner"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__health
+msgid "Health"
+msgstr "Salud"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_debt_capacity_wizard__id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_court__id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_confirm_cancel__id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_confirm_finish__id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_refinancing__id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_committed__id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_concept__id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_payment_line__id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_type__id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_discount_variable__id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_loans_line__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_capacity_view_form
+msgid "IF YOU HAVE DEBT CAPACITY, THE FEE IS $"
+msgstr "SI TIENE CAPACIDAD DE ENDEUDAMIENTO, LA TARIFA ES DE $"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__activity_exception_icon
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_dis_aid__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono para indicar una actividad de excepción."
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__identification_id
+msgid "Identification"
+msgstr "Identificación"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__identification_id
+msgid "Identification No"
+msgstr "No. Identificación"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__type_identification_applicant
+msgid "Identification Type"
+msgstr "Tipo de Identificación"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_needaction
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_unread
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_needaction
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado hay nuevos mensajes que requieren su atención."
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_has_error
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_has_sms_error
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_has_error
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__include_commission
+msgid "Includes Commissions"
+msgstr "Incluye Comisiones"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__includes_overtime
+msgid "Includes Overtime"
+msgstr "Incluye Horas Extras"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__initial_balance
+msgid "Initial Balance"
+msgstr "Balance Inicial"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__interest_pay
+msgid "Interest Payment"
+msgstr "Pago de Interes"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_is_follower
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__approve_job_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__elaborated_job_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__job_id
+msgid "Job"
+msgstr "Cargo"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid__embargo_type__judicial
+msgid "Judicial Deposit"
+msgstr "Depósito Judicial"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_debt_capacity_wizard____last_update
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_court____last_update
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_confirm_cancel____last_update
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_confirm_finish____last_update
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_refinancing____last_update
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity____last_update
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid____last_update
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_committed____last_update
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_concept____last_update
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line____last_update
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_payment_line____last_update
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_type____last_update
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_discount_variable____last_update
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_loans_line____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_debt_capacity_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_court__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_confirm_cancel__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_confirm_finish__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_refinancing__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_committed__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_concept__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_payment_line__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_type__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_discount_variable__write_uid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_loans_line__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_debt_capacity_wizard__write_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_court__write_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_confirm_cancel__write_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_confirm_finish__write_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_refinancing__write_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__write_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__write_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_committed__write_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_concept__write_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__write_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_payment_line__write_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_type__write_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_discount_variable__write_date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_loans_line__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización en"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__less_deductions
+msgid "Less Deductions"
+msgstr "Menos Deducciones"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_concept__type__libranza
+msgid "Libranza"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__line_ids
+msgid "Line_ids"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_view_form
+msgid "Load Data"
+msgstr "Cargar Datos"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_concept__type__loan
+msgid "Loan"
+msgstr "Préstamo"
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_capacity_view_form
+msgid "Loans"
+msgstr "Préstamos"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__loans_line_ids
+msgid "Loans Line"
+msgstr "Linea de Préstamos"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__has_fixed_quota
+msgid "Manage Fixed Quota"
+msgstr "Maneja Cuota Fija"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__has_partner
+msgid "Manage Partner"
+msgstr "Maneja Tercero"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__manual_simulation
+msgid "Manual Simulation"
+msgstr "Simulación Manual"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__has_manual_terms
+msgid "Manual Terms"
+msgstr "Plazo Manual"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_type__max_percent
+msgid "Maximum Percent"
+msgstr "Porcentaje Máximo"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_has_error
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_has_error
+msgid "Message Delivery error"
+msgstr "Mensaje de error"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_ids
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_type__min_percent
+msgid "Minimum Percent"
+msgstr "Porcentaje Minimo"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid__payment_type__1
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_type__frequency__monthly
+msgid "Monthly"
+msgstr "Mensual"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__monthly_effective_rate
+msgid "Monthly Effective Rate"
+msgstr "Tasa Efectiva Mensual"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__monthly_nominal_rate
+msgid "Monthly Nominal Rate"
+msgstr "Tasa Nominal Mensual"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__monthly_pay
+msgid "Monthly Payment"
+msgstr "Pago Mensual"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__monthly_fee
+msgid "Monthly fee"
+msgstr "Cuota"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid "Must have at least one committed"
+msgstr "Debe tener por lo menos un comprometido"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_court__nit
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__court_nit
+msgid "NIT"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_court__name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__approve_employee_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__elaborated_employee_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_payment_line__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__net
+msgid "Net"
+msgstr "Neto"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Siguiente plazo de actividad"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__activity_summary
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__activity_type_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_debt_capacity__approved__no
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.confirm_cancel_wizard_discounts_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.confirm_finish_wizard_discounts_form
+msgid "No"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid "No file uploaded yet "
+msgstr "No se ha subido ningún archivo todavía "
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__number_claimant_identification
+msgid "No. Identification Claimant"
+msgstr "No. Identificación Demandante"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid "Not a valid Credit Number, is not a number"
+msgstr "No es un número de crédito válido, no es un número"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_needaction_counter
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_has_error_counter
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_unread_counter
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes sin leer"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__observations
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__observation
+msgid "Observations"
+msgstr "Observaciones"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__overtime
+msgid "Overtime"
+msgstr "Horas Extras"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__partner_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_concept__partner_id
+msgid "Partner"
+msgstr "Tercero"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Nómina"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_line__state__payed
+msgid "Payed"
+msgstr "Pagado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__date
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_payment_line__date
+msgid "Payment Date"
+msgstr "Fecha de Pago"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__payment_line_ids
+msgid "Payment Lines"
+msgstr "Lineas de Pago"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_payment_line__payment_value
+msgid "Payment Value"
+msgstr "Valor Pagado"
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_view_form
+msgid "Payments Table"
+msgstr "Tabla de Pagos"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_hr_payroll_dis_aid_payment_line
+msgid "Payments for HR Payroll Discount"
+msgstr "Pagos para HR Payroll Discount"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_payment_line__payslip_line_id
+msgid "Payslip Line"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid "Pending data to be filled"
+msgstr "Datos pendientes de rellenar"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__pens_solidarity_fund
+msgid "Pens Solidarity Fund"
+msgstr "Fondo Solidaridad Pens"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__pension
+msgid "Pension"
+msgstr "Pensión"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_committed__fix_percent
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_committed__select_fix__percent
+msgid "Percent"
+msgstr "Porcentaje"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__percentage
+msgid "Percentage Accrued"
+msgstr "Porcentaje Devengado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_court__phone
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__court_phone
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_view_form
+msgid "Plaintiff"
+msgstr "Demandante"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__priority
+msgid "Priority"
+msgstr "Prioridad"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__process_number
+msgid "Process Number"
+msgstr "Número de Proceso"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid "Quote No. "
+msgstr "Cuota No."
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid "Quote No. 0"
+msgstr "Cuota No. 0"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__quote_payed
+msgid "Quote Payed"
+msgstr "Cuotas Pagadas"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__quote_to_pay
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_loans_line__quote_to_pay
+msgid "Quote to Pay"
+msgstr "Cuota a Pagar"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_dis_aid_refinancing__type__refinance
+msgid "Refinance"
+msgstr "Refinanciar"
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_view_form
+msgid "Refinance / Pay"
+msgstr "Refinanciar / Pagar"
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.debt_capacity_wizard_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.refinancing_form
+msgid "Refinance Credit - Insert Payment"
+msgstr "Refinanciar Crédito - Insertar Pago"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_debt_capacity__state__rejected
+msgid "Rejected"
+msgstr "Rechazado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__committed_id
+msgid "Related Committed"
+msgstr "Comprometido Relacionado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__pv_id
+msgid "Related Payroll Variant"
+msgstr "PV Relacionada"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__requested_amount
+msgid "Requested Amount"
+msgstr "Monto Solicitado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__respect_smlv
+msgid "Respect SMLV"
+msgstr "Respeta SMLV"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__respect_legal_discount
+msgid "Respects Legal Discounts"
+msgstr "Respeta Descuentos Legales"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__activity_user_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__retention_at_source
+msgid "Retention at Source"
+msgstr "Retención en la Fuente"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de entrega del SMS"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__salary_employee
+msgid "Salary Employee"
+msgstr "Salario del Empleado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_discount_variable__salary_rule_id
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_discounts_view_form
+msgid "Salary Rule"
+msgstr "Regla Salarial"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_concept__sequence_id
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.actions.server,name:hr_payroll_dis_aid.action_dis_aid_simulate
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_view_form
+msgid "Simulate"
+msgstr "Simular"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__simulation_file
+msgid "Simulation File"
+msgstr "Archivo de Simulación"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid ""
+"Some Discounts/Aids are not in Draft state or have another issue.\n"
+"\n"
+" Records related: "
+msgstr ""
+"Algunos Descuentos/auxilios no están en estado de borrador o tienen otro "
+"problema.\n"
+"\n"
+" Registros relacionados: "
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid ""
+"Some Discounts/Aids are not in Draft state or have another issue.\n"
+"\n"
+" Records related:- "
+msgstr ""
+"Algunos Descuentos/Auxilios no están en estado de borrador o tienen otro "
+"problema.\n"
+"\n"
+" Registros relacionados:- "
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_committed__start_date
+msgid "Start Date"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__state
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__state
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_line__state
+msgid "State"
+msgstr "Estado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__activity_state
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_dis_aid__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencida: la fecha tope ya ha pasado\n"
+"Hoy: La fecha tope es hoy\n"
+"Planificada: futuras actividades."
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_view_form
+msgid "Summary"
+msgstr "Resumen"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__surname
+msgid "Surname"
+msgstr "Apellido"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_refinancing__new_term_in_months
+msgid "Term in Month"
+msgstr "Plazo en Meses"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid "Term in months has not been assigned"
+msgstr "El plazo en meses no ha sido asignado"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid "Term in months or the value of the quote has not been assigned"
+msgstr "El plazo en meses o el valor de la cuota no ha sido asignado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__terms_in_years
+msgid "Terms in Years"
+msgstr "Plazo en Años"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__terms_in_months
+msgid "Terms in months"
+msgstr "Plazo en Meses"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_debt_capacity.py:0
+#, python-format
+msgid "The accumulated percentage cannot be more than 50 or less than 0"
+msgstr "El porcentaje acumulado no puede ser superior al 50 ni inferior al 0"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid ""
+"The employee has another embargoe with lowest or equal priority. The "
+"embargo is "
+msgstr ""
+"El empleado tiene otro embargo con igual o menor prioridad. El embargo es "
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid "The fixed percentage is outside the ranges of the type"
+msgstr "El porcentaje fijo está fuera de los rangos del tipo"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#, python-format
+msgid ""
+"The minimum percentage cannot be greater than or equal to the maximum "
+"percentage"
+msgstr "El porcentaje mínimo no puede ser mayor o igual al porcentaje máximo"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__total_accruals
+msgid "Total Accruals"
+msgstr "Total Devengado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__total_amount
+msgid "Total Amount"
+msgstr "Monto Total"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__total_debt_capacity
+msgid "Total Debt Capacity"
+msgstr "Capacidad de Endeudamiento Total"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__total_original
+msgid "Total Original"
+msgstr "Total Original"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__total_paid
+msgid "Total Paid"
+msgstr "Total Pagado"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__total_pay
+msgid "Total Pay"
+msgstr "Pago Total"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__total_payable
+msgid "Total Payable"
+msgstr "Saldo"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__total_quote
+msgid "Total Quotes"
+msgstr "Cuotas Totales"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__total
+msgid "Total Value"
+msgstr "Valor Total"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__total_to_pay
+msgid "Total to Pay"
+msgstr "Total a Pagar"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_dis_aid_refinancing__type
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_committed__name
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_committed__type_id
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_concept__type
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_type__name
+msgid "Type"
+msgstr "Tipo"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__contract_type_id
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_capacity_view_form
+msgid "Type Contract"
+msgstr "Tipo de contrato"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__activity_exception_decoration
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_dis_aid__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de actividad de excepción registrada."
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_unread
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes sin leer"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__message_unread_counter
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes sin leer"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid_committed__fix_value
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_committed__select_fix__value
+msgid "Value"
+msgstr "Valor"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_committed__select_fix__val_ipc
+msgid "Value with IPC increment"
+msgstr "Valor con Incremento IPC"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid_committed__select_fix__val_percent
+msgid "Value with percent increment"
+msgstr "Valor con Incremento de Porcentaje"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_discount_variable__name
+msgid "Variation"
+msgstr "Variación"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__wage
+msgid "Wage"
+msgstr "Salario"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/models/hr_payroll_dis_aid.py:0
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.confirm_cancel_wizard_discounts_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.confirm_finish_wizard_discounts_form
+#, python-format
+msgid "Warning"
+msgstr "Alerta"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__website_message_ids
+#: model:ir.model.fields,field_description:hr_payroll_dis_aid.field_hr_payroll_dis_aid__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_debt_capacity__website_message_ids
+#: model:ir.model.fields,help:hr_payroll_dis_aid.field_hr_payroll_dis_aid__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicaciones del sitio web"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_debt_capacity__approved__yes
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.confirm_cancel_wizard_discounts_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.confirm_finish_wizard_discounts_form
+msgid "Yes"
+msgstr "Sí"
+
+#. module: hr_payroll_dis_aid
+#: code:addons/hr_payroll_dis_aid/wizard/refinancing.py:0
+#, python-format
+msgid "You must enter the extra value to be paid."
+msgstr "Debes introducir el valor extra a pagar."
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_hr_dis_aid_confirm_cancel
+msgid "hr.dis.aid.confirm.cancel"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_hr_dis_aid_confirm_finish
+msgid "hr.dis.aid.confirm.finish"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model,name:hr_payroll_dis_aid.model_hr_dis_aid_refinancing
+msgid "hr.dis.aid.refinancing"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_court_view_form
+msgid "hr_court_form"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_court_view_tree
+msgid "hr_court_tree"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_dis_aid_concepts_view_tree
+msgid "hr_dis_aid_concepts_tree"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_dis_aid_type_view_tree
+msgid "hr_dis_aid_type_tree"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_capacity_view_form
+msgid "hr_payroll_capacity_form"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_capacity_view_view_tree
+msgid "hr_payroll_capacity_view_tree"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_discounts_view_form
+msgid "hr_payroll_debt_discounts_form"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_view_form
+msgid "hr_payroll_dis_aid_form"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_aid_type_view_form
+msgid "hr_payroll_dis_aid_type_form"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model_terms:ir.ui.view,arch_db:hr_payroll_dis_aid.hr_payroll_dis_discounts_view_tree
+msgid "hr_payroll_dis_discounts_tree"
+msgstr ""
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid__check_change_terms__month
+msgid "month"
+msgstr "Mes"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid__check_change_terms__none
+msgid "none"
+msgstr "Ninguno"
+
+#. module: hr_payroll_dis_aid
+#: model:ir.model.fields.selection,name:hr_payroll_dis_aid.selection__hr_payroll_dis_aid__check_change_terms__year
+msgid "year"
+msgstr "Año"
