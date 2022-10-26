@@ -30,6 +30,7 @@
         "data/product_scheme_data.xml",
         "data/cron_acp_tacita_dian.xml",
         "report/account_move_invoice_report.xml",
+        "views/send_electronic_invoice_email_template.xml"
     ],
     "installable": True,
 }
